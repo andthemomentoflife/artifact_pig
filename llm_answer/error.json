@@ -1,0 +1,772 @@
+{
+    "200.json.Checker": {
+        "MODEL": "llama",
+        "API": "",
+        "SEM": "omit code",
+        "MIG": "libn",
+        "ETC": "syntax"
+    },
+    "85.json.run": {
+        "MODEL": "llama",
+        "API": "api(wrong usage of exec_command. it returns tuple. also no stdin)",
+        "SEM": "arg(/sbin omitted)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "202.json.search_s": {
+        "MODEL": "llama",
+        "API": "api(wrong usage of search, result should be assigend in conn.etries)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "126.json.commit": {
+        "MODEL": "llama",
+        "API": "api(not replacing any api, just delete)",
+        "SEM": "code(if not self.enable_auto_commit deleted)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "206.json.dumps": {
+        "MODEL": "llama",
+        "API": "",
+        "SEM": "code(delte all the lines) arg(arg value changed)",
+        "MIG": "",
+        "ETC": "syntax"
+    },
+    "202.json.simple_bind_s": {
+        "MODEL": "llama",
+        "API": "arg(using wrong arg) omit(not all migrated)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "616.json.IPv6Network": {
+        "MODEL": "llama",
+        "API": "omit(not all migrated)",
+        "SEM": "code(omit FaucetTestBase)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QFileDialog": {
+        "MODEL": "llama",
+        "API": "imp(no importing QFileDialog) omit(not all migrated)",
+        "SEM": "arg(arg is wrongly as the line's semantic has c hanged) code(the code semantic)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QScrollArea": {
+        "MODEL": "llama",
+        "API": "api",
+        "SEM": "code(code omitted init_gui)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QLabel": {
+        "MODEL": "llama",
+        "API": "",
+        "SEM": "code(structure changed actually the line semantic changed)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "233.json.show": {
+        "MODEL": "llama",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "492.json.HTTPHeader": {
+        "MODEL": "llama",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "67.json.load_certificate": {
+        "MODEL": "llama",
+        "API": "api(wrong api)",
+        "SEM": "arg(data is not replaced)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "39.json.request": {
+        "MODEL": "llama",
+        "API": "omit(not all migrated) ",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "syntax(to use ridedata, unassigned)"
+    },
+    "265.json.parse": {
+        "MODEL": "llama",
+        "API": "omit(not all migrated)",
+        "SEM": "arg(wrong argument value) code(code omitted)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "153.json.RequestHandler": {
+        "MODEL": "llama",
+        "API": "api(actually code went away)",
+        "SEM": "code(UpdateHandler no)",
+        "MIG": "",
+        "ETC": "syntax"
+    },
+    "126.json.KafkaConsumer": {
+        "MODEL": "llama",
+        "API": "api(no max.poll.records)",
+        "SEM": "arg(group went to self.group_id)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "199.json.StrictRedis": {
+        "MODEL": "llama",
+        "API": "api(unsupported api)",
+        "SEM": "arg(charset not delivered)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "457.json.unpackb": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated)",
+        "SEM": "arg(arg value changed)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "28.json.route": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated)",
+        "SEM": "arg(value changed)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "120.json.set_verifier": {
+        "MODEL": "gemma",
+        "API": "api(wrong api and in token)",
+        "SEM": "code(self.token.set_verifer...)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "28.json.method": {
+        "MODEL": "gemma",
+        "API": "api(not using api)",
+        "SEM": "code(code omitted)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QAction": {
+        "MODEL": "gemma",
+        "API": "api(no api)",
+        "SEM": "code(code omitted)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "85.json.disconnect_all": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated) ",
+        "SEM": "code(code omitted)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "616.json.broadcast": {
+        "MODEL": "gemma",
+        "API": "api(not using broadcast)",
+        "SEM": "code(code omitted) arg(arg changed)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "200.json._checks": {
+        "MODEL": "gemma",
+        "API": "api(no api)",
+        "SEM": "code(semantic changed)",
+        "MIG": "libn",
+        "ETC": "syntax"
+    },
+    "191.json.Response": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated) api(wrong api)",
+        "SEM": "code(code omitted) arg(wrong argument even for static_file)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "5.json.echo": {
+        "MODEL": "gemma",
+        "API": "omit(not migrated all)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "153.json.body": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "457.json.packb": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated)",
+        "SEM": "arg(arg value changed)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "100.json.KafkaProducer": {
+        "MODEL": "gemma",
+        "API": "api(wrong api) arg(wrong arg type)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "190.json.read": {
+        "MODEL": "gemma",
+        "API": "api(no api)",
+        "SEM": "code(code strcture changed)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "284.json.get": {
+        "MODEL": "gemma",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "282.json.BertLayerNorm": {
+        "MODEL": "gemma",
+        "API": "api(wrong api)",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "282.json.WarmupConstantSchedule": {
+        "MODEL": "gemma",
+        "API": "",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "28.json.render_template": {
+        "MODEL": "gemma",
+        "API": "omit(not all migrated) ",
+        "SEM": "arg(changed) code",
+        "MIG": "",
+        "ETC": "syntax(profile not defined)"
+    },
+    "280.json.addheaders": {
+        "MODEL": "qwen",
+        "API": "",
+        "SEM": "arg(headers value changed)",
+        "MIG": "code",
+        "ETC": ""
+    },
+    "200.json.match": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": "syntax"
+    },
+    "221.json.add_argument": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "arg(False to parse_unicode)",
+        "MIG": "libn",
+        "ETC": "syntax"
+    },
+    "293.json.white": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "200.json.register_check": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "193.json.network": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "304.json.get_pubkey": {
+        "MODEL": "qwen",
+        "API": "imp(padding, default_backend() ...)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "syntax"
+    },
+    "20.json.BertForTokenClassification": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": "syntax"
+    },
+    "175.json.PANDOC_PATH": {
+        "MODEL": "qwen",
+        "API": "api(note xist)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "528.json.VerifyingKey": {
+        "MODEL": "qwen",
+        "API": "imp omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "syntax"
+    },
+    "492.json.Curl": {
+        "MODEL": "qwen",
+        "API": "api(wrong api)",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": "syntax"
+    },
+    "67.json.digest": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "126.json.ConsumerNoMoreData": {
+        "MODEL": "qwen",
+        "API": "api(not existing api imported)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "syntax"
+    },
+    "28.json.send_file": {
+        "MODEL": "qwen",
+        "API": "omit(imported but not used)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "var lib"
+    },
+    "200.json.expand_indent": {
+        "MODEL": "qwen",
+        "API": "omit(no api)",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "293.json.QCheckBox": {
+        "MODEL": "qwen",
+        "API": "omit(imported but not used)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "var"
+    },
+    "39.json.status": {
+        "MODEL": "qwen",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "var"
+    },
+    "200.json.noqa": {
+        "MODEL": "qwen",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": "var"
+    },
+    "254.json.settings": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "202.json.INVALID_CREDENTIALS": {
+        "MODEL": "deepseek",
+        "API": "api(wrong api) arg(message added)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "153.json.WSGIApplication": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "118.json.imap": {
+        "MODEL": "deepseek",
+        "API": "omit",
+        "SEM": "arg code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "39.json.decode": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "282.json.WarmupLinearSchedule": {
+        "MODEL": "deepseek",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "293.json.QGridLayout": {
+        "MODEL": "deepseek",
+        "API": "api",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QStyle": {
+        "MODEL": "deepseek",
+        "API": "api",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "191.json.loads": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "parse"
+    },
+    "4.json.get": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "parse"
+    },
+    "265.json.compare": {
+        "MODEL": "deepseek",
+        "API": "api omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "var"
+    },
+    "190.json.post": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "arg(upload_url changed and files)",
+        "MIG": "code",
+        "ETC": "imp"
+    },
+    "126.json.KafkaProducer": {
+        "MODEL": "deepseek",
+        "API": "omit(no code)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "282.json.WarmupCosineWithWarmupRestartsSchedule": {
+        "MODEL": "deepseek",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "118.json.Pool": {
+        "MODEL": "deepseek",
+        "API": "omit",
+        "SEM": "code arg(not delivered)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "233.json.code": {
+        "MODEL": "deepseek",
+        "API": "api(wrong)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "191.json.jsonify": {
+        "MODEL": "deepseek",
+        "API": "",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "parse"
+    },
+    "616.json.IPv4Network": {
+        "MODEL": "deepseek",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "8.json.new": {
+        "MODEL": "gemma3",
+        "API": "api(wrong api)",
+        "SEM": "arg(key.encode)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "126.json.poll": {
+        "MODEL": "gemma3",
+        "API": "api(consume)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "492.json.contettype": {
+        "MODEL": "gemma3",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "8.json.encrypt": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "20.json.XLNetPreTrainedModel": {
+        "MODEL": "gemma3",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "20.json.XLNetModel": {
+        "MODEL": "gemma3",
+        "API": "",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "282.json.BertAdam": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "4.json.data": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QLineEdit": {
+        "MODEL": "gemma3",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "85.json.sudo": {
+        "MODEL": "gemma3",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "489.json.PrettyTable": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "293.json.QSplitter": {
+        "MODEL": "gemma3",
+        "API": "omit",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    },
+    "457.json.Ext": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "200.json.ARITHMETIC_OP": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "293.json.QWidget": {
+        "MODEL": "gemma3",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "8.json.decrypt": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "arg(key is already bytes)",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QVBoxLayout": {
+        "MODEL": "gemma3",
+        "API": "omit",
+        "SEM": "arg(central_widgets added) code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QGroupBox": {
+        "MODEL": "gemma3",
+        "API": "omit(imported but not used)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "282.json.WarmupCosineSchedule": {
+        "MODEL": "gemma3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "28.json.form": {
+        "MODEL": "qwen3",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "60.json.release": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": "imp var"
+    },
+    "190.json.status": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "528.json.verify": {
+        "MODEL": "qwen3",
+        "API": "",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "parse"
+    },
+    "28.json.flash": {
+        "MODEL": "qwen3",
+        "API": "omit",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "492.json.setopt": {
+        "MODEL": "qwen3",
+        "API": "imp",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QPushButton": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.QTextEdit": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "254.json.lcd": {
+        "MODEL": "qwen3",
+        "API": "imp",
+        "SEM": "arg code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "528.json.to_bytes": {
+        "MODEL": "qwen3",
+        "API": "",
+        "SEM": "",
+        "MIG": "",
+        "ETC": "parse"
+    },
+    "110.json.is_empty_string": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "110.json.is_not_empty_string": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "293.json.Vertical": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "282.json.ConstantLR": {
+        "MODEL": "qwen3",
+        "API": "api",
+        "SEM": "code",
+        "MIG": "libn",
+        "ETC": ""
+    },
+    "616.json.IPNetwork": {
+        "MODEL": "qwen3",
+        "API": "api(only ipv4) arg(route_cidr)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "251.json.start_subscribe": {
+        "MODEL": "qwen3",
+        "API": "api(not deleted)",
+        "SEM": "code",
+        "MIG": "",
+        "ETC": ""
+    },
+    "492.json.BytesIO": {
+        "MODEL": "qwen3",
+        "API": "",
+        "SEM": "",
+        "MIG": "code",
+        "ETC": ""
+    },
+    "282.json.WarmupCosineWithHardRestartsSchedule": {
+        "MODEL": "qwen3",
+        "API": "",
+        "SEM": "",
+        "MIG": "code",
+        "ETC": ""
+    },
+    "233.json.response_data": {
+        "MODEL": "qwen3",
+        "API": "api(not del)",
+        "SEM": "",
+        "MIG": "",
+        "ETC": ""
+    }
+}

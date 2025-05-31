@@ -1,0 +1,25 @@
+You are tasked with migrating code from one library to another. Your goal is to reimplement the given code using a different library while maintaining the same functionality. Follow these steps carefully:
+
+1. First, examine the original code written using the {libo} library:
+
+<original_code>
+```python
+{codeb}
+```
+</original_code>
+
+2. Your task is to migrate this code from {libo} to {libn}. 
+
+3. When reimplementing the APIs, follow these guidelines: {apios}
+
+4. Carefully analyze the original code and identify the key functionalities and APIs used from the {libo} library.
+
+5. Research the equivalent APIs or methods in the {libn} library that can replace the functionality of the {libo} library.
+
+6. Rewrite the code using the {libn} library, ensuring that all functionalities are preserved and the guidelines for API reimplementation are followed.
+
+7. Provide your migrated code inside <migrated_code> tags. Use proper Python formatting and include comments where necessary to explain any non-obvious changes or decisions.
+
+8. After the migrated code, provide a brief explanation of the major changes you made and any challenges you encountered during the migration process. Include this explanation inside <explanation> tags.
+
+Remember to test your migrated code thoroughly to ensure it produces the same results as the original code. If you encounter any APIs or functionalities that don't have direct equivalents in the new library, explain your approach to handling these cases in your explanation.

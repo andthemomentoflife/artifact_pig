@@ -1,0 +1,4415 @@
+{
+    "1.json": {
+        "Path": {
+            "apio": "Path",
+            "answer": "Path",
+            "signo": [],
+            "signn": []
+        },
+        "ancestor": {
+            "apio": "ancestor",
+            "answer": "parent",
+            "signo": [
+                "n"
+            ],
+            "signn": []
+        }
+    },
+    "2.json": {
+        "LevelDB": {
+            "apio": "LevelDB",
+            "answer": "DB",
+            "signo": [
+                "filename",
+                "kwargs"
+            ],
+            "signn": [
+                "name",
+                "create_if_missing",
+                "error_if_exists",
+                "paranoid_checks",
+                "write_buffer_size",
+                "max_open_files",
+                "lru_cache_size",
+                "block_size",
+                "block_restart_interval",
+                "max_file_size",
+                "compression",
+                "bloom_filter_bits",
+                "comparator",
+                "comparator_name"
+            ]
+        },
+        "Put": {
+            "apio": "Put",
+            "answer": "put",
+            "signo": [
+                "key",
+                "value",
+                "sync"
+            ],
+            "signn": [
+                "key",
+                "value",
+                "sync"
+            ]
+        },
+        "Get": {
+            "apio": "Get",
+            "answer": "get",
+            "signo": [
+                "key",
+                "verify_checksums",
+                "fill_cache"
+            ],
+            "signn": [
+                "key",
+                "default",
+                "verify_checksums",
+                "fill_cache"
+            ]
+        },
+        "Delete": {
+            "apio": "Delete",
+            "answer": "delete",
+            "signo": [
+                "key",
+                "sync"
+            ],
+            "signn": [
+                "key",
+                "sync"
+            ]
+        }
+    },
+    "4.json": {
+        "get": {
+            "apio": "get",
+            "answer": "get_response",
+            "signo": [
+                "args",
+                "kw"
+            ],
+            "signn": []
+        },
+        "data": {
+            "apio": "data",
+            "answer": "body",
+            "signo": [],
+            "signn": []
+        },
+        "mimetype": {
+            "apio": "mimetype",
+            "answer": "content_type",
+            "signo": [],
+            "signn": []
+        },
+        "status_code": {
+            "apio": "status_code",
+            "answer": "status_code",
+            "signo": [],
+            "signn": []
+        },
+        "content_length": {
+            "apio": "content_length",
+            "answer": "content_length",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "5.json": {
+        "argument": {
+            "apio": "argument",
+            "answer": "add_argument",
+            "signo": [
+                "param_decls",
+                "cls",
+                "attrs"
+            ],
+            "signn": [
+                "name_or_flags",
+                "action",
+                "nargs",
+                "const",
+                "default",
+                "type",
+                "choices",
+                "required",
+                "help",
+                "metavar",
+                "dest",
+                "version",
+                "kwargs"
+            ]
+        },
+        "option": {
+            "apio": "option",
+            "answer": "add_argument",
+            "signo": [
+                "param_decls",
+                "cls",
+                "attrs"
+            ],
+            "signn": [
+                "name_or_flags",
+                "action",
+                "nargs",
+                "const",
+                "default",
+                "type",
+                "choices",
+                "required",
+                "help",
+                "metavar",
+                "dest",
+                "version",
+                "kwargs"
+            ]
+        }
+    },
+    "6.json": {
+        "connect": {
+            "apio": "connect",
+            "answer": "Connection",
+            "signo": [
+                "hostname",
+                "port",
+                "username",
+                "password",
+                "pkey",
+                "key_filename",
+                "timeout",
+                "allow_agent",
+                "look_for_keys",
+                "compress",
+                "sock",
+                "gss_auth",
+                "gss_kex",
+                "gss_deleg_creds",
+                "gss_host",
+                "banner_timeout",
+                "auth_timeout",
+                "channel_timeout",
+                "gss_trust_dns",
+                "passphrase",
+                "disabled_algorithms",
+                "transport_factory",
+                "auth_strategy"
+            ],
+            "signn": [
+                "host",
+                "user",
+                "port",
+                "config",
+                "gateway",
+                "forward_agent",
+                "connect_timeout",
+                "connect_kwargs",
+                "inline_ssh_env"
+            ]
+        },
+        "close": {
+            "apio": "close",
+            "answer": "close",
+            "signo": [],
+            "signn": []
+        },
+        "exec_command": {
+            "apio": "exec_command",
+            "answer": "run",
+            "signo": [
+                "command",
+                "bufsize",
+                "timeout",
+                "get_pty",
+                "environment"
+            ],
+            "signn": [
+                "command",
+                "kwargs"
+            ]
+        },
+        "recv_exit_status": {
+            "answer": "return_code",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "put": {
+            "apio": "put",
+            "answer": "put",
+            "signo": [
+                "localpath",
+                "remotepath",
+                "callback",
+                "confirm"
+            ],
+            "signn": [
+                "args",
+                "kwargs"
+            ]
+        }
+    },
+    "8.json": {
+        "new": {
+            "apio": "new",
+            "answer": "Cipher",
+            "signo": [
+                "key",
+                "mode",
+                "args",
+                "kwargs"
+            ],
+            "signn": [
+                "algorithm",
+                "mode",
+                "backend"
+            ]
+        },
+        "encrypt": {
+            "apio": "encrypt",
+            "answer": "update",
+            "signo": [
+                "plaintext",
+                "output"
+            ],
+            "signn": [
+                "data"
+            ]
+        },
+        "decrypt": {
+            "apio": "decrypt",
+            "answer": "update",
+            "signo": [
+                "ciphertext",
+                "output"
+            ],
+            "signn": [
+                "data"
+            ]
+        }
+    },
+    "9.json": {
+        "Bottle": {
+            "apio": "Bottle",
+            "answer": "Flask",
+            "signo": [
+                "catch_all",
+                "auto_json"
+            ],
+            "signn": [
+                "import_name",
+                "static_url_path",
+                "static_folder",
+                "static_host",
+                "host_matching",
+                "subdomain_matching",
+                "template_folder",
+                "instance_path",
+                "instance_relative_config",
+                "root_path"
+            ]
+        },
+        "post": {
+            "apio": "post",
+            "answer": "route",
+            "signo": [
+                "path",
+                "method",
+                "options"
+            ],
+            "signn": [
+                "rule",
+                "options"
+            ]
+        },
+        "abort": {
+            "apio": "abort",
+            "answer": "abort",
+            "signo": [
+                "code",
+                "text"
+            ],
+            "signn": [
+                "code",
+                "args",
+                "kwargs"
+            ]
+        },
+        "get": {
+            "apio": "get",
+            "answer": "get",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "read": {
+            "answer": "get_data",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "run": {
+            "apio": "run",
+            "answer": "run",
+            "signo": [
+                "app",
+                "server",
+                "host",
+                "port",
+                "interval",
+                "reloader",
+                "quiet",
+                "plugins",
+                "debug",
+                "config",
+                "kargs"
+            ],
+            "signn": [
+                "host",
+                "port",
+                "debug",
+                "load_dotenv",
+                "options"
+            ]
+        },
+        "headers": {
+            "answer": "headers",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "13.json": {
+        "add_argument": {
+            "answer": "usage(constant)",
+            "signo": [
+                "args",
+                "kwargs"
+            ],
+            "signn": "No Candidate API"
+        },
+        "parse_args": {
+            "apio": "parse_args",
+            "answer": "docopt",
+            "signo": [
+                "args",
+                "namespace"
+            ],
+            "signn": [
+                "doc",
+                "argv",
+                "help",
+                "version",
+                "options_first"
+            ]
+        }
+    },
+    "20.json": {
+        "BertForTokenClassification": {
+            "apio": "BertForTokenClassification",
+            "answer": "BertForTokenClassification",
+            "signo": [
+                "config"
+            ],
+            "signn": [
+                "config"
+            ]
+        },
+        "XLNetPreTrainedModel": {
+            "apio": "XLNetPreTrainedModel",
+            "answer": "XLNetPreTrainedModel",
+            "signo": [
+                "inputs",
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "XLNetModel": {
+            "apio": "XLNetModel",
+            "answer": "XLNetModel",
+            "signo": [
+                "config"
+            ],
+            "signn": [
+                "config"
+            ]
+        }
+    },
+    "28.json": {
+        "Flask": {
+            "apio": "Flask",
+            "answer": "Quart",
+            "signo": [
+                "import_name",
+                "static_url_path",
+                "static_folder",
+                "static_host",
+                "host_matching",
+                "subdomain_matching",
+                "template_folder",
+                "instance_path",
+                "instance_relative_config",
+                "root_path"
+            ],
+            "signn": [
+                "import_name",
+                "static_url_path",
+                "static_folder",
+                "static_host",
+                "host_matching",
+                "subdomain_matching",
+                "template_folder",
+                "instance_path",
+                "instance_relative_config",
+                "root_path"
+            ]
+        },
+        "route": {
+            "answer": "route",
+            "signo": [
+                "rule",
+                "options"
+            ],
+            "signn": "No Candidate API"
+        },
+        "method": {
+            "answer": "method",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "secret_key": {
+            "answer": "secret_key",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "form": {
+            "apio": "form",
+            "answer": "form",
+            "signo": [],
+            "signn": []
+        },
+        "files": {
+            "apio": "files",
+            "answer": "files",
+            "signo": [],
+            "signn": []
+        },
+        "flash": {
+            "apio": "flash",
+            "answer": "flash",
+            "signo": [
+                "message",
+                "category"
+            ],
+            "signn": [
+                "message",
+                "category"
+            ]
+        },
+        "render_template": {
+            "apio": "render_template",
+            "answer": "render_template",
+            "signo": [
+                "template_name_or_list",
+                "context"
+            ],
+            "signn": [
+                "template_name_or_list",
+                "context"
+            ]
+        },
+        "send_from_directory": {
+            "apio": "send_from_directory",
+            "answer": "send_from_directory",
+            "signo": [
+                "directory",
+                "path",
+                "kwargs"
+            ],
+            "signn": [
+                "directory",
+                "file_name",
+                "mimetype",
+                "as_attachment",
+                "attachment_filename",
+                "add_etags",
+                "cache_timeout",
+                "conditional",
+                "last_modified"
+            ]
+        },
+        "send_file": {
+            "apio": "send_file",
+            "answer": "send_file",
+            "signo": [
+                "path_or_file",
+                "mimetype",
+                "as_attachment",
+                "download_name",
+                "conditional",
+                "etag",
+                "last_modified",
+                "max_age"
+            ],
+            "signn": [
+                "filename_or_io",
+                "mimetype",
+                "as_attachment",
+                "attachment_filename",
+                "add_etags",
+                "cache_timeout",
+                "conditional",
+                "last_modified"
+            ]
+        },
+        "run": {
+            "apio": "run",
+            "answer": "run",
+            "signo": [
+                "host",
+                "port",
+                "debug",
+                "load_dotenv",
+                "options"
+            ],
+            "signn": [
+                "host",
+                "port",
+                "debug",
+                "use_reloader",
+                "loop",
+                "ca_certs",
+                "certfile",
+                "keyfile",
+                "kwargs"
+            ]
+        }
+    },
+    "36.json": {
+        "spawn_n": {
+            "apio": "spawn_n",
+            "answer": "spawn",
+            "signo": [],
+            "signn": []
+        },
+        "sleep": {
+            "apio": "sleep",
+            "answer": "sleep",
+            "signo": [],
+            "signn": [
+                "seconds",
+                "ref"
+            ]
+        },
+        "monkey_patch": {
+            "apio": "monkey_patch",
+            "answer": "patch_all",
+            "signo": [
+                "on"
+            ],
+            "signn": [
+                "socket",
+                "dns",
+                "time",
+                "select",
+                "thread",
+                "os",
+                "ssl",
+                "subprocess",
+                "sys",
+                "aggressive",
+                "Event",
+                "builtins",
+                "signal",
+                "queue",
+                "contextvars",
+                "kwargs"
+            ]
+        },
+        "setdefaulttimeout": {
+            "answer": "setdefaulttimeout",
+            "signo": [
+                "timeout"
+            ],
+            "signn": "No Candidate API"
+        },
+        "time": {
+            "apio": "time",
+            "answer": "time",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "39.json": {
+        "request": {
+            "apio": "request",
+            "answer": "get",
+            "signo": [
+                "uri",
+                "method",
+                "body",
+                "headers",
+                "redirections",
+                "connection_type"
+            ],
+            "signn": [
+                "url",
+                "params",
+                "kwargs"
+            ]
+        },
+        "status": {
+            "apio": "status",
+            "answer": "status_code",
+            "signo": [],
+            "signn": []
+        },
+        "decode": {
+            "apio": "decode",
+            "answer": "json",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "60.json": {
+        "acquire": {
+            "apio": "acquire",
+            "answer": "acquire",
+            "signo": [
+                "timeout"
+            ],
+            "signn": [
+                "blocking",
+                "delay",
+                "max_delay",
+                "timeout"
+            ]
+        },
+        "LockFile": {
+            "apio": "LockFile",
+            "answer": "InterProcessLock",
+            "signo": [
+                "path",
+                "threaded",
+                "timeout"
+            ],
+            "signn": [
+                "path",
+                "sleep_func",
+                "logger"
+            ]
+        },
+        "release": {
+            "apio": "release",
+            "answer": "release",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "65.json": {
+        "attributes": {
+            "apio": "attributes",
+            "answer": "ib",
+            "signo": [
+                "attrs",
+                "apply_with_cmp",
+                "apply_with_init",
+                "apply_with_repr",
+                "apply_immutable",
+                "store_attributes",
+                "kw"
+            ],
+            "signn": []
+        },
+        "Attribute": {
+            "apio": "Attribute",
+            "answer": "ib",
+            "signo": [
+                "name",
+                "exclude_from_cmp",
+                "exclude_from_init",
+                "exclude_from_repr",
+                "exclude_from_immutable",
+                "default_value",
+                "default_factory",
+                "instance_of",
+                "init_aliaser"
+            ],
+            "signn": []
+        }
+    },
+    "85.json": {
+        "run": {
+            "apio": "run",
+            "answer": "exec_command",
+            "signo": [
+                "command",
+                "shell",
+                "pty",
+                "combine_stderr",
+                "quiet",
+                "warn_only",
+                "stdout",
+                "stderr"
+            ],
+            "signn": [
+                "command",
+                "bufsize",
+                "timeout",
+                "get_pty",
+                "environment"
+            ]
+        },
+        "sudo": {
+            "apio": "sudo",
+            "answer": "exec_command",
+            "signo": [
+                "command",
+                "shell",
+                "pty",
+                "combine_stderr",
+                "user",
+                "quiet",
+                "warn_only",
+                "stdout",
+                "stderr",
+                "group"
+            ],
+            "signn": [
+                "command",
+                "bufsize",
+                "timeout",
+                "get_pty",
+                "environment"
+            ]
+        },
+        "get": {
+            "apio": "get",
+            "answer": "get",
+            "signo": [
+                "remote_path",
+                "local_path"
+            ],
+            "signn": [
+                "remotepath",
+                "localpath",
+                "callback",
+                "prefetch",
+                "max_concurrent_prefetch_requests"
+            ]
+        },
+        "disconnect_all": {
+            "apio": "disconnect_all",
+            "answer": "close",
+            "signo": [],
+            "signn": []
+        },
+        "put": {
+            "apio": "put",
+            "answer": "put",
+            "signo": [
+                "local_path",
+                "remote_path",
+                "use_sudo",
+                "mirror_local_mode",
+                "mode"
+            ],
+            "signn": [
+                "localpath",
+                "remotepath",
+                "callback",
+                "confirm"
+            ]
+        }
+    },
+    "86.json": {
+        "PyQuery": {
+            "apio": "PyQuery",
+            "answer": "BeautifulSoup",
+            "signo": [
+                "args",
+                "kwargs"
+            ],
+            "signn": [
+                "markup",
+                "features",
+                "builder",
+                "parse_only",
+                "from_encoding",
+                "kwargs"
+            ]
+        },
+        ".bicycle_station": {
+            "apio": ".bicycle_station",
+            "answer": "find_all",
+            "signo": [],
+            "signn": [
+                "name",
+                "attrs",
+                "recursive",
+                "text",
+                "limit",
+                "kwargs"
+            ]
+        },
+        "div": {
+            "apio": "div",
+            "answer": "find_all",
+            "signo": [],
+            "signn": [
+                "name",
+                "attrs",
+                "recursive",
+                "text",
+                "limit",
+                "kwargs"
+            ]
+        },
+        "attrib": {
+            "answer": "subscript",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "text_content": {
+            "answer": "text, string",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "100.json": {
+        "KafkaProducer": {
+            "apio": "KafkaProducer",
+            "answer": "Producer",
+            "signo": [
+                "configs"
+            ],
+            "signn": []
+        },
+        "send": {
+            "apio": "send",
+            "answer": "produce",
+            "signo": [
+                "topic",
+                "value",
+                "key",
+                "partition",
+                "timestamp_ms"
+            ],
+            "signn": [
+                "topic",
+                "key",
+                "value",
+                "partition",
+                "on_delivery",
+                "timestamp",
+                "headers"
+            ]
+        }
+    },
+    "107.json": {
+        "IPv4Address": {
+            "apio": "IPv4Address",
+            "answer": "ip_address",
+            "signo": [
+                "address"
+            ],
+            "signn": [
+                "address"
+            ]
+        },
+        "IPv4Network": {
+            "apio": "IPv4Network",
+            "answer": "ip_network",
+            "signo": [
+                "address",
+                "strict"
+            ],
+            "signn": [
+                "address",
+                "strict"
+            ]
+        }
+    },
+    "110.json": {
+        "is_empty_string": {
+            "apio": "is_empty_string",
+            "answer": "is_null_string",
+            "signo": [
+                "value"
+            ],
+            "signn": [
+                "value"
+            ]
+        },
+        "IntegerType": {
+            "apio": "IntegerType",
+            "answer": "Integer",
+            "signo": [],
+            "signn": [
+                "value",
+                "strict_level",
+                "kwargs"
+            ]
+        },
+        "try_convert": {
+            "answer": "try_convert",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "is_not_empty_string": {
+            "apio": "is_not_empty_string",
+            "answer": "is_not_null_string",
+            "signo": [
+                "value"
+            ],
+            "signn": [
+                "value"
+            ]
+        }
+    },
+    "117.json": {
+        "wait_for_edge": {
+            "answer": "wait_for_press",
+            "signo": [
+                "channel",
+                "edge",
+                "bouncetime",
+                "timeout"
+            ],
+            "signn": "No Candidate API"
+        }
+    },
+    "118.json": {
+        "Pool": {
+            "apio": "Pool",
+            "answer": "Pool",
+            "signo": [
+                "processes",
+                "initializer",
+                "initargs",
+                "maxtaskperchild"
+            ],
+            "signn": [
+                "processes",
+                "initializer",
+                "initargs",
+                "maxtasksperchild",
+                "context"
+            ]
+        },
+        "imap": {
+            "apio": "imap",
+            "answer": "imap",
+            "signo": [
+                "func",
+                "iterable",
+                "chunksize"
+            ],
+            "signn": [
+                "func",
+                "iterable",
+                "chunksize"
+            ]
+        },
+        "close": {
+            "apio": "close",
+            "answer": "close",
+            "signo": [],
+            "signn": []
+        },
+        "join": {
+            "apio": "join",
+            "answer": "join",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "119.json": {
+        "get_session": {
+            "apio": "get_session",
+            "answer": "connect_to_region",
+            "signo": [
+                "env_vars"
+            ],
+            "signn": [
+                "region_name",
+                "kw_params"
+            ]
+        }
+    },
+    "120.json": {
+        "Client": {
+            "apio": "Client",
+            "answer": "Client",
+            "signo": [
+                "consumer",
+                "token",
+                "kwargs"
+            ],
+            "signn": [
+                "client_key",
+                "client_secret",
+                "resource_owner_key",
+                "resource_owner_secret",
+                "callback_uri",
+                "signature_method",
+                "signature_type",
+                "rsa_key",
+                "verifier",
+                "realm",
+                "encoding",
+                "decoding",
+                "nonce",
+                "timestamp"
+            ]
+        },
+        "set_verifier": {
+            "apio": "set_verifier",
+            "answer": "verifier",
+            "signo": [
+                "verifier"
+            ],
+            "signn": []
+        }
+    },
+    "125.json": {
+        "IPAddress": {
+            "answer": "IPv4Address + IPv6Address",
+            "signo": [
+                "addr",
+                "version",
+                "flags"
+            ],
+            "signn": "No Candidate API"
+        },
+        "IPNetwork": {
+            "answer": "Ipv4Netowrk + IPv6Network",
+            "signo": [
+                "addr",
+                "version",
+                "flags",
+                "expand_partial"
+            ],
+            "signn": "No Candidate API"
+        }
+    },
+    "126.json": {
+        "KafkaConsumer": {
+            "apio": "KafkaConsumer",
+            "answer": "Consumer",
+            "signo": [
+                "topics",
+                "configs"
+            ],
+            "signn": []
+        },
+        "KafkaProducer": {
+            "apio": "KafkaProducer",
+            "answer": "Producer",
+            "signo": [
+                "configs"
+            ],
+            "signn": []
+        },
+        "poll": {
+            "apio": "poll",
+            "answer": "consume",
+            "signo": [
+                "timeout_ms",
+                "max_records"
+            ],
+            "signn": [
+                "num_messages",
+                "timeout"
+            ]
+        },
+        "commit": {
+            "answer": "commit",
+            "signo": [
+                "offsets"
+            ],
+            "signn": "No Candidate API"
+        },
+        "close": {
+            "apio": "close",
+            "answer": "close",
+            "signo": [
+                "autocommit"
+            ],
+            "signn": []
+        },
+        "send": {
+            "apio": "send",
+            "answer": "produce",
+            "signo": [
+                "topic",
+                "value",
+                "key",
+                "partition",
+                "timestamp_ms"
+            ],
+            "signn": [
+                "topic",
+                "key",
+                "value",
+                "partition",
+                "on_delivery",
+                "timestamp",
+                "headers"
+            ]
+        },
+        "KafkaError": {
+            "apio": "KafkaError",
+            "answer": "KafkaException",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "132.json": {
+        "init_app": {
+            "apio": "init_app",
+            "answer": "init",
+            "signo": [
+                "app",
+                "dsn",
+                "logging",
+                "level",
+                "logging_exclusions",
+                "wrap_wsgi",
+                "register_signal"
+            ],
+            "signn": "No Candidate API"
+        },
+        "level": {
+            "apio": "level",
+            "answer": "set_level",
+            "signo": [],
+            "signn": [
+                "value"
+            ]
+        }
+    },
+    "149.json": {
+        "open": {
+            "apio": "open",
+            "answer": "open",
+            "signo": [
+                "name",
+                "mode",
+                "memmap",
+                "save_backup",
+                "kwargs"
+            ],
+            "signn": [
+                "name",
+                "mode",
+                "memmap",
+                "save_backup",
+                "cache",
+                "lazy_load_hdus",
+                "ignore_missing_simple",
+                "use_fsspec",
+                "fsspec_kwargs",
+                "decompress_in_memory",
+                "kwargs"
+            ]
+        },
+        "PrimaryHDU": {
+            "apio": "PrimaryHDU",
+            "answer": "PrimaryHDU",
+            "signo": [
+                "data",
+                "header",
+                "do_not_scale_image_data",
+                "ignore_blank",
+                "uint",
+                "scale_back"
+            ],
+            "signn": [
+                "data",
+                "header",
+                "do_not_scale_image_data",
+                "ignore_blank",
+                "uint",
+                "scale_back"
+            ]
+        },
+        "ImageHDU": {
+            "apio": "ImageHDU",
+            "answer": "ImageHDU",
+            "signo": [
+                "data",
+                "header",
+                "name",
+                "do_not_scale_image_data",
+                "uint",
+                "scale_back"
+            ],
+            "signn": [
+                "data",
+                "header",
+                "name",
+                "do_not_scale_image_data",
+                "uint",
+                "scale_back",
+                "ver"
+            ]
+        }
+    },
+    "153.json": {
+        "RequestHandler": {
+            "apio": "RequestHandler",
+            "answer": "MethodView",
+            "signo": [
+                "request",
+                "response"
+            ],
+            "signn": []
+        },
+        "body": {
+            "answer": "data",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "query_string": {
+            "answer": "query_string",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "154.json": {
+        "Sniffer": {
+            "apio": "Sniffer",
+            "answer": "Sniffer",
+            "signo": [],
+            "signn": []
+        },
+        "reader": {
+            "apio": "reader",
+            "answer": "reader",
+            "signo": [
+                "csvfile",
+                "dialect",
+                "delimiter",
+                "quotechar",
+                "escapechar",
+                "doublequote",
+                "skipinitialspace",
+                "lineterminator",
+                "quoting",
+                "strict"
+            ],
+            "signn": [
+                "csvfile",
+                "dialect",
+                "delimiter",
+                "quotechar",
+                "escapechar",
+                "doublequote",
+                "skipinitialspace",
+                "lineterminator",
+                "quoting",
+                "strict"
+            ]
+        },
+        "Error": {
+            "apio": "Error",
+            "answer": "Error",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "175.json": {
+        "rst": {
+            "answer": "convert",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "176.json": {
+        "ConfigParser": {
+            "apio": "ConfigParser",
+            "answer": "ConfigObj",
+            "signo": [],
+            "signn": [
+                "infile",
+                "options",
+                "configspec",
+                "encoding",
+                "interpolation",
+                "raise_errors",
+                "list_values",
+                "create_empty",
+                "file_error",
+                "stringify",
+                "indent_type",
+                "default_encoding",
+                "unrepr",
+                "write_empty_values",
+                "_inspec"
+            ]
+        }
+    },
+    "177.json": {
+        "get": {
+            "apio": "get",
+            "answer": "get",
+            "signo": [
+                "url",
+                "params",
+                "kwargs"
+            ],
+            "signn": [
+                "url",
+                "allow_redirects",
+                "kwargs"
+            ]
+        },
+        "status_code": {
+            "apio": "status_code",
+            "answer": "status",
+            "signo": [],
+            "signn": []
+        },
+        "reason": {
+            "apio": "reason",
+            "answer": "reason",
+            "signo": [],
+            "signn": []
+        },
+        "json": {
+            "apio": "json",
+            "answer": "json",
+            "signo": [
+                "kwargs"
+            ],
+            "signn": [
+                "encoding",
+                "loads",
+                "content_type"
+            ]
+        }
+    },
+    "190.json": {
+        "request": {
+            "apio": "request",
+            "answer": "get",
+            "signo": [
+                "url",
+                "method",
+                "body",
+                "headers",
+                "kwargs"
+            ],
+            "signn": [
+                "url",
+                "params",
+                "kwargs"
+            ]
+        },
+        "post": {
+            "apio": "post",
+            "answer": "post",
+            "signo": [
+                "path",
+                "payload",
+                "headers",
+                "params_dict",
+                "params"
+            ],
+            "signn": [
+                "url",
+                "data",
+                "json",
+                "kwargs"
+            ]
+        },
+        "status_int": {
+            "apio": "status_int",
+            "answer": "status_code",
+            "signo": [],
+            "signn": []
+        },
+        "status": {
+            "apio": "status",
+            "answer": "reason",
+            "signo": [],
+            "signn": []
+        },
+        "body_string": {
+            "apio": "body_string",
+            "answer": "json",
+            "signo": [
+                "charset",
+                "unicode_errors"
+            ],
+            "signn": [
+                "kwargs"
+            ]
+        },
+        "read": {
+            "apio": "read",
+            "answer": "iter_content",
+            "signo": [
+                "n"
+            ],
+            "signn": [
+                "chunk_size",
+                "decode_unicode"
+            ]
+        }
+    },
+    "191.json": {
+        "route": {
+            "apio": "route",
+            "answer": "route",
+            "signo": [
+                "rule",
+                "options"
+            ],
+            "signn": [
+                "path",
+                "method",
+                "callback",
+                "name",
+                "apply",
+                "skip",
+                "config"
+            ]
+        },
+        "Flask": {
+            "apio": "Flask",
+            "answer": "Bottle",
+            "signo": [
+                "import_name",
+                "static_url_path",
+                "static_folder",
+                "static_host",
+                "host_matching",
+                "subdomain_matching",
+                "template_folder",
+                "instance_path",
+                "instance_relative_config",
+                "root_path"
+            ],
+            "signn": [
+                "kwargs"
+            ]
+        },
+        "config": {
+            "apio": "config",
+            "answer": "config",
+            "signo": [],
+            "signn": []
+        },
+        "run": {
+            "apio": "run",
+            "answer": "run",
+            "signo": [
+                "host",
+                "port",
+                "debug",
+                "load_dotenv",
+                "options"
+            ],
+            "signn": [
+                "kwargs"
+            ]
+        },
+        "Response": {
+            "apio": "Response",
+            "answer": "Response",
+            "signo": [],
+            "signn": []
+        },
+        "request": {
+            "apio": "request",
+            "answer": "request",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "193.json": {
+        "IPNetwork": {
+            "apio": "IPNetwork",
+            "answer": "ip_interface",
+            "signo": [
+                "addr",
+                "version",
+                "flags"
+            ],
+            "signn": [
+                "address"
+            ]
+        },
+        "IPAddress": {
+            "apio": "IPAddress",
+            "answer": "ip_address",
+            "signo": [
+                "addr",
+                "version",
+                "flags"
+            ],
+            "signn": [
+                "address"
+            ]
+        },
+        "value": {
+            "answer": "int",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "network": {
+            "answer": "network_address",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "197.json": {
+        "hashpw": {
+            "answer": "encrypt, verify",
+            "signo": [
+                "password",
+                "salt"
+            ],
+            "signn": "No Candidate API"
+        }
+    },
+    "199.json": {
+        "StrictRedis": {
+            "apio": "StrictRedis",
+            "answer": "Redis",
+            "signo": [],
+            "signn": [
+                "host",
+                "port",
+                "db",
+                "password",
+                "socket_timeout",
+                "socket_connect_timeout",
+                "socket_keepalive",
+                "socket_keepalive_options",
+                "connection_pool",
+                "unix_socket_path",
+                "encoding",
+                "encoding_errors",
+                "decode_responses",
+                "retry_on_timeout",
+                "ssl",
+                "ssl_keyfile",
+                "ssl_certfile",
+                "ssl_cert_reqs",
+                "ssl_ca_certs",
+                "ssl_check_hostname",
+                "max_connections",
+                "single_connection_client",
+                "health_check_interval",
+                "client_name",
+                "username",
+                "auto_close_connection_pool"
+            ]
+        },
+        "set": {
+            "apio": "set",
+            "answer": "set",
+            "signo": [
+                "name",
+                "value",
+                "ex",
+                "px",
+                "nx",
+                "xx",
+                "keepttl",
+                "get",
+                "exat",
+                "pxat"
+            ],
+            "signn": [
+                "name",
+                "value",
+                "ex",
+                "px",
+                "nx",
+                "xx",
+                "keepttl"
+            ]
+        },
+        "get": {
+            "apio": "get",
+            "answer": "get",
+            "signo": [
+                "name"
+            ],
+            "signn": [
+                "name"
+            ]
+        },
+        "delete": {
+            "apio": "delete",
+            "answer": "delete",
+            "signo": [
+                "names"
+            ],
+            "signn": [
+                "names"
+            ]
+        }
+    },
+    "200.json": {
+        "noqa": {
+            "apio": "noqa",
+            "answer": "noqa",
+            "signo": [],
+            "signn": []
+        },
+        "match": {
+            "answer": "match",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "register_check": {
+            "apio": "register_check",
+            "answer": "register_check",
+            "signo": [
+                "check",
+                "codes"
+            ],
+            "signn": [
+                "check",
+                "codes"
+            ]
+        },
+        "expand_indent": {
+            "apio": "expand_indent",
+            "answer": "expand_indent",
+            "signo": [
+                "line"
+            ],
+            "signn": [
+                "line"
+            ]
+        },
+        "Checker": {
+            "apio": "Checker",
+            "answer": "Checker",
+            "signo": [
+                "filename",
+                "lines",
+                "options",
+                "report",
+                "kwargs"
+            ],
+            "signn": [
+                "filename",
+                "lines",
+                "options",
+                "report",
+                "kwargs"
+            ]
+        },
+        "ARITHMETIC_OP": {
+            "apio": "ARITHMETIC_OP",
+            "answer": "ARITHMETIC_OP",
+            "signo": [],
+            "signn": []
+        },
+        "_checks": {
+            "answer": "_checks",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "202.json": {
+        "initialize": {
+            "apio": "initialize",
+            "answer": "Server",
+            "signo": [
+                "uri",
+                "trace_level",
+                "trace_file",
+                "trace_stack_limit",
+                "bytes_mode",
+                "fileno",
+                "kwargs"
+            ],
+            "signn": [
+                "host",
+                "port",
+                "use_ssl",
+                "allowed_referral_hosts",
+                "get_info",
+                "tls",
+                "formatter",
+                "connect_timeout",
+                "mode",
+                "validator"
+            ]
+        },
+        "search_s": {
+            "apio": "search_s",
+            "answer": "search",
+            "signo": [
+                "base",
+                "scope",
+                "filterstr",
+                "attrlist",
+                "attrsonly"
+            ],
+            "signn": [
+                "search_base",
+                "search_filter",
+                "search_scope",
+                "dereference_aliases",
+                "attributes",
+                "size_limit",
+                "time_limit",
+                "types_only",
+                "get_operational_attributes",
+                "controls",
+                "paged_size",
+                "paged_criticality",
+                "paged_cookie",
+                "auto_escape"
+            ]
+        },
+        "simple_bind_s": {
+            "apio": "simple_bind_s",
+            "answer": "bind",
+            "signo": [
+                "who",
+                "cred",
+                "serverctrls",
+                "clientctrls"
+            ],
+            "signn": [
+                "read_server_info",
+                "controls"
+            ]
+        }
+    },
+    "203.json": {
+        "RTMClient": {
+            "apio": "RTMClient",
+            "answer": "RTMClient",
+            "signo": [
+                "token",
+                "run_async",
+                "auto_reconnect",
+                "ssl",
+                "proxy",
+                "timeout",
+                "base_url",
+                "connect_method",
+                "ping_interval",
+                "loop",
+                "headers"
+            ],
+            "signn": [
+                "token",
+                "run_async",
+                "auto_reconnect",
+                "ssl",
+                "proxy",
+                "timeout",
+                "base_url",
+                "connect_method",
+                "ping_interval",
+                "loop",
+                "headers"
+            ]
+        },
+        "WebClient": {
+            "apio": "WebClient",
+            "answer": "WebClient",
+            "signo": [
+                "token",
+                "run_async",
+                "auto_reconnect",
+                "ssl",
+                "proxy",
+                "timeout",
+                "base_url",
+                "connect_method",
+                "ping_interval",
+                "loop",
+                "headers"
+            ],
+            "signn": []
+        },
+        "run_on": {
+            "apio": "run_on",
+            "answer": "run_on",
+            "signo": [
+                "event"
+            ],
+            "signn": [
+                "event"
+            ]
+        },
+        "chat_postMessage": {
+            "apio": "chat_postMessage",
+            "answer": "chat_postMessage",
+            "signo": [
+                "channel",
+                "text",
+                "as_user",
+                "attachments",
+                "blocks",
+                "thread_ts",
+                "reply_broadcast",
+                "unfurl_links",
+                "unfurl_media",
+                "container_id",
+                "icon_emoji",
+                "icon_url",
+                "mrkdwn",
+                "link_names",
+                "username",
+                "parse",
+                "metadata",
+                "kwargs"
+            ],
+            "signn": [
+                "channel",
+                "text",
+                "as_user",
+                "attachments",
+                "blocks",
+                "thread_ts",
+                "reply_broadcast",
+                "unfurl_links",
+                "unfurl_media",
+                "container_id",
+                "icon_emoji",
+                "icon_url",
+                "mrkdwn",
+                "link_names",
+                "username",
+                "parse",
+                "metadata",
+                "kwargs"
+            ]
+        },
+        "users_list": {
+            "apio": "users_list",
+            "answer": "users_list",
+            "signo": [
+                "cursor",
+                "include_locale",
+                "limit",
+                "team_id",
+                "kwargs"
+            ],
+            "signn": [
+                "cursor",
+                "include_locale",
+                "limit",
+                "team_id",
+                "kwargs"
+            ]
+        },
+        "start": {
+            "apio": "start",
+            "answer": "start",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "205.json": {
+        "parse": {
+            "apio": "parse",
+            "answer": "parse",
+            "signo": [
+                "source",
+                "parser"
+            ],
+            "signn": [
+                "file",
+                "parser",
+                "bufsize",
+                "forbid_dtd",
+                "forbid_entities",
+                "forbid_external"
+            ]
+        },
+        "findall": {
+            "answer": "getElementsByTagname",
+            "signo": [
+                "elem",
+                "path",
+                "namespaces",
+                "with_prefixes"
+            ],
+            "signn": "No Candidate API"
+        },
+        "get": {
+            "answer": "get",
+            "signo": [],
+            "signn": "No Candidate API"
+        }
+    },
+    "207.json": {
+        "parseFragment": {
+            "apio": "parseFragment",
+            "answer": "clean",
+            "signo": [
+                "stream",
+                "args",
+                "kwargs"
+            ],
+            "signn": [
+                "text",
+                "tags",
+                "attributes",
+                "protocols",
+                "strip",
+                "strip_comments",
+                "css_sanitizer"
+            ]
+        }
+    },
+    "218.json": {
+        "load": {
+            "apio": "load",
+            "answer": "safe_load",
+            "signo": [
+                "stream",
+                "Loader",
+                "version",
+                "preserve_quotes"
+            ],
+            "signn": [
+                "stream"
+            ]
+        },
+        "dump": {
+            "apio": "dump",
+            "answer": "safe_dump",
+            "signo": [
+                "data",
+                "stream",
+                "Dumper",
+                "default_style",
+                "default_flow_style",
+                "canonical",
+                "indent",
+                "width",
+                "allow_unicode",
+                "line_break",
+                "encoding",
+                "explicit_start",
+                "explicit_end",
+                "version",
+                "tags",
+                "block_seq_indent"
+            ],
+            "signn": [
+                "data",
+                "stream",
+                "kwds"
+            ]
+        }
+    },
+    "221.json": {
+        "ArgumentParser": {
+            "apio": "ArgumentParser",
+            "answer": "ArgParser",
+            "signo": [
+                "prog",
+                "usage",
+                "description",
+                "epilog",
+                "parents",
+                "formatter_class",
+                "prefix_chars",
+                "fromfile_prefix_chars",
+                "argument_default",
+                "conflict_handler",
+                "add_help",
+                "allow_abbrev",
+                "exit_on_error"
+            ],
+            "signn": []
+        },
+        "parse_args": {
+            "apio": "parse_args",
+            "answer": "parse_args",
+            "signo": [
+                "args",
+                "namespace"
+            ],
+            "signn": [
+                "args",
+                "namespace",
+                "config_file_contents",
+                "env_vars"
+            ]
+        }
+    },
+    "225.json": {
+        "dumps": {
+            "apio": "dumps",
+            "answer": "dumps",
+            "signo": [],
+            "signn": []
+        },
+        "loads": {
+            "apio": "loads",
+            "answer": "loads",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "233.json": {
+        "code": {
+            "answer": "code",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "response_data": {
+            "answer": "message",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "tweets": {
+            "answer": "search",
+            "signo": [
+                "q"
+            ],
+            "signn": "No Candidate API"
+        },
+        "show": {
+            "apio": "show",
+            "answer": "get_status",
+            "signo": [
+                "_id"
+            ],
+            "signn": [
+                "id",
+                "kwargs"
+            ]
+        },
+        "TwitterHTTPError": {
+            "answer": "TweepError",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "verified": {
+            "apio": "verified",
+            "answer": "verified",
+            "signo": [],
+            "signn": []
+        },
+        "location": {
+            "apio": "location",
+            "answer": "location",
+            "signo": [],
+            "signn": []
+        },
+        "description": {
+            "apio": "description",
+            "answer": "description",
+            "signo": [],
+            "signn": []
+        },
+        "screen_name": {
+            "answer": "screen_name",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "name": {
+            "apio": "name",
+            "answer": "name",
+            "signo": [],
+            "signn": []
+        },
+        "statuses_count": {
+            "answer": "stasuses_count",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "followers_count": {
+            "answer": "followers_count",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "Twitter": {
+            "apio": "Twitter",
+            "answer": "API",
+            "signo": [
+                "format",
+                "domain",
+                "secure",
+                "auth",
+                "api_version",
+                "retry",
+                "verify_context"
+            ],
+            "signn": [
+                "auth",
+                "cache",
+                "host",
+                "parser",
+                "proxy",
+                "retry_count",
+                "retry_delay",
+                "retry_errors",
+                "timeout",
+                "upload_host",
+                "user_agent",
+                "wait_on_rate_limit"
+            ]
+        },
+        "OAuth": {
+            "apio": "OAuth",
+            "answer": "OAuthHandler",
+            "signo": [
+                "token",
+                "token_secret",
+                "consumer_key",
+                "consumer_secret"
+            ],
+            "signn": [
+                "consumer_key",
+                "consumer_secret",
+                "access_token",
+                "access_token_secret",
+                "callback"
+            ]
+        },
+        "user": {
+            "apio": "user",
+            "answer": "user",
+            "signo": [],
+            "signn": []
+        },
+        "user_timeline": {
+            "apio": "user_timeline",
+            "answer": "user_timeline",
+            "signo": [
+                "screen_name",
+                "count"
+            ],
+            "signn": [
+                "kwargs"
+            ]
+        }
+    },
+    "236.json": {
+        "WSGIServer": {
+            "apio": "WSGIServer",
+            "answer": "server",
+            "signo": [
+                "listener",
+                "application",
+                "backlog",
+                "spawn",
+                "log",
+                "error_log",
+                "handler_class",
+                "environ",
+                "ssl_args"
+            ],
+            "signn": [
+                "sock",
+                "site",
+                "log",
+                "environ",
+                "max_size",
+                "max_http_version",
+                "protocol",
+                "server_event",
+                "minimum_chunk_size",
+                "log_x_forwarded_for",
+                "custom_pool",
+                "keepalive",
+                "log_output",
+                "log_format",
+                "url_length_limit",
+                "debug",
+                "socket_timeout",
+                "capitalize_response_headers"
+            ]
+        },
+        "patch_all": {
+            "apio": "patch_all",
+            "answer": "monkey_patch",
+            "signo": [
+                "socket",
+                "dns",
+                "time",
+                "select",
+                "thread",
+                "os",
+                "ssl",
+                "subprocess",
+                "sys",
+                "aggressive",
+                "Event",
+                "builtins",
+                "signal",
+                "queue",
+                "contextvars",
+                "kwargs"
+            ],
+            "signn": [
+                "on"
+            ]
+        }
+    },
+    "238.json": {
+        "ib": {
+            "answer": "*",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "s": {
+            "apio": "s",
+            "answer": "dataclass",
+            "signo": [],
+            "signn": [
+                "init",
+                "repr",
+                "eq",
+                "order",
+                "unsafe_hash",
+                "frozen",
+                "match_args",
+                "kw_only",
+                "slots"
+            ]
+        }
+    },
+    "251.json": {
+        "create": {
+            "answer": "create_redis",
+            "signo": [
+                "cls",
+                "host",
+                "port",
+                "password",
+                "db",
+                "encoder",
+                "auto_reconnect",
+                "loop",
+                "protocol_class"
+            ],
+            "signn": "No Candidate API"
+        },
+        "next_published": {
+            "apio": "next_published",
+            "answer": "xread",
+            "signo": [],
+            "signn": [
+                "streams",
+                "count",
+                "block"
+            ]
+        },
+        "close": {
+            "apio": "close",
+            "answer": "close",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "254.json": {
+        "local": {
+            "apio": "local",
+            "answer": "run",
+            "signo": [
+                "command",
+                "capture",
+                "shell"
+            ],
+            "signn": [
+                "command",
+                "kwargs"
+            ]
+        },
+        "lcd": {
+            "apio": "lcd",
+            "answer": "cd",
+            "signo": [
+                "path"
+            ],
+            "signn": [
+                "path"
+            ]
+        }
+    },
+    "265.json": {
+        "parse": {
+            "apio": "parse",
+            "answer": "validate",
+            "signo": [
+                "version"
+            ],
+            "signn": [
+                "version_string"
+            ]
+        },
+        "compare": {
+            "apio": "compare",
+            "answer": "compare",
+            "signo": [
+                "ver1",
+                "ver2"
+            ],
+            "signn": [
+                "v1",
+                "v2"
+            ]
+        },
+        "match": {
+            "apio": "match",
+            "answer": "match",
+            "signo": [
+                "version",
+                "match_expr"
+            ],
+            "signn": [
+                "spec",
+                "version"
+            ]
+        }
+    },
+    "268.json": {
+        "add_argument": {
+            "answer": "option, argument",
+            "signo": [
+                "args",
+                "kwargs"
+            ],
+            "signn": "No Candidate API"
+        }
+    },
+    "272.json": {
+        "update": {
+            "apio": "update",
+            "answer": "update",
+            "signo": [
+                "value"
+            ],
+            "signn": [
+                "n"
+            ]
+        },
+        "ProgressBar": {
+            "apio": "ProgressBar",
+            "answer": "tqdm",
+            "signo": [
+                "maxval",
+                "widgets",
+                "term_width",
+                "poll",
+                "left_justify",
+                "fd"
+            ],
+            "signn": [
+                "iterable",
+                "desc",
+                "total",
+                "leave",
+                "file",
+                "ncols",
+                "mininterval",
+                "maxinterval",
+                "miniters",
+                "ascii",
+                "disable",
+                "unit",
+                "unit_scale",
+                "dynamic_ncols",
+                "smoothing",
+                "bar_format",
+                "initial",
+                "position",
+                "postfix",
+                "unit_divisor",
+                "write_bytes",
+                "lock_args",
+                "nrows",
+                "colour",
+                "delay",
+                "gui",
+                "kwargs"
+            ]
+        }
+    },
+    "273.json": {
+        "Collect": {
+            "answer": "Collect",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "Client": {
+            "apio": "Client",
+            "answer": "Client",
+            "signo": [
+                "url",
+                "kwargs"
+            ],
+            "signn": [
+                "wsdl",
+                "wsse",
+                "transport",
+                "service_name",
+                "port_name",
+                "plugins",
+                "settings"
+            ]
+        },
+        "WebFault": {
+            "apio": "WebFault",
+            "answer": "Fault",
+            "signo": [
+                "fault",
+                "document"
+            ],
+            "signn": [
+                "message",
+                "code",
+                "actor",
+                "detail",
+                "subcodes"
+            ]
+        }
+    },
+    "280.json": {
+        "addheaders": {
+            "apio": "addheaders",
+            "answer": "headers",
+            "signo": [],
+            "signn": []
+        },
+        "open": {
+            "apio": "open",
+            "answer": "get",
+            "signo": [
+                "url_or_request",
+                "data",
+                "timeout"
+            ],
+            "signn": [
+                "url",
+                "params",
+                "kwargs"
+            ]
+        },
+        "read": {
+            "apio": "read",
+            "answer": "text",
+            "signo": [
+                "size"
+            ],
+            "signn": []
+        }
+    },
+    "282.json": {
+        "ConstantLR": {
+            "apio": "ConstantLR",
+            "answer": "ConstantLRSchedule",
+            "signo": [],
+            "signn": [
+                "optimizer",
+                "last_epoch"
+            ]
+        },
+        "BertAdam": {
+            "apio": "BertAdam",
+            "answer": "AdamW",
+            "signo": [
+                "params",
+                "lr",
+                "warmup",
+                "t_total",
+                "schedule",
+                "b1",
+                "b2",
+                "e",
+                "weight_decay_rate",
+                "max_grad_norm"
+            ],
+            "signn": [
+                "params",
+                "lr",
+                "betas",
+                "eps",
+                "weight_decay",
+                "correct_bias"
+            ]
+        },
+        "WarmupCosineSchedule": {
+            "apio": "WarmupCosineSchedule",
+            "answer": "WarmupCosineSchedule",
+            "signo": [
+                "warmup",
+                "t_total",
+                "cycles",
+                "kw"
+            ],
+            "signn": [
+                "optimizer",
+                "warmup_steps",
+                "t_total",
+                "cycles",
+                "last_epoch"
+            ]
+        },
+        "WarmupConstantSchedule": {
+            "apio": "WarmupConstantSchedule",
+            "answer": "WarmupConstantSchedule",
+            "signo": [],
+            "signn": [
+                "optimizer",
+                "warmup_steps",
+                "last_epoch"
+            ]
+        },
+        "WarmupLinearSchedule": {
+            "apio": "WarmupLinearSchedule",
+            "answer": "WarmupLinearSchedule",
+            "signo": [],
+            "signn": [
+                "optimizer",
+                "warmup_steps",
+                "t_total",
+                "last_epoch"
+            ]
+        },
+        "WarmupCosineWithHardRestartsSchedule": {
+            "apio": "WarmupCosineWithHardRestartsSchedule",
+            "answer": "WarmupCosineWithHardRestartsSchedule",
+            "signo": [
+                "warmup",
+                "t_total",
+                "cycles",
+                "kw"
+            ],
+            "signn": [
+                "optimizer",
+                "warmup_steps",
+                "t_total",
+                "cycles",
+                "last_epoch"
+            ]
+        },
+        "from_pretrained": {
+            "apio": "from_pretrained",
+            "answer": "from_pretrained",
+            "signo": [
+                "cls",
+                "pretrained_model_name",
+                "cache_dir",
+                "inputs",
+                "kwargs"
+            ],
+            "signn": [
+                "cls",
+                "pretrained_model_name_or_path",
+                "model_args",
+                "kwargs"
+            ]
+        }
+    },
+    "283.json": {
+        "IPv4Address": {
+            "answer": "IPv4Address",
+            "signo": [
+                "address"
+            ],
+            "signn": "No Candidate API"
+        },
+        "AddressValueError": {
+            "apio": "AddressValueError",
+            "answer": "AddrFormatError",
+            "signo": [],
+            "signn": []
+        },
+        "IPv6Address": {
+            "answer": "IPv6Address",
+            "signo": [
+                "address"
+            ],
+            "signn": "No Candidate API"
+        }
+    },
+    "284.json": {
+        "ClientSession": {
+            "apio": "ClientSession",
+            "answer": "AsyncClient",
+            "signo": [
+                "base_url",
+                "connector",
+                "loop",
+                "cookies",
+                "headers",
+                "skip_auto_headers",
+                "auth",
+                "json_serialize",
+                "request_class",
+                "response_class",
+                "ws_response_class",
+                "version",
+                "cookie_jar",
+                "connector_owner",
+                "raise_for_status",
+                "read_timeout",
+                "conn_timeout",
+                "timeout",
+                "auto_decompress",
+                "trust_env",
+                "requote_redirect_url",
+                "trace_configs",
+                "read_bufsize",
+                "fallback_charset_resolver"
+            ],
+            "signn": [
+                "auth",
+                "params",
+                "headers",
+                "cookies",
+                "verify",
+                "cert",
+                "http1",
+                "http2",
+                "proxy",
+                "proxies",
+                "mounts",
+                "timeout",
+                "follow_redirects",
+                "limits",
+                "max_redirects",
+                "event_hooks",
+                "base_url",
+                "transport",
+                "app",
+                "trust_env",
+                "default_encoding"
+            ]
+        },
+        "get": {
+            "apio": "get",
+            "answer": "get",
+            "signo": [
+                "url",
+                "allow_redirects",
+                "kwargs"
+            ],
+            "signn": [
+                "url",
+                "params",
+                "headers",
+                "cookies",
+                "auth",
+                "follow_redirects",
+                "timeout",
+                "extensions"
+            ]
+        },
+        "status": {
+            "apio": "status",
+            "answer": "status_code",
+            "signo": [],
+            "signn": []
+        },
+        "ClientConnectorError": {
+            "apio": "ClientConnectorError",
+            "answer": "ConnectError",
+            "signo": [
+                "connection_key",
+                "os_error"
+            ],
+            "signn": []
+        }
+    },
+    "293.json": {
+        "white": {
+            "answer": "white",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "QThread": {
+            "apio": "QThread",
+            "answer": "QThread",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "parent",
+                "destroyed",
+                "finished",
+                "objectName",
+                "objectNameChanged",
+                "started"
+            ]
+        },
+        "QCoreApplication": {
+            "apio": "QCoreApplication",
+            "answer": "QCoreApplication",
+            "signo": [
+                "argv"
+            ],
+            "signn": [
+                "arg__1",
+                "destroyed",
+                "objectName",
+                "objectNameChanged"
+            ]
+        },
+        "Vertical": {
+            "answer": "Vertical",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "Horizontal": {
+            "answer": "Horizontal",
+            "signo": [],
+            "signn": "No Candidate API"
+        },
+        "instance": {
+            "apio": "instance",
+            "answer": "instance",
+            "signo": [],
+            "signn": []
+        },
+        "QMainWindow": {
+            "apio": "QMainWindow",
+            "answer": "QMainWindow",
+            "signo": [
+                "parent",
+                "flags"
+            ],
+            "signn": [
+                "parent",
+                "flags",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "animated",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "dockNestingEnabled",
+                "dockOptions",
+                "documentMode",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "iconSize",
+                "iconSizeChanged",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "rect",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabShape",
+                "tabifiedDockWidgetActivated",
+                "tabletTracking",
+                "toolButtonStyle",
+                "toolButtonStyleChanged",
+                "toolTip",
+                "toolTipDuration",
+                "unifiedTitleAndToolBarOnMac",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QWidget": {
+            "apio": "QWidget",
+            "answer": "QWidget",
+            "signo": [
+                "parent",
+                "flags"
+            ],
+            "signn": [
+                "parent",
+                "f",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "rect",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QApplication": {
+            "apio": "QApplication",
+            "answer": "QApplication",
+            "signo": [
+                "argv"
+            ],
+            "signn": [
+                "arg__1",
+                "destroyed",
+                "objectName",
+                "objectNameChanged"
+            ]
+        },
+        "QAction": {
+            "apio": "QAction",
+            "answer": "QAction",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "icon",
+                "text",
+                "parent",
+                "autoRepeat",
+                "changed",
+                "checkable",
+                "checked",
+                "destroyed",
+                "enabled",
+                "font",
+                "hovered",
+                "iconText",
+                "iconVisibleInMenu",
+                "menuRole",
+                "objectName",
+                "objectNameChanged",
+                "priority",
+                "shortcut",
+                "shortcutContext",
+                "shortcutVisibleInContextMenu",
+                "statusTip",
+                "toggled",
+                "toolTip",
+                "triggered",
+                "visible",
+                "whatsThis"
+            ]
+        },
+        "QPushButton": {
+            "apio": "QPushButton",
+            "answer": "QPushButton",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "icon",
+                "text",
+                "parent",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "autoDefault",
+                "autoExclusive",
+                "autoFillBackground",
+                "autoRepeat",
+                "autoRepeatDelay",
+                "autoRepeatInterval",
+                "baseSize",
+                "checkable",
+                "checked",
+                "childrenRect",
+                "childrenRegion",
+                "clicked",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "default",
+                "destroyed",
+                "down",
+                "enabled",
+                "flat",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "iconSize",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "pressed",
+                "rect",
+                "released",
+                "shortcut",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "toggled",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QLineEdit": {
+            "apio": "QLineEdit",
+            "answer": "QLineEdit",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "arg__1",
+                "parent",
+                "acceptDrops",
+                "acceptableInput",
+                "accessibleDescription",
+                "accessibleName",
+                "alignment",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "clearButtonEnabled",
+                "contextMenuPolicy",
+                "cursor",
+                "cursorMoveStyle",
+                "cursorPosition",
+                "cursorPositionChanged",
+                "customContextMenuRequested",
+                "destroyed",
+                "displayText",
+                "dragEnabled",
+                "echoMode",
+                "editingFinished",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frame",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "hasSelectedText",
+                "height",
+                "inputMask",
+                "inputMethodHints",
+                "inputRejected",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maxLength",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "modified",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "placeholderText",
+                "pos",
+                "readOnly",
+                "rect",
+                "redoAvailable",
+                "returnPressed",
+                "selectedText",
+                "selectionChanged",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "text",
+                "textChanged",
+                "textEdited",
+                "toolTip",
+                "toolTipDuration",
+                "undoAvailable",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QTextEdit": {
+            "apio": "QTextEdit",
+            "answer": "QTextEdit",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "text",
+                "parent",
+                "acceptDrops",
+                "acceptRichText",
+                "accessibleDescription",
+                "accessibleName",
+                "autoFillBackground",
+                "autoFormatting",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "copyAvailable",
+                "currentCharFormatChanged",
+                "cursor",
+                "cursorPositionChanged",
+                "cursorWidth",
+                "customContextMenuRequested",
+                "destroyed",
+                "document",
+                "documentTitle",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameRect",
+                "frameShadow",
+                "frameShape",
+                "frameSize",
+                "frameWidth",
+                "fullScreen",
+                "geometry",
+                "height",
+                "horizontalScrollBarPolicy",
+                "html",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "lineWidth",
+                "lineWrapColumnOrWidth",
+                "lineWrapMode",
+                "locale",
+                "markdown",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "midLineWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "overwriteMode",
+                "palette",
+                "placeholderText",
+                "plainText",
+                "pos",
+                "readOnly",
+                "rect",
+                "redoAvailable",
+                "selectionChanged",
+                "size",
+                "sizeAdjustPolicy",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabChangesFocus",
+                "tabStopDistance",
+                "tabStopWidth",
+                "tabletTracking",
+                "textChanged",
+                "textInteractionFlags",
+                "toolTip",
+                "toolTipDuration",
+                "undoAvailable",
+                "undoRedoEnabled",
+                "updatesEnabled",
+                "verticalScrollBarPolicy",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QVBoxLayout": {
+            "apio": "QVBoxLayout",
+            "answer": "QVBoxLayout",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "parent",
+                "destroyed",
+                "margin",
+                "objectName",
+                "objectNameChanged",
+                "sizeConstraint",
+                "spacing"
+            ]
+        },
+        "QGridLayout": {
+            "apio": "QGridLayout",
+            "answer": "QGridLayout",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "parent",
+                "destroyed",
+                "margin",
+                "objectName",
+                "objectNameChanged",
+                "sizeConstraint",
+                "spacing"
+            ]
+        },
+        "QSplitter": {
+            "apio": "QSplitter",
+            "answer": "QSplitter",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "arg__1",
+                "parent",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "autoFillBackground",
+                "baseSize",
+                "childrenCollapsible",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameRect",
+                "frameShadow",
+                "frameShape",
+                "frameSize",
+                "frameWidth",
+                "fullScreen",
+                "geometry",
+                "handleWidth",
+                "height",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "lineWidth",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "midLineWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "opaqueResize",
+                "orientation",
+                "palette",
+                "pos",
+                "rect",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "splitterMoved",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QLabel": {
+            "apio": "QLabel",
+            "answer": "QLabel",
+            "signo": [
+                "parent",
+                "flags"
+            ],
+            "signn": [
+                "text",
+                "parent",
+                "f",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "alignment",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameRect",
+                "frameShadow",
+                "frameShape",
+                "frameSize",
+                "frameWidth",
+                "fullScreen",
+                "geometry",
+                "hasSelectedText",
+                "height",
+                "indent",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "lineWidth",
+                "linkActivated",
+                "linkHovered",
+                "locale",
+                "margin",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "midLineWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "openExternalLinks",
+                "palette",
+                "pixmap",
+                "pos",
+                "rect",
+                "scaledContents",
+                "selectedText",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "textFormat",
+                "textInteractionFlags",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "wordWrap",
+                "x",
+                "y"
+            ]
+        },
+        "QFileDialog": {
+            "apio": "QFileDialog",
+            "answer": "QFileDialog",
+            "signo": [
+                "parent",
+                "f"
+            ],
+            "signn": [
+                "parent",
+                "caption",
+                "directory",
+                "filter",
+                "acceptDrops",
+                "acceptMode",
+                "accepted",
+                "accessibleDescription",
+                "accessibleName",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "confirmOverwrite",
+                "contextMenuPolicy",
+                "currentChanged",
+                "currentUrlChanged",
+                "cursor",
+                "customContextMenuRequested",
+                "defaultSuffix",
+                "destroyed",
+                "directoryEntered",
+                "directoryUrlEntered",
+                "enabled",
+                "fileMode",
+                "fileSelected",
+                "filesSelected",
+                "filterSelected",
+                "finished",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "nameFilterDetailsVisible",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "options",
+                "palette",
+                "pos",
+                "readOnly",
+                "rect",
+                "rejected",
+                "resolveSymlinks",
+                "size",
+                "sizeGripEnabled",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "supportedSchemes",
+                "tabletTracking",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "urlSelected",
+                "urlsSelected",
+                "viewMode",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QMessageBox": {
+            "apio": "QMessageBox",
+            "answer": "QMessageBox",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "icon",
+                "title",
+                "text",
+                "buttons",
+                "parent",
+                "flags",
+                "acceptDrops",
+                "accepted",
+                "accessibleDescription",
+                "accessibleName",
+                "autoFillBackground",
+                "baseSize",
+                "buttonClicked",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "detailedText",
+                "enabled",
+                "finished",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "iconPixmap",
+                "informativeText",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "rect",
+                "rejected",
+                "size",
+                "sizeGripEnabled",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "standardButtons",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "textFormat",
+                "textInteractionFlags",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QComboBox": {
+            "apio": "QComboBox",
+            "answer": "QComboBox",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "parent",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "activated",
+                "autoCompletion",
+                "autoCompletionCaseSensitivity",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "count",
+                "currentData",
+                "currentIndex",
+                "currentIndexChanged",
+                "currentText",
+                "currentTextChanged",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "duplicatesEnabled",
+                "editTextChanged",
+                "editable",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frame",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "highlighted",
+                "iconSize",
+                "inputMethodHints",
+                "insertPolicy",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maxCount",
+                "maxVisibleItems",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumContentsLength",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "modelColumn",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "placeholderText",
+                "pos",
+                "rect",
+                "size",
+                "sizeAdjustPolicy",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "textActivated",
+                "textHighlighted",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QScrollArea": {
+            "apio": "QScrollArea",
+            "answer": "QScrollArea",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "parent",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "alignment",
+                "autoFillBackground",
+                "baseSize",
+                "childrenRect",
+                "childrenRegion",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameRect",
+                "frameShadow",
+                "frameShape",
+                "frameSize",
+                "frameWidth",
+                "fullScreen",
+                "geometry",
+                "height",
+                "horizontalScrollBarPolicy",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "lineWidth",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "midLineWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "rect",
+                "size",
+                "sizeAdjustPolicy",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "verticalScrollBarPolicy",
+                "visible",
+                "whatsThis",
+                "widgetResizable",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QStyle": {
+            "apio": "QStyle",
+            "answer": "QStyle",
+            "signo": [],
+            "signn": [
+                "destroyed",
+                "objectName",
+                "objectNameChanged"
+            ]
+        },
+        "QGroupBox": {
+            "apio": "QGroupBox",
+            "answer": "QGroupBox",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "title",
+                "parent",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "alignment",
+                "autoFillBackground",
+                "baseSize",
+                "checkable",
+                "checked",
+                "childrenRect",
+                "childrenRegion",
+                "clicked",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "enabled",
+                "flat",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "rect",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "toggled",
+                "toolTip",
+                "toolTipDuration",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        },
+        "QCheckBox": {
+            "apio": "QCheckBox",
+            "answer": "QCheckBox",
+            "signo": [
+                "parent"
+            ],
+            "signn": [
+                "text",
+                "parent",
+                "acceptDrops",
+                "accessibleDescription",
+                "accessibleName",
+                "autoExclusive",
+                "autoFillBackground",
+                "autoRepeat",
+                "autoRepeatDelay",
+                "autoRepeatInterval",
+                "baseSize",
+                "checkable",
+                "checked",
+                "childrenRect",
+                "childrenRegion",
+                "clicked",
+                "contextMenuPolicy",
+                "cursor",
+                "customContextMenuRequested",
+                "destroyed",
+                "down",
+                "enabled",
+                "focus",
+                "focusPolicy",
+                "font",
+                "frameGeometry",
+                "frameSize",
+                "fullScreen",
+                "geometry",
+                "height",
+                "icon",
+                "iconSize",
+                "inputMethodHints",
+                "isActiveWindow",
+                "layoutDirection",
+                "locale",
+                "maximized",
+                "maximumHeight",
+                "maximumSize",
+                "maximumWidth",
+                "minimized",
+                "minimumHeight",
+                "minimumSize",
+                "minimumSizeHint",
+                "minimumWidth",
+                "modal",
+                "mouseTracking",
+                "normalGeometry",
+                "objectName",
+                "objectNameChanged",
+                "palette",
+                "pos",
+                "pressed",
+                "rect",
+                "released",
+                "shortcut",
+                "size",
+                "sizeHint",
+                "sizeIncrement",
+                "sizePolicy",
+                "stateChanged",
+                "statusTip",
+                "styleSheet",
+                "tabletTracking",
+                "toggled",
+                "toolTip",
+                "toolTipDuration",
+                "tristate",
+                "updatesEnabled",
+                "visible",
+                "whatsThis",
+                "width",
+                "windowFilePath",
+                "windowIcon",
+                "windowIconChanged",
+                "windowIconText",
+                "windowIconTextChanged",
+                "windowModality",
+                "windowModified",
+                "windowOpacity",
+                "windowTitle",
+                "windowTitleChanged",
+                "x",
+                "y"
+            ]
+        }
+    },
+    "303.json": {
+        "HTTPError": {
+            "apio": "HTTPError",
+            "answer": "RequestException",
+            "signo": [],
+            "signn": [
+                "args",
+                "kwargs"
+            ]
+        }
+    },
+    "304.json": {
+        "load_cert_der_string": {
+            "apio": "load_cert_der_string",
+            "answer": "load_pem_x509_certificate",
+            "signo": [
+                "cert_str"
+            ],
+            "signn": []
+        },
+        "get_subject": {
+            "apio": "get_subject",
+            "answer": "subject",
+            "signo": [],
+            "signn": []
+        },
+        "as_text": {
+            "apio": "as_text",
+            "answer": "get_attributes_for_oid",
+            "signo": [
+                "indent",
+                "flags"
+            ],
+            "signn": [
+                "oid"
+            ]
+        },
+        "get_issuer": {
+            "apio": "get_issuer",
+            "answer": "issuer",
+            "signo": [],
+            "signn": []
+        },
+        "get_pubkey": {
+            "apio": "get_pubkey",
+            "answer": "public_key",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "67.json": {
+        "get_notBefore": {
+            "apio": "get_notBefore",
+            "answer": "not_valid_before",
+            "signo": [],
+            "signn": []
+        },
+        "get_notAfter": {
+            "apio": "get_notAfter",
+            "answer": "not_valid_after",
+            "signo": [],
+            "signn": []
+        },
+        "load_certificate": {
+            "apio": "load_certificate",
+            "answer": "load_pem_x509_certificate",
+            "signo": [
+                "type",
+                "buffer"
+            ],
+            "signn": []
+        },
+        "get_subject": {
+            "apio": "get_subject",
+            "answer": "subject",
+            "signo": [],
+            "signn": []
+        },
+        "get_issuer": {
+            "apio": "get_issuer",
+            "answer": "issuer",
+            "signo": [],
+            "signn": []
+        },
+        "get_components": {
+            "apio": "get_components",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        },
+        "digest": {
+            "apio": "digest",
+            "answer": "digest_name",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "130.json": {
+        "settings": {
+            "apio": "settings",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        },
+        "dump": {
+            "apio": "dump",
+            "answer": "dump",
+            "signo": [
+                "file",
+                "protocol",
+                "byref",
+                "fmode",
+                "recurse",
+                "kwds"
+            ],
+            "signn": []
+        }
+    },
+    "206.json": {
+        "dumps": {
+            "apio": "dumps",
+            "answer": "dumps",
+            "signo": [
+                "obj",
+                "skipkeys",
+                "ensure_ascii",
+                "check_circular",
+                "allow_nan",
+                "cls",
+                "indent",
+                "separators",
+                "encoding",
+                "default",
+                "use_decimal",
+                "namedtuple_as_object",
+                "tuple_as_array",
+                "bigint_as_string",
+                "sort_keys",
+                "item_sort_key",
+                "for_json",
+                "ignore_nan",
+                "int_as_string_bitcount",
+                "iterable_as_array",
+                "kw"
+            ],
+            "signn": []
+        },
+        "loads": {
+            "apio": "loads",
+            "answer": "loads",
+            "signo": [
+                "s",
+                "encoding",
+                "cls",
+                "object_hook",
+                "parse_float",
+                "parse_int",
+                "parse_constant",
+                "object_pairs_hook",
+                "use_decimal",
+                "allow_nan",
+                "kw"
+            ],
+            "signn": []
+        }
+    },
+    "457.json": {
+        "Ext": {
+            "apio": "Ext",
+            "answer": "ExtType",
+            "signo": [
+                "type",
+                "data"
+            ],
+            "signn": []
+        },
+        "packb": {
+            "apio": "packb",
+            "answer": "packb",
+            "signo": [
+                "obj",
+                "options"
+            ],
+            "signn": []
+        },
+        "unpackb": {
+            "apio": "unpackb",
+            "answer": "unpackb",
+            "signo": [
+                "s",
+                "options"
+            ],
+            "signn": []
+        }
+    },
+    "489.json": {
+        "PrettyTable": {
+            "apio": "PrettyTable",
+            "answer": "tabulate",
+            "signo": [
+                "field_names",
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "align": {
+            "apio": "align",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        },
+        "float_format": {
+            "apio": "float_format",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        },
+        "add_row": {
+            "apio": "add_row",
+            "answer": "-",
+            "signo": [
+                "row",
+                "divider"
+            ],
+            "signn": []
+        }
+    },
+    "492.json": {
+        "Curl": {
+            "apio": "Curl",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        },
+        "BytesIO": {
+            "apio": "BytesIO",
+            "answer": "-",
+            "signo": [
+                "initial_bytes"
+            ],
+            "signn": []
+        },
+        "HTTPHeader": {
+            "apio": "HTTPHeader",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        },
+        "setopt": {
+            "apio": "setopt",
+            "answer": "get",
+            "signo": [
+                "option",
+                "value"
+            ],
+            "signn": []
+        },
+        "contenttype": {
+            "apio": "contenttype",
+            "answer": "-",
+            "signo": [],
+            "signn": []
+        }
+    },
+    "528.json": {
+        "VerifyingKey": {
+            "apio": "VerifyingKey",
+            "answer": "VerifyKey",
+            "signo": [
+                "vk_s",
+                "prefix",
+                "encoding"
+            ],
+            "signn": []
+        },
+        "to_bytes": {
+            "apio": "to_bytes",
+            "answer": "encode",
+            "signo": [
+                "prefix"
+            ],
+            "signn": []
+        },
+        "verify": {
+            "apio": "verify",
+            "answer": "verify",
+            "signo": [
+                "sig",
+                "msg",
+                "prefix",
+                "encoding"
+            ],
+            "signn": []
+        }
+    },
+    "616.json": {
+        "IPv4Network": {
+            "apio": "IPv4Network",
+            "answer": "ip_interface",
+            "signo": [
+                "address",
+                "strict"
+            ],
+            "signn": []
+        },
+        "IPv6Network": {
+            "apio": "IPv6Network",
+            "answer": "ip_interface",
+            "signo": [
+                "address",
+                "strict"
+            ],
+            "signn": []
+        },
+        "broadcast": {
+            "apio": "broadcast",
+            "answer": "broadcast_address",
+            "signo": [],
+            "signn": []
+        },
+        "IPNetwork": {
+            "apio": "IPNetwork",
+            "answer": "ip_interface",
+            "signo": [
+                "address",
+                "version",
+                "strict"
+            ],
+            "signn": []
+        }
+    }
+}

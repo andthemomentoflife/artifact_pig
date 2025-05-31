@@ -1,0 +1,16 @@
+*~
+build
+dist
+setup.cfg
+*.pyc
+*.egg-info
+sandbox
+
+# mkdocs
+docs
+
+# VS code
+.vscode
+
+# Conda
+env

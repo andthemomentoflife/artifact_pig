@@ -1,0 +1,35 @@
+site_name: Pandoc (Python Library)
+
+docs_dir: mkdocs
+
+site_dir: docs
+
+nav:
+  - Overview: index.md
+  - Getting started: getting-started.md
+  - Examples: examples.md
+  - Document structure: document.md
+  - Pandoc's Markdown: markdown.md
+  - Containers and iteration: iteration.md
+  - Configuration: configuration.md
+  - Cookbook: cookbook.md
+  - Command-line interface: cli.md
+  - API reference: api.md
+  - Changelog: changelog.md
+  - "Labs 🧪": labs.md
+
+theme: "material"
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+repo_name: "pandoc"
+repo_url: "https://github.com/boisgera/pandoc"
+edit_uri: edit/master/mkdocs/

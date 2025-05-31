@@ -1,0 +1,32 @@
+# Compiled files
+*.py[co]
+*.a
+*.o
+*.so
+*.pyd
+
+# Other generated files
+pyfits/version.py
+
+# Sphinx
+_build
+
+# Packages/installer info
+.eggs
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Other
+.tox
+.*.swp
+.coverage
+cover

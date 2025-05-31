@@ -1,0 +1,190 @@
+CHANGELOG
+=========
+
+0.16.0: 2020-06-08
+------------------
+- Added support for Python 3.8
+- Dropped support for Python <3.6
+- Deprecated 'loop' parameter in Connection.create and Pool.create
+- Added support for zpopmin and zrangebylex methods
+- Fix DeprecationWarning for inspect.formatargspec()
+- Fix missing object asyncio.streams.IncompleteReadError
+- Intersphinx: all classes that can be imported from the top-level module must now be
+  referenced from the top-level module in the docstrings too.
+  E.g. :class:`asyncio_redis.exceptions.Error` has changed to
+  :class:`asyncio_redis.Error`.
+- Added flake8, black, and isort as mandatory CI checks
+
+
+0.15.1: 2018-07-30
+------------------
+
+- Added Python 3.7 compatibility.
+- Added several options to zadd and zincrby.
+- Bugfix in concurrency with transactions:
+
+    * Transactions were apparently prone to race conditions, because crutial
+      parts of the transaction did a 'yield' while entering the transaction in
+      the 'multi' command. This has been fixed now by using an asyncio.Lock.
+    * Because of this, it also became possible to start multiple
+      transactions or commands on the same connection. If the lock was
+      acquired by another transaction/command, will will wait instead of
+      raising an exception.
+
+- Fall back to asyncio.async when asyncio.ensure_future is not available.
+- Encode scripts using utf-8 instead of ascii.
+- Better handle timeouts during pubsub.
+
+
+0.14.3: 2016-09-04
+------------------
+
+Fixes:
+- Better handle timeouts during pubsub. (Handle IncompleteReadError.)
+- Use asyncio.ensure_future instead of deprecated async() when available.
+- Encode scripts using utf-8 instead of ascii.
+- Bugfix in concurrency with transactions:
+    * Transactions were apparently prone to race conditions, because crutial
+      parts of the transaction did a 'yield' while entering the transaction in
+      the 'multi' command. This has been fixed now by using an asyncio.Lock.
+    * Because of this, it also became possible to start multiple
+      transactions or commands on the same connection. If the lock was acquired
+      by another transaction/command, will will wait instead of raising an
+      exception.
+
+0.14.2: 2015-12-16
+------------------
+
+Fixes:
+- Added a few missing @asyncio.coroutine decorators for Python 3.5
+  compatibility.
+
+
+0.14.1: 2015-08-08
+------------------
+
+Fixes:
+- Correctly handle empty chunks returned by the 'scan' function.
+- Correctly handle returned  values in `spop`.
+- Fixed default '*' argument for scan operations. (When BytesEncore is used.)
+
+New features:
+- Add a RedisProtocol.watch() method
+- Added LIMIT support for ZRangeByScore
+- Added count parameter to 'scan' cursors.
+
+
+0.13.4: 2014-08-18
+------------------
+
+Fixes:
+- Rpoplpush can return nil when the list is empty.
+
+
+0.13.3: 2014-07-13
+------------------
+
+Fixes:
+- Protocol was in a faulty state after a transaction failure.
+- Pubsub did not work with BytesEncoder.
+
+
+0.13.2: 2014-07-06
+------------------
+
+Fixes:
+- Fixed broken psubscribe.
+
+
+0.13.1: 2014-06-29
+------------------
+
+Fixes:
+- HiRedisProtocol implementation has been improved. (Cleaner code and a little
+  faster.)
+
+Backward-incompatibilities:
+- Some arguments of Connection, Pool and RedisProtocol are now keyword-only.
+- Made hiredis on optional dependency. (Using extra_required in the setup.)
+
+
+0.12.6: 2014-06-17
+------------------
+
+New features:
+- Added `protocol_class` parameter for Pool and Connection
+- Added experimental `HiRedisProtocol` class.
+
+Fixes:
+- Improving the performance of multibulk replies (Especially _asset, _asdict
+  and _aslist methods should be significantly faster.)
+
+
+0.12.5: 2014-06-03
+------------------
+
+Fixes:
+- Circular reference between `Connection` and `Protocol` was never cleaned up
+  because of __del__.
+- Memory leaks in unit tests were fixed.
+
+Backward-incompatibilities:
+- Connection is not closed anymore in __del__, like in version 0.12.4, but
+  instead the `Connection` and `Pool` classes got an explicit close method.
+
+
+0.12.4: 2014-05-28
+------------------
+
+New features:
+- Unix socket support. (When port=3, we suppose unix socket connection.)
+
+Fixes:
+- Closing of transport in Connection.__del__ and unittests.
+
+
+0.12.3: 2014-04-18
+------------------
+
+Fixes:
+- Correctly handle CancelledError.
+- Passing of both host and port variables in unit tests.
+- Using the correct loop during reconnect in Connection.
+
+
+0.12.2: 2014-04-09
+------------------
+
+Fixes:
+- Passing a custom loop should now work everywhere. (Unit tests added.)
+
+
+0.12.1: 2014-04-03
+------------------
+
+New features:
+- _asdict suffixes for methods that have a ZRangeReply return-annotation.
+- Added ZREVRANGE
+
+Fixes:
+- Encoding of negative integers
+- Fixes in the MOVE and PUNSUBSCRIBE
+- Using separate logger
+- Fix when transmitting large replies over the network.
+
+Backward-incompatibilities:
+- Iterating through a DictReply or ZRangeReply now yields futures that return
+  (key, value) tuples instead of {key:value} dicts of one element. (This
+  behaviour was not really documented and it certainly is an improvement.)
+
+0.11.1: 2014-03-30
+------------------
+
+New features:
+- Timeout support for blpop/brpop/brpoplpush
+- setup.py improved. Don't install asyncio on Python 3.4
+
+
+0.10.1: 2014-03-19
+------------------
+No changelog before this point.

@@ -1,0 +1,10 @@
+MANIFEST
+build/
+dist/
+*.egg-info/
+*.pyc
+*.swp
+.tox/
+.cache/
+.pytest_cache/
+docs/_build

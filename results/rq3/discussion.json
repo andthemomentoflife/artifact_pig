@@ -1,0 +1,356 @@
+{
+    "120.json.set_verifier": {
+        "model": "llama",
+        "api": "check_verifier",
+        "fault": "LLM1",
+        "description": "API: right api but not used (but hard as now verifier is not related to client not a token)"
+    },
+    "6.json.recv_exit_status": {
+        "model": "llama",
+        "api": "resolve_connect_kwargs",
+        "fault": "LLM2",
+        "description": "POST: LLM code changes the semanctic (return_code 256) and also filtered out by our filtering policy | if LLM gives right code, we need output, which can be matched with original line, but currently the local is wrong"
+    },
+    "119.json.get_session": {
+        "model": "llama",
+        "api": "get_region",
+        "fault": "GUMTREE",
+        "description": "POST: gumtree matched failed at both default and post. Even though it matched, we will need import boto and also should change the variable name (self.session -> self.s3_service)"
+    },
+    "265.json.parse": {
+        "model": "llama",
+        "api": "Parser",
+        "fault": "LLM1",
+        "description": "IMP: wrong import in the node, not import statement"
+    },
+    "13.json.new_version": {
+        "model": "llama",
+        "api": "LeafPattern",
+        "fault": "LLM2",
+        "description": "-"
+    },
+    "207.json.childNodes": {
+        "model": "llama",
+        "api": "charEncoding",
+        "fault": "LLM1",
+        "description": "API: Cleaner can be a candidate but actually LLM gave non existing API"
+    },
+    "233.json.OAuth": {
+        "model": "llama",
+        "api": "author_id",
+        "fault": "GUMTREE",
+        "description": "POST: LLM code often divdies the variable which makes Gumtree picks the line. If gumtree matches the tw_api, by the way, also we need auth too"
+    },
+    "492.json.setopt": {
+        "model": "llama",
+        "api": "list_paths",
+        "fault": "GUMTREE",
+        "description": "GUMTREE: multiple function is in one function, by ours, we can match(default cannot) partially right (response = requests.get matched, too)"
+    },
+    "175.json.rst": {
+        "model": "llama",
+        "api": "convert_text",
+        "fault": "LLM2",
+        "description": "wrong api"
+    },
+    "202.json.search_s": {
+        "model": "llama",
+        "api": "search_level",
+        "fault": "LLM1",
+        "description": "API: even though we provided correct api (search), it doens't use"
+    },
+    "28.json.secret_key": {
+        "model": "gemma",
+        "api": "create_logger",
+        "fault": "LLM2",
+        "description": "we filtered out and secret_key is from another library"
+    },
+    "85.json.sudo": {
+        "model": "gemma",
+        "api": "send",
+        "fault": "LLM2",
+        "description": "argument value has changed (sudo) but LLM doesn't reflect it"
+    },
+    "67.json.get_components": {
+        "model": "gemma",
+        "api": "aa_compromise",
+        "fault": "LLM2",
+        "description": "SLICING: wrong api get_components (transplanting only line works as x509 is wrong now)"
+    },
+    "126.json.KafkaConsumer": {
+        "model": "gemma",
+        "api": "VerifiableConsumer",
+        "fault": "LLM1",
+        "description": "argument value inside conf cannot be figured as cimplementation"
+    },
+    "489.json.PrettyTable": {
+        "model": "gemma",
+        "api": "JupyterHTMLStr",
+        "fault": "ETC",
+        "description": "parse error"
+    },
+    "65.json.Attribute": {
+        "model": "gemma",
+        "api": "AttrsInstance",
+        "fault": "GUMTREE",
+        "description": "decorator"
+    },
+    "268.json.add_argument": {
+        "model": "gemma",
+        "api": "CoreArgument",
+        "fault": "GUMTREE",
+        "description": "decorator"
+    },
+    "176.json.ConfigParser": {
+        "model": "gemma",
+        "api": "ConfigObjError",
+        "fault": "LLM1",
+        "description": "right api, but wrong arg allow_no_value"
+    },
+    "85.json.run": {
+        "model": "gemma",
+        "api": "rename",
+        "fault": "LLM2",
+        "description": ""
+    },
+    "67.json.load_certificate": {
+        "model": "gemma",
+        "api": "certificates",
+        "fault": "LLM2",
+        "description": ""
+    },
+    "85.json.password": {
+        "model": "qwen",
+        "api": "auth_password",
+        "fault": "GUMTREE",
+        "description": "gumtree matches all nodes with connect (it is right but can be solved in other way)"
+    },
+    "126.json.commit": {
+        "model": "qwen",
+        "api": "ConfigEntry",
+        "fault": "ETC",
+        "description": "omits the line"
+    },
+    "202.json.unbind_s": {
+        "model": "qwen",
+        "api": "bind_pool",
+        "fault": "LLM2",
+        "description": "we considred this as not an answer even though it is(benchmark)"
+    },
+    "65.json.attributes": {
+        "model": "qwen",
+        "api": "attrs",
+        "fault": "GUMTREE",
+        "description": "decorator"
+    },
+    "126.json.close": {
+        "model": "qwen",
+        "api": "Consumer",
+        "fault": "LLM2",
+        "description": "no close for producer"
+    },
+    "272.json.ProgressBar": {
+        "model": "qwen",
+        "api": "pbar",
+        "fault": "LLM2",
+        "description": "due to other line importing tqdm"
+    },
+    "13.json.add_argument": {
+        "model": "qwen",
+        "api": "formal_usage",
+        "fault": "GUMTREE",
+        "description": "transplant is hard as it becomes a constant..."
+    },
+    "254.json.local": {
+        "model": "qwen",
+        "api": "call",
+        "fault": "ETC",
+        "description": "partially omits the code"
+    },
+    "282.json.from_pretrained": {
+        "model": "qwen",
+        "api": "from_pretrained",
+        "fault": "LLM1",
+        "description": "POST: modeling import this it is right, as imp is additionally needed and we can find it"
+    },
+    "5.json.option": {
+        "model": "deepseek",
+        "api": "BooleanOptionalAction",
+        "fault": "GUMTREE",
+        "description": "decorator"
+    },
+    "6.json.put": {
+        "model": "deepseek",
+        "api": "Result",
+        "fault": "LLM1",
+        "description": "API: put is right api but we need to call with client"
+    },
+    "4.json.get": {
+        "model": "deepseek",
+        "api": "fget",
+        "fault": "GUMTREE",
+        "description": "it divdes the task"
+    },
+    "13.json.dry_run": {
+        "model": "deepseek",
+        "api": "parse_pattern",
+        "fault": "LLM2",
+        "description": "-"
+    },
+    "251.json.next_published": {
+        "model": "deepseek",
+        "api": "client_list",
+        "fault": "LLM2",
+        "description": "hallucination(even didn't use any canddiaets)"
+    },
+    "153.json.RequestHandler": {
+        "model": "deepseek",
+        "api": "request_context",
+        "fault": "ETC",
+        "description": "code omitted"
+    },
+    "5.json.echo": {
+        "model": "deepseek",
+        "api": "Namespace",
+        "fault": "LLM2",
+        "description": "fitlered out due to using print"
+    },
+    "205.json.getroot": {
+        "model": "deepseek",
+        "api": "",
+        "fault": "LLM2",
+        "description": "wrong usage and api from other lib"
+    },
+    "8.json.randint": {
+        "model": "deepseek",
+        "api": "add_recipient",
+        "fault": "LLM2",
+        "description": "from other lib (hallucination)"
+    },
+    "13.json.working_path": {
+        "model": "deepseek",
+        "api": "parse_pattern",
+        "fault": "LLM2",
+        "description": "="
+    },
+    "86.json.PyQuery": {
+        "model": "gemma3",
+        "api": "prettify",
+        "fault": "LLM2",
+        "description": "STATION_LIST_URL cannot be idrectly opened"
+    },
+    "8.json.get_random_bytes": {
+        "model": "gemma3",
+        "api": "parameter_bytes",
+        "fault": "LLM2",
+        "description": "from other lib"
+    },
+    "303.json.connection_from_url": {
+        "model": "gemma3",
+        "api": "ContentDecodingError",
+        "fault": "GUMTREE",
+        "description": "it's hard as it matches with with statement (shoudl check)"
+    },
+    "236.json.WSGIServer": {
+        "model": "gemma3",
+        "api": "serve",
+        "fault": "LLM1",
+        "description": "API: providing right api but not used (2nd)"
+    },
+    "251.json.subscribe": {
+        "model": "gemma3",
+        "api": "punsubscribe",
+        "fault": "LLM2",
+        "description": "but evaluated as wrong different to benchamrk"
+    },
+    "200.json.match": {
+        "model": "gemma3",
+        "api": "max_line_length",
+        "fault": "ETC",
+        "description": "parse error"
+    },
+    "13.json.interactive": {
+        "model": "gemma3",
+        "api": "Dict",
+        "fault": "LLM2",
+        "description": "should be in subscript"
+    },
+    "28.json.route": {
+        "model": "gemma3",
+        "api": "request",
+        "fault": "ETC",
+        "description": "partially omits the code"
+    },
+    "233.json.Twitter": {
+        "model": "qwen3",
+        "api": "iterator",
+        "fault": "GUMTREE",
+        "description": "divide the code in two line, even naive Gumtree cannot match"
+    },
+    "202.json.simple_bind_s": {
+        "model": "qwen3",
+        "api": "validate_bind",
+        "fault": "GUMTREE",
+        "description": "POST: bind is needed and also, conn1, conn2 should be var unified"
+    },
+    "197.json.hashpw": {
+        "model": "qwen3",
+        "api": "genhash",
+        "fault": "LLM2",
+        "description": "encode is needed"
+    },
+    "67.json.digest": {
+        "model": "qwen3",
+        "api": "PaddingContext",
+        "fault": "LLM2",
+        "description": "API: making custom digest"
+    },
+    "205.json.findall": {
+        "model": "qwen3",
+        "api": "name",
+        "fault": "LLM2",
+        "description": "wrong code (nsmap)"
+    },
+    "457.json.unpackb": {
+        "model": "qwen3",
+        "api": "Unpacker",
+        "fault": "ETC",
+        "description": "partially omits the code"
+    },
+    "191.json.Response": {
+        "model": "qwen3",
+        "api": "LocalResponse",
+        "fault": "ETC",
+        "description": "partially omits the code"
+    },
+    "67.json.get_issuer": {
+        "model": "gemma3",
+        "api": "digest_size",
+        "fault": "LLM1",
+        "description": "wrong usage of dict (but right api)"
+    },
+    "67.json.get_subject": {
+        "model": "gemma3",
+        "api": "digest_size",
+        "fault": "LLM1",
+        "description": "wrong usage of dict"
+    },
+    "304.json.get_pubkey": {
+        "model": "qwen3",
+        "api": "public_key",
+        "fault": "LLM1",
+        "description": "wrong usage of the line (but right api)"
+    },
+    "282.json.BertLayerNorm": {
+        "model": "qwen",
+        "api": "XLNetLayerNorm",
+        "fault": "LLM1",
+        "description": "wrong import with (original benchmark is to other internal library)"
+    },
+    "528.json.VerifyingKey": {
+        "model": "qwen3",
+        "api": "",
+        "fault": "it turns out to be correct",
+        "description": ""
+    }
+}

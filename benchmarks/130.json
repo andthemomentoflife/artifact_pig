@@ -1,0 +1,20 @@
+{
+    "bef_file": "130b.py",
+    "aft_file": "130a.py",
+    "libo": "dill",
+    "libn": "cloudpickle",
+    "apio": [
+        "settings",
+        "dump"
+    ],
+    "apin": [
+        "dump",
+        "cloudpickle"
+    ],
+    "url": "https://github.com/rapid-design-of-systems-laboratory/beluga/commit/078e3e56",
+    "filepath": "beluga/beluga.py",
+    "lines": [
+        "141-142:141",
+        "8:8"
+    ]
+}

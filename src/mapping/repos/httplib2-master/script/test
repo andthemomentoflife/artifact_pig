@@ -1,0 +1,71 @@
+#!/bin/bash
+set -eux
+# By default, run tests with pytest-forked plugin,
+# disable in terminal for debugging, you may add --forked
+flag_forked="--forked"
+if [[ -z "${CI:-}" ]] && [[ -t 1 ]] ; then
+	flag_forked=""
+fi
+test_flags=(
+	$@
+	"$flag_forked"
+	tests/
+)
+if [[ -n "${CI:-}" ]] ; then
+	test_flags+=(--fulltrace)
+fi
+: "${stages="venv,style,test,check_version"}"
+
+main() {
+	cd "$( dirname "${BASH_SOURCE[0]}" )/.."
+	if enabled venv && [[ -z "${CI:-}${VIRTUAL_ENV:-}" ]] ; then
+		echo "environment: neither CI nor existing virtualenv, using \`python -m venv ./venv\`" >&2
+		[[ -x venv/bin/pip ]] || python -m venv venv
+		source venv/bin/activate
+	fi
+
+	if enabled style ; then
+		pip install black isort
+		grep -E 'flake8' <requirements-test.txt |xargs pip install
+		# TODO enable after py2/3 merge and initial black/isort run
+        # isort python3/ tests/
+        # black python3/ tests/
+        flake8 python3/ tests/
+	fi
+
+	if enabled test ; then
+		pip install -e . -r requirements-test.txt
+		if [[ -n "${CI:-}" ]] ; then
+			httplib2_test_still_run_skipped=1 pytest --fulltrace -k test_303 "$@" tests/ || true
+			httplib2_test_still_run_skipped=1 pytest --fulltrace -k test_head_301 "$@" tests/ || true
+		fi
+		pytest --fulltrace "${test_flags[@]}"
+	fi
+
+	if enabled check_version ; then
+        rm -f dist/*.gz
+		# TODO: sdist bdist_wheel
+		# but wheels don't roll well with our 2/3 split code base
+		python setup.py sdist
+		install_check_version
+	fi
+
+	rm -rf ./_httplib2_test_cache
+}
+
+enabled() {
+	[[ ",${stages}," = *,$1,* ]] || return 1
+}
+
+install_check_version() {
+	# FIXME replace gz with whl after py2/3 merge
+	pip install dist/httplib2*gz
+	version_source=$(python setup.py --version)
+	version_installed=$(pip show httplib2 |grep -F Version: |cut -d' ' -f2)
+	if [[ "$version_source" != "$version_installed" ]] ; then
+		echo "error: installed package version=$version_installed does not match source=$version_source" >&2
+		return 1
+	fi
+}
+
+main "$@"

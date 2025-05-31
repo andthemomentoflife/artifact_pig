@@ -1,0 +1,1596 @@
+{
+    "1.json": {
+        "Path": {
+            "is_correct": "n",
+            "reason": "parse error"
+        },
+        "ancestor": {
+            "is_correct": "n",
+            "reason": "parse error"
+        },
+        "child": {
+            "is_correct": "n",
+            "reason": "parse error"
+        }
+    },
+    "2.json": {
+        "LevelDB": {
+            "is_correct": "y",
+            "reason": "matched with a line"
+        },
+        "Put": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Get": {
+            "is_correct": "n",
+            "reason": "suppose user can get all lines in func exists. Actually, plyvel's get doesn't raise exception when key doesn't exist. even plyvel.KeyNotFoundError doesn't exist."
+        },
+        "Delete": {
+            "is_correct": "n",
+            "reason": "not implemented"
+        }
+    },
+    "4.json": {
+        "Client": {
+            "is_correct": "y",
+            "reason": "well deleted"
+        },
+        "get": {
+            "is_correct": "n",
+            "reason": "get_response should be used"
+        },
+        "data": {
+            "is_correct": "n",
+            "reason": "n"
+        },
+        "mimetype": {
+            "is_correct": "n",
+            "reason": "var name changed"
+        },
+        "status_code": {
+            "is_correct": "n",
+            "reason": "not used status_code"
+        },
+        "content_length": {
+            "is_correct": "n",
+            "reason": "var name changed and even surround context is wrong"
+        }
+    },
+    "5.json": {
+        "command": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "argument": {
+            "is_correct": "n",
+            "reason": "required cannot be used"
+        },
+        "option": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "version_option": {
+            "is_correct": "n",
+            "reason": "version is added"
+        },
+        "echo": {
+            "is_correct": "n",
+            "reason": "onix_file_path needed and not migrated "
+        }
+    },
+    "6.json": {
+        "SSHClient": {
+            "is_correct": "y",
+            "reason": "well deleted"
+        },
+        "load_system_host_keys": {
+            "is_correct": "y",
+            "reason": "well deleted"
+        },
+        "set_missing_host_key_policy": {
+            "is_correct": "y",
+            "reason": "well deleted"
+        },
+        "connect": {
+            "is_correct": "n",
+            "reason": "no key_filename arg"
+        },
+        "open_sftp": {
+            "is_correct": "y",
+            "reason": "well deleted"
+        },
+        "close": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        },
+        "exec_command": {
+            "is_correct": "y",
+            "reason": "suppose user doesn't get cd() line"
+        },
+        "recv_exit_status": {
+            "is_correct": "n",
+            "reason": "user should get additional return_code, stdout, stderr"
+        },
+        "put": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        }
+    },
+    "8.json": {
+        "StrongRandom": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        },
+        "randint": {
+            "is_correct": "n",
+            "reason": "not migrated (no randoM)"
+        },
+        "get_random_bytes": {
+            "is_correct": "n",
+            "reason": "semantic changed"
+        },
+        "new": {
+            "is_correct": "n",
+            "reason": "import error in modes"
+        },
+        "encrypt": {
+            "is_correct": "n",
+            "reason": "var name changed"
+        },
+        "decrypt": {
+            "is_correct": "n",
+            "reason": "ciphertext became different"
+        }
+    },
+    "9.json": {
+        "Bottle": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "post": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "abort": {
+            "is_correct": "n",
+            "reason": "no import"
+        },
+        "get": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "read": {
+            "is_correct": "n",
+            "reason": "used json"
+        },
+        "run": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "headers": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "13.json": {
+        "ArgumentParser": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "add_argument": {
+            "is_correct": "n",
+            "reason": "no dry_run"
+        },
+        "parse_args": {
+            "is_correct": "n",
+            "reason": "no docopt imported"
+        },
+        "set_defaults": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Namespace": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "new_version": {
+            "is_correct": "b",
+            "reason": "<new_version>"
+        },
+        "working_path": {
+            "is_correct": "n",
+            "reason": "semantics changed, no case where working_path is empty"
+        },
+        "dry_run": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "interactive": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "20.json": {
+        "BertForTokenClassification": {
+            "is_correct": "n",
+            "reason": "import"
+        },
+        "XLNetPreTrainedModel": {
+            "is_correct": "n",
+            "reason": "no api"
+        },
+        "XLNetModel": {
+            "is_correct": "n",
+            "reason": "no api"
+        }
+    },
+    "28.json": {
+        "Flask": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "route": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "method": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "secret_key": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "form": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "files": {
+            "is_correct": "n",
+            "reason": "post processing async should be done"
+        },
+        "flash": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "render_template": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "send_from_directory": {
+            "is_correct": "n",
+            "reason": "await so async should be done"
+        },
+        "send_file": {
+            "is_correct": "n",
+            "reason": "not migrated at all"
+        },
+        "run": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "36.json": {
+        "spawn_n": {
+            "is_correct": "n",
+            "reason": "no join"
+        },
+        "sleep": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "monkey_patch": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "setdefaulttimeout": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "time": {
+            "is_correct": "n",
+            "reason": "time not imported"
+        }
+    },
+    "39.json": {
+        "Http": {
+            "is_correct": "n",
+            "reason": "cannot know whether it is deleted"
+        },
+        "request": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "status": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        },
+        "decode": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        }
+    },
+    "60.json": {
+        "acquire": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "LockFile": {
+            "is_correct": "n",
+            "reason": "wrong api"
+        },
+        "i_am_locking": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        },
+        "release": {
+            "is_correct": "n",
+            "reason": "not all migrated"
+        },
+        "break_lock": {
+            "is_correct": "n",
+            "reason": "not migrated"
+        }
+    },
+    "65.json": {
+        "attributes": {
+            "is_correct": "n",
+            "reason": "NonMatchingTenantError not migrated"
+        },
+        "Attribute": {
+            "is_correct": "n",
+            "reason": "NonMatchingTenantError"
+        }
+    },
+    "85.json": {
+        "run": {
+            "is_correct": "n",
+            "reason": "cannot use stdin"
+        },
+        "sudo": {
+            "is_correct": "n",
+            "reason": "no sudo"
+        },
+        "get": {
+            "is_correct": "n",
+            "reason": "additional var needed"
+        },
+        "disconnect_all": {
+            "is_correct": "n",
+            "reason": "addtional var needed"
+        },
+        "put": {
+            "is_correct": "n",
+            "reason": "wrong kwarg remote_path"
+        },
+        "user": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "hosts": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "password": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "host_string": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "warn_only": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "86.json": {
+        "PyQuery": {
+            "is_correct": "n",
+            "reason": "requests needed but no"
+        },
+        ".bicycle_station": {
+            "is_correct": "n",
+            "reason": "var name changed"
+        },
+        "div": {
+            "is_correct": "y",
+            "reason": "suppose user can get all three lines"
+        },
+        "attrib": {
+            "is_correct": "y",
+            "reason": "suppose user copies all the line"
+        },
+        "text_content": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "100.json": {
+        "KafkaProducer": {
+            "is_correct": "n",
+            "reason": "no value.serializer"
+        },
+        "send": {
+            "is_correct": "n",
+            "reason": "no errback"
+        },
+        "add_callback": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "add_errback": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "107.json": {
+        "IPv4Address": {
+            "is_correct": "n",
+            "reason": "no lib imported"
+        },
+        "IPv4Network": {
+            "is_correct": "n",
+            "reason": "no lib imported"
+        }
+    },
+    "110.json": {
+        "is_empty_string": {
+            "is_correct": "n",
+            "reason": "no api"
+        },
+        "IntegerType": {
+            "is_correct": "n",
+            "reason": "no api"
+        },
+        "try_convert": {
+            "is_correct": "y",
+            "reason": "only try_convert is right"
+        },
+        "is_not_empty_string": {
+            "is_correct": "n",
+            "reason": "no api"
+        }
+    },
+    "117.json": {
+        "wait_for_edge": {
+            "is_correct": "y",
+            "reason": "suppose user can get all lines (button. too)"
+        },
+        "setmode": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "setup": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "118.json": {
+        "Pool": {
+            "is_correct": "n",
+            "reason": "askllm"
+        },
+        "imap": {
+            "is_correct": "n",
+            "reason": "askllm"
+        },
+        "close": {
+            "is_correct": "n",
+            "reason": "askllm"
+        },
+        "join": {
+            "is_correct": "n",
+            "reason": "askllm"
+        }
+    },
+    "119.json": {
+        "get_service": {
+            "is_correct": "n",
+            "reason": "file used another lib"
+        },
+        "get_session": {
+            "is_correct": "n",
+            "reason": "anotherl ib"
+        },
+        "get_endpoint": {
+            "is_correct": "n",
+            "reason": "not del and used another lib"
+        },
+        "get_operation": {
+            "is_correct": "n",
+            "reason": "list_objects"
+        }
+    },
+    "120.json": {
+        "Consumer": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "Token": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "Client": {
+            "is_correct": "n",
+            "reason": "self.consumer is wrong"
+        },
+        "set_verifier": {
+            "is_correct": "n",
+            "reason": "not del and even token doesn't exist"
+        }
+    },
+    "125.json": {
+        "IPAddress": {
+            "is_correct": "n",
+            "reason": "wronog api"
+        },
+        "IPNetwork": {
+            "is_correct": "n",
+            "reason": "cannot find a line"
+        }
+    },
+    "126.json": {
+        "KafkaConsumer": {
+            "is_correct": "n",
+            "reason": "no kwarg max.poll.records"
+        },
+        "KafkaProducer": {
+            "is_correct": "n",
+            "reason": "wrong kwarg"
+        },
+        "poll": {
+            "is_correct": "n",
+            "reason": "cosume shouldb e used"
+        },
+        "commit": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "close": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "send": {
+            "is_correct": "n",
+            "reason": "var name self.pconn"
+        },
+        "KafkaError": {
+            "is_correct": "n",
+            "reason": "cannot finda line"
+        },
+        "ConsumerNoMoreData": {
+            "is_correct": "n",
+            "reason": "no del"
+        },
+        "SelectSelector": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "DefaultSelector": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "132.json": {
+        "Sentry": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "init_app": {
+            "is_correct": "n",
+            "reason": "no import"
+        },
+        "logging": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "level": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "register_logger_signal": {
+            "is_correct": "n",
+            "reason": "cannot determine line is deleted or matched"
+        },
+        "register_signal": {
+            "is_correct": "n",
+            "reason": "cannot determine line is deleted or matched"
+        }
+    },
+    "149.json": {
+        "open": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "PrimaryHDU": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "ImageHDU": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "153.json": {
+        "RequestHandler": {
+            "is_correct": "n",
+            "reason": "no migrated (where is the class)"
+        },
+        "body": {
+            "is_correct": "n",
+            "reason": "cannot find a line"
+        },
+        "query_string": {
+            "is_correct": "n",
+            "reason": "query_string is already a bytes/ cannot encode"
+        },
+        "WSGIApplication": {
+            "is_correct": "n",
+            "reason": "should be deleted"
+        }
+    },
+    "154.json": {
+        "Sniffer": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "reader": {
+            "is_correct": "n",
+            "reason": "import"
+        },
+        "Error": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "175.json": {
+        "PANDOC_PATH": {
+            "is_correct": "n",
+            "reason": "wrong lib"
+        },
+        "Document": {
+            "is_correct": "n",
+            "reason": "wrong lib"
+        },
+        "markdown": {
+            "is_correct": "n",
+            "reason": "wrong lib"
+        },
+        "rst": {
+            "is_correct": "n",
+            "reason": "wrong lib"
+        }
+    },
+    "176.json": {
+        "ConfigParser": {
+            "is_correct": "n",
+            "reason": "no kwarg unquote"
+        },
+        "read": {
+            "is_correct": "y",
+            "reason": "well del"
+        }
+    },
+    "177.json": {
+        "get": {
+            "is_correct": "n",
+            "reason": "session needed and even the semnatic is changed so line cannot be directly imported"
+        },
+        "status_code": {
+            "is_correct": "n",
+            "reason": "r changed to response"
+        },
+        "reason": {
+            "is_correct": "n",
+            "reason": " cannot find a line"
+        },
+        "json": {
+            "is_correct": "n",
+            "reason": "get_json needed"
+        }
+    },
+    "190.json": {
+        "request": {
+            "is_correct": "n",
+            "reason": "var changed res to response_data"
+        },
+        "Resource": {
+            "is_correct": "y",
+            "reason": "well del, suppose user can find _run matches to _post"
+        },
+        "post": {
+            "is_correct": "n",
+            "reason": "addtional url, data"
+        },
+        "status_int": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "status": {
+            "is_correct": "n",
+            "reason": "content cannot be status"
+        },
+        "body_string": {
+            "is_correct": "y",
+            "reason": "suppose user can find _run matches to _get_response_data"
+        },
+        "body_stream": {
+            "is_correct": "n",
+            "reason": "cannot find a lin"
+        },
+        "read": {
+            "is_correct": "n",
+            "reason": "res and response"
+        }
+    },
+    "191.json": {
+        "route": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Flask": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "config": {
+            "is_correct": "n",
+            "reason": "canot find a line"
+        },
+        "after_request": {
+            "is_correct": "n",
+            "reason": "cannot find a direct match line don't know whether line is del or not"
+        },
+        "run": {
+            "is_correct": "n",
+            "reason": "port changed"
+        },
+        "Response": {
+            "is_correct": "n",
+            "reason": "arg value changed due to download_sequcneces headers"
+        },
+        "request": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "jsonify": {
+            "is_correct": "n",
+            "reason": "var name changed clonse -> data"
+        },
+        "SQLAlchemy": {
+            "is_correct": "n",
+            "reason": "cannot find a direct match line don't know whether line is del or not"
+        },
+        "APIManager": {
+            "is_correct": "n",
+            "reason": "cannot find a direct match line don't know whether line is del or not"
+        },
+        "loads": {
+            "is_correct": "n",
+            "reason": "no loads imported"
+        }
+    },
+    "193.json": {
+        "IPNetwork": {
+            "is_correct": "n",
+            "reason": "no api "
+        },
+        "IPAddress": {
+            "is_correct": "n",
+            "reason": "no api"
+        },
+        "value": {
+            "is_correct": "n",
+            "reason": "no api"
+        },
+        "network": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "prefixlen": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "197.json": {
+        "gensalt": {
+            "is_correct": "n",
+            "reason": "wrong lib"
+        },
+        "hashpw": {
+            "is_correct": "n",
+            "reason": "wrong lib"
+        }
+    },
+    "199.json": {
+        "StrictRedis": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "set": {
+            "is_correct": "n",
+            "reason": "async postprocess needed"
+        },
+        "get": {
+            "is_correct": "n",
+            "reason": "async postprocessneeded"
+        },
+        "delete": {
+            "is_correct": "n",
+            "reason": "async postprocess needed"
+        }
+    },
+    "200.json": {
+        "noqa": {
+            "is_correct": "n",
+            "reason": "pycodestyle no used"
+        },
+        "match": {
+            "is_correct": "n",
+            "reason": "pycodestyle not used"
+        },
+        "register_check": {
+            "is_correct": "n",
+            "reason": "pycodestyle"
+        },
+        "expand_indent": {
+            "is_correct": "n",
+            "reason": "pycodestyle not used"
+        },
+        "Checker": {
+            "is_correct": "n",
+            "reason": "pycodestyle not used"
+        },
+        "ARITHMETIC_OP": {
+            "is_correct": "n",
+            "reason": "pycodestyle not used"
+        },
+        "_checks": {
+            "is_correct": "n",
+            "reason": "pycodestyle not used"
+        }
+    },
+    "202.json": {
+        "initialize": {
+            "is_correct": "n",
+            "reason": "var name changed"
+        },
+        "search_s": {
+            "is_correct": "n",
+            "reason": "addition connection needed"
+        },
+        "SCOPE_SUBTREE": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "INVALID_CREDENTIALS": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "simple_bind_s": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "UNWILLING_TO_PERFORM": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "INVALID_DN_SYNTAX": {
+            "is_correct": "n",
+            "reason": "notdel"
+        },
+        "SERVER_DOWN": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "unbind_s": {
+            "is_correct": "n",
+            "reason": "not del"
+        }
+    },
+    "203.json": {
+        "RTMClient": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "WebClient": {
+            "is_correct": "n",
+            "reason": "no webapi"
+        },
+        "run_on": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "chat_postMessage": {
+            "is_correct": "n",
+            "reason": "cannot use chat_postMessage to WebApi"
+        },
+        "users_list": {
+            "is_correct": "n",
+            "reason": "members >> slack_members"
+        },
+        "start": {
+            "is_correct": "n",
+            "reason": "cannot use start in webapi"
+        }
+    },
+    "205.json": {
+        "parse": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "getroot": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "findall": {
+            "is_correct": "n",
+            "reason": "no nsmap"
+        },
+        "get": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "207.json": {
+        "HTMLParser": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "HTMLSanitizer": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "parseFragment": {
+            "is_correct": "n",
+            "reason": "cannot transplant"
+        },
+        "childNodes": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "toxml": {
+            "is_correct": "y",
+            "reason": "well del"
+        }
+    },
+    "218.json": {
+        "load": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "dump": {
+            "is_correct": "n",
+            "reason": "import error for yaml"
+        }
+    },
+    "221.json": {
+        "ArgumentParser": {
+            "is_correct": "n",
+            "reason": "no kwarg au tohelp"
+        },
+        "add_argument": {
+            "is_correct": "n",
+            "reason": "group doesn'tmake sense"
+        },
+        "parse_args": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "225.json": {
+        "dumps": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "loads": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "233.json": {
+        "code": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "response_data": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "tweets": {
+            "is_correct": "n",
+            "reason": "tw_api -> api"
+        },
+        "show": {
+            "is_correct": "n",
+            "reason": "tw_api -> api"
+        },
+        "TwitterHTTPError": {
+            "is_correct": "n",
+            "reason": "wronng imp"
+        },
+        "verified": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "location": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "description": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "screen_name": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "name": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "statuses_count": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "followers_count": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Twitter": {
+            "is_correct": "n",
+            "reason": "var name changed"
+        },
+        "OAuth": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "user": {
+            "is_correct": "n",
+            "reason": "no _user"
+        },
+        "user_timeline": {
+            "is_correct": "n",
+            "reason": "api -> tw_api"
+        }
+    },
+    "236.json": {
+        "WSGIServer": {
+            "is_correct": "n",
+            "reason": "wrong api"
+        },
+        "serve_forever": {
+            "is_correct": "n",
+            "reason": "no run"
+        },
+        "patch_all": {
+            "is_correct": "n",
+            "reason": "wrong api"
+        }
+    },
+    "238.json": {
+        "ib": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "s": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "251.json": {
+        "create": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "start_subscribe": {
+            "is_correct": "n",
+            "reason": "no del"
+        },
+        "subscribe": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "next_published": {
+            "is_correct": "n",
+            "reason": "no xread"
+        },
+        "close": {
+            "is_correct": "n",
+            "reason": "close whre?"
+        }
+    },
+    "254.json": {
+        "local": {
+            "is_correct": "n",
+            "reason": "ctx needed"
+        },
+        "lcd": {
+            "is_correct": "n",
+            "reason": "ctx needed"
+        },
+        "settings": {
+            "is_correct": "n",
+            "reason": "ctx"
+        }
+    },
+    "265.json": {
+        "parse": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "compare": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "match": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        }
+    },
+    "268.json": {
+        "ArgumentParser": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "add_argument": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "add_subparsers": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "add_parser": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "set_defaults": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "parse_args": {
+            "is_correct": "y",
+            "reason": "well del"
+        }
+    },
+    "272.json": {
+        "update": {
+            "is_correct": "n",
+            "reason": " var name changed"
+        },
+        "wrap_stderr": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "flush": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "Timer": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "ETA": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "Bar": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "ProgressBar": {
+            "is_correct": "n",
+            "reason": "var name chnaged"
+        }
+    },
+    "273.json": {
+        "Collect": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Client": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "WebFault": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "HttpAuthenticated": {
+            "is_correct": "n",
+            "reason": "not del Transport"
+        },
+        "Reply": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "Text": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "addcredentials": {
+            "is_correct": "n",
+            "reason": "not del"
+        },
+        "unescape": {
+            "is_correct": "y",
+            "reason": "well del"
+        },
+        "decode": {
+            "is_correct": "y",
+            "reason": "well del"
+        }
+    },
+    "280.json": {
+        "Browser": {
+            "is_correct": "n",
+            "reason": "cannot find a direct match func"
+        },
+        "set_handle_robots": {
+            "is_correct": "n",
+            "reason": "cannot find a direct match func"
+        },
+        "addheaders": {
+            "is_correct": "n",
+            "reason": "addhearders cannot apply to Sssion"
+        },
+        "open": {
+            "is_correct": "n",
+            "reason": "sem changed due to constant url"
+        },
+        "read": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "282.json": {
+        "ConstantLR": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "WarmupCosineWithWarmupRestartsSchedule": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "BertAdam": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "WarmupCosineSchedule": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "WarmupConstantSchedule": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "WarmupLinearSchedule": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "WarmupCosineWithHardRestartsSchedule": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "from_pretrained": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        },
+        "BertLayerNorm": {
+            "is_correct": "n",
+            "reason": "not used libn"
+        }
+    },
+    "283.json": {
+        "IPv4Address": {
+            "is_correct": "n",
+            "reason": "cannot find a line"
+        },
+        "AddressValueError": {
+            "is_correct": "n",
+            "reason": "cannot find a line"
+        },
+        "IPv6Address": {
+            "is_correct": "n",
+            "reason": "cannot find a line"
+        }
+    },
+    "284.json": {
+        "ClientSession": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get": {
+            "is_correct": "n",
+            "reason": "wrong kwarg allow_redirectes"
+        },
+        "status": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "ClientConnectorError": {
+            "is_correct": "n",
+            "reason": "wrong api"
+        }
+    },
+    "293.json": {
+        "white": {
+            "is_correct": "n",
+            "reason": "no white"
+        },
+        "QThread": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QCoreApplication": {
+            "is_correct": "n",
+            "reason": "not exist"
+        },
+        "Vertical": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "Horizontal": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "instance": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "QMainWindow": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QWidget": {
+            "is_correct": "n",
+            "reason": "cannot find a line"
+        },
+        "QApplication": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "QAction": {
+            "is_correct": "n",
+            "reason": " no import"
+        },
+        "QPushButton": {
+            "is_correct": "n",
+            "reason": "no import"
+        },
+        "QLineEdit": {
+            "is_correct": "n",
+            "reason": "noimp"
+        },
+        "QTextEdit": {
+            "is_correct": "n",
+            "reason": "no imp"
+        },
+        "QVBoxLayout": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "QGridLayout": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "QSplitter": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "QLabel": {
+            "is_correct": "n",
+            "reason": "not all line"
+        },
+        "QFileDialog": {
+            "is_correct": "n",
+            "reason": "no imp"
+        },
+        "QMessageBox": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "QComboBox": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QScrollArea": {
+            "is_correct": "n",
+            "reason": " no line"
+        },
+        "QStyle": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "QGroupBox": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "QCheckBox": {
+            "is_correct": "n",
+            "reason": "no imp"
+        }
+    },
+    "303.json": {
+        "HTTPError": {
+            "is_correct": "n",
+            "reason": " no line"
+        },
+        "parse_url": {
+            "is_correct": "n",
+            "reason": " still use urlparse"
+        },
+        "scheme": {
+            "is_correct": "n",
+            "reason": " not del"
+        },
+        "connection_from_url": {
+            "is_correct": "n",
+            "reason": "still request_uri"
+        },
+        "request_uri": {
+            "is_correct": "n",
+            "reason": ""
+        }
+    },
+    "304.json": {
+        "load_cert_der_string": {
+            "is_correct": "n",
+            "reason": "import error in x509"
+        },
+        "get_subject": {
+            "is_correct": "n",
+            "reason": "wroong api SUbject"
+        },
+        "as_text": {
+            "is_correct": "n",
+            "reason": "wrong"
+        },
+        "get_issuer": {
+            "is_correct": "n",
+            "reason": "wrong"
+        },
+        "get_pubkey": {
+            "is_correct": "n",
+            "reason": "wrong"
+        }
+    },
+    "67.json": {
+        "get_notBefore": {
+            "is_correct": "n",
+            "reason": "api is right but usage is wrong"
+        },
+        "get_notAfter": {
+            "is_correct": "n",
+            "reason": "api is right but usage is wrong"
+        },
+        "load_certificate": {
+            "is_correct": "n",
+            "reason": "wrong api"
+        },
+        "get_subject": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get_issuer": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get_components": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "digest": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "130.json": {
+        "settings": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "dump": {
+            "is_correct": "n",
+            "reason": "imp error"
+        }
+    },
+    "206.json": {
+        "dumps": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "loads": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "457.json": {
+        "Ext": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "packb": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "unpackb": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "489.json": {
+        "PrettyTable": {
+            "is_correct": "n",
+            "reason": "wrong kwarg"
+        },
+        "align": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "float_format": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "add_row": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "492.json": {
+        "Curl": {
+            "is_correct": "n",
+            "reason": "structure"
+        },
+        "BytesIO": {
+            "is_correct": "n",
+            "reason": "structure"
+        },
+        "HTTPHeader": {
+            "is_correct": "n",
+            "reason": "structure"
+        },
+        "setopt": {
+            "is_correct": "n",
+            "reason": "structure"
+        },
+        "contenttype": {
+            "is_correct": "n",
+            "reason": "structure"
+        }
+    },
+    "528.json": {
+        "VerifyingKey": {
+            "is_correct": "n",
+            "reason": "not all"
+        },
+        "to_bytes": {
+            "is_correct": "n",
+            "reason": "structure"
+        },
+        "verify": {
+            "is_correct": "n",
+            "reason": "not all"
+        }
+    },
+    "616.json": {
+        "IPv4Network": {
+            "is_correct": "n",
+            "reason": "not all"
+        },
+        "IPv6Network": {
+            "is_correct": "n",
+            "reason": "not all"
+        },
+        "broadcast": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "IPNetwork": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    }
+}
