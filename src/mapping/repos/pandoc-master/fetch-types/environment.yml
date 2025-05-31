@@ -1,0 +1,7 @@
+name: pandoc-fetch-types
+dependencies:
+  - python=3.7
+  - black
+  - beautifulsoup4
+  - requests
+  - sh

@@ -1,0 +1,156 @@
+from pathlib import Path
+import os
+
+HOME_PATH = Path.home() / "desktop" / "pig_sal"
+HOME_PATH = HOME_PATH / "src/mapping/repos"
+
+git_loc_old = {
+    "unipath": "Unipath-master/unipath",
+    # 'leveldb': "",
+    "werkzeug": "werkzeug-main/src/werkzeug",
+    "click": "click-main/src/click",
+    "paramiko": "paramiko-main/paramiko",
+    "pycryptodome": "pycryptodome-master/lib/Crypto",
+    "bottle": "bottle-master/bottle.py",
+    "argparse": "argparse.py",
+    "pytorch-transformers": "pytorch-transformers-master/pytorch_transformers",
+    "flask": "flask-main/src/flask",
+    "eventlet": "eventlet-master/eventlet",
+    "httplib2": "httplib2-master/python3/httplib2",
+    "lockfile": "pylockfile-99870bfa02f1ba490da6a59b1499f0f1578c9825/lockfile",
+    "characteristic": "characteristic-main/characteristic.py",
+    "pyquery": "pyquery-master/pyquery",
+    "pycrypto": "pycryptodome-master/lib/Crypto",
+    "kafka": "kafka-python-master/kafka",
+    "ipaddr": "ipaddress.py",
+    "dataproperty": "DataProperty-master/dataproperty",
+    "RPi.GPIO": "RPi.GPIO-master/RPi",
+    "multiprocessing": "multiprocessing",
+    "botocore": "botocore-develop/botocore",
+    "oauth2": "python-oauth2-1/oauth2",
+    "netaddr": "netaddr-master/netaddr",
+    "kafka-python": "kafka-python-master/kafka",
+    "raven": "raven-python-master/raven",
+    "pyfits": "PyFITS-master/pyfits",
+    "webapp2": "webapp2-master/webapp2.py",
+    "csv": "csv.py",
+    "pyandoc": "pandoc-master/src/pandoc",  # https://github.com/adityarathod/pyandoc
+    "configparser": "configparser.py",
+    "requests": "requests-main/src/requests",
+    "restkit": "restkit-master/restkit",
+    "flask": "flask-main/src/flask",
+    "bcrypt": "bcrypt-main/src/bcrypt",
+    "redis": "redis-py-master/redis",
+    "pep8": "pep8-master/pep8.py",
+    "python-ldap": "python-ldap-main/Lib/ldap",
+    "slackclient": "python-slackclient-master/slackclient",
+    "lxml": "lxml-master/src/lxml",
+    "html5lib": "html5lib-python-master/html5lib",
+    "PyQt5": "PyQt-master/PyQt5",
+    "ruamel.yaml": "ruamel",
+    "argparse": "argparse.py",
+    "msgpack": "msgpack-python-main/msgpack",
+    "twitter": "python-twitter-master/twitter",
+    "gevent": "gevent-master/src/gevent",
+    "attrs": "attrs-main/src/attr",
+    "asyncio-redis": "asyncio-redis-master/asyncio_redis",
+    "fabric3": "fabric-cfdca6b4082e5d89edcac0dcbafd3c2884723913/fabric",
+    "node-semver": "python-node-semver-master/nodesemver",
+    "requests-oauth2": "requests-oauth2-master/requests_oauth2",  # https://github.com/joestump/python-oauth2/blob/master/oauth2/__init__.py
+    "progressbar": "python-progressbar-develop/progressbar",
+    "suds": "suds-master/suds",
+    "logger": "logger-master/logger",
+    "mechanize": "mechanize-master/mechanize",
+    "pytorch-pretrained-bert": "pytorch-pretrained-BERT-master/pytorch_pretrained_bert",
+    "aiohttp": "aiohttp-master/aiohttp",
+    "PyQt5": "PyQt-master/PyQt5",
+    "urllib3": "urllib3-main/src/urllib3",
+    "m2crypto": "M2Crypto-master/src/M2Crypto",
+    "pycurl": "pycurl-master/python/curl",
+    "ed25519": "python-ed25519-master/src/ed25519",
+    "prettytable": "prettytable-main/src/prettytable",
+    "pyopenssl": "pyopenssl-main/src/OpenSSL",
+    "simplejson": "simplejson-master/simplejson",
+    "dill": "dill-master/dill",
+}
+
+git_loc = {
+    "msgpack": "msgpack-python-main/msgpack",
+    "pathlib": "pathlib.py",
+    "plyvel": "plyvel-main/plyvel",
+    "webob": "webob-main/src/webob",
+    "argparse": "argparse.py",
+    "fabric": "fabric-main/fabric",
+    "cryptography": "cryptography-main/src/cryptography",
+    "flask": "flask-main/src/flask",
+    "pytorch-transformers": "pytorch-transformers-master/pytorch_transformers",
+    # "pycryptodomex": "pycryptodomex-main",
+    "docopt": "docopt-master/docopt.py",
+    "transformers": "transformers-main/src/transformers",
+    "quart": "quart-main/src/quart",
+    "gevent": "gevent-master/src/gevent",
+    "requests": "requests-main/src/requests",
+    "fasteners": "fasteners-main/fasteners",
+    "attrs": "attrs-main/src/attr",
+    "paramiko": "paramiko-main/paramiko",
+    "beautifulsoup4": "BeautifulSoup4-master/bs4",
+    "pycryptodome": "pycryptodome-master/lib/Crypto",
+    "confluent-kafka": "confluent-kafka-python-master/src/confluent_kafka",  # It is C implementation
+    "ipaddress": "ipaddress.py",
+    "typepy": "typepy-master/typepy",
+    "gpiozero": "gpiozero-master/gpiozero",
+    "multiprocess": "multiprocess-master/pypy3.10/multiprocess",
+    "boto": "boto-develop/boto",
+    "oauthlib": "oauthlib-master/oauthlib",
+    "sentry-sdk": "sentry-python-master/sentry_sdk",
+    "astropy": "astropy-main/astropy",
+    "unicodecsv": "python-unicodecsv-master/unicodecsv",
+    "pypandoc": "pypandoc-master/pypandoc",
+    "configobj": "configobj-release/src/configobj",
+    "aiohttp": "aiohttp-master/aiohttp",
+    "bottle": "bottle-master/bottle.py",
+    "passlib": "passlib-master/passlib",
+    "aioredis": "aioredis-py-master/aioredis",
+    "pycodestyle": "pycodestyle-main/pycodestyle.py",
+    "ldap3": "ldap3-dev/ldap3",
+    "slack-sdk": "python-slack-sdk-main/slack_sdk",
+    "defusedxml": "defusedxml-main/defusedxml",
+    "bleach": "bleach-main/bleach",
+    "pyqt6": "PyQt-master/PyQt6",
+    "pyyaml": "pyyaml-main/lib/yaml",
+    "configargparse": "ConfigArgParse-master/configargparse.py",
+    "u-msgpack-python": "u-msgpack-python-master/umsgpack",
+    "tweepy": "tweepy-master/tweepy",
+    "eventlet": "eventlet-master/eventlet",
+    "dataclasses": "dataclasses.py",
+    "invoke": "invoke-main/invoke",
+    "semantic-version": "python-semanticversion-master/semantic_version",
+    "click": "click-main/src/click",
+    "tqdm": "tqdm-master/tqdm",
+    "zeep": "python-zeep-main/src/zeep",
+    "logging": "logging",
+    "requests-oauthlib": "requests-oauthlib-master/requests_oauthlib",
+    "netaddr": "netaddr-master/netaddr",
+    "httpx": "httpx-master/httpx",
+    "PySide2": "cg-stubs-master/pyside/stubs/PySide2",  # Pyside2 is stub file
+    "pynacl": "pynacl-main/src/nacl",
+    "tabulate": "python-tabulate-master/tabulate",
+    "ujson": "ujson.pyi",  # ujson is not a git repo, it is a C implementation so stupfile
+    "cloudpickle": "cloudpickle-master/cloudpickle",
+}
+
+
+# Check Whether each path is valid
+def check_validity():
+    for key, value in git_loc_old.items():
+        if value == "":
+            continue
+        path = HOME_PATH / value
+        if not path.exists():
+            print(path)
+
+
+check_validity()
+
+# signature - name
+# feedback vs pre-provided ??

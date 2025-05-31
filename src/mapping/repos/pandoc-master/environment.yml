@@ -1,0 +1,17 @@
+name: pandoc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.4
+  - pandoc=3.2
+  - plumbum
+  - ply
+  - pip
+  - setuptools
+  - wheel
+  - twine
+  - black
+  - emoji
+  - strictyaml
+  - mkdocs
+  - mkdocs-material=9.1.6

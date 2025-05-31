@@ -1,0 +1,22 @@
+{
+    "bef_file": "206b.py",
+    "aft_file": "206a.py",
+    "libo": "simplejson",
+    "libn": "ujson",
+    "apio": [
+        "dumps",
+        "loads"
+    ],
+    "apin": [
+        "dumps",
+        "ujson",
+        "loads"
+    ],
+    "url": "https://github.com/zulip/zulip/commit/222ef672",
+    "filepath": "zephyr/models.py",
+    "lines": [
+        "120:120",
+        "21:21",
+        "342:342"
+    ]
+}

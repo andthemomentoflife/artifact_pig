@@ -1,0 +1,23 @@
+{
+    "bef_file": "489b.py",
+    "aft_file": "489a.py",
+    "libo": "prettytable",
+    "libn": "tabulate",
+    "apio": [
+        "PrettyTable",
+        "align",
+        "float_format",
+        "add_row"
+    ],
+    "apin": [
+        "prettytable.PrettyTable",
+        "prettytable.ALL",
+        "tabulate"
+    ],
+    "url": "https://github.com/educationaltestingservice/skll/commit/f870a659",
+    "filepath": "skll/experiments.py",
+    "lines": [
+        "29:39",
+        "879-883,900:899-902"
+    ]
+}

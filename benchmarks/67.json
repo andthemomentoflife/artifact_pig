@@ -1,0 +1,44 @@
+{
+    "bef_file": "67b.py",
+    "aft_file": "67a.py",
+    "libo": "pyopenssl",
+    "libn": "cryptography",
+    "apio": [
+        "get_notBefore",
+        "get_notAfter",
+        "load_certificate",
+        "get_subject",
+        "get_issuer",
+        "get_components",
+        "digest"
+    ],
+    "apin": [
+        "not_valid_before",
+        "not_valid_after",
+        "cryptography.x509",
+        "cryptography.hazmat.backends.openssl",
+        "cryptography.hazmat.primitives.hashes",
+        "load_pem_x509_certificate",
+        "subject",
+        "issuer",
+        "fingerprint",
+        "MD5",
+        "fingerprint",
+        "SHA1",
+        "fingerprint",
+        "SHA256"
+    ],
+    "url": "https://github.com/RIPE-NCC/ripe-atlas-sagan/commit/f6fc10c8",
+    "filepath": "ripe/atlas/sagan/ssl.py",
+    "lines": [
+        "123:67",
+        "124:68",
+        "24:23-25",
+        "62-65:60",
+        "66:74",
+        "67:78",
+        "78:63",
+        "79:64",
+        "80:65"
+    ]
+}

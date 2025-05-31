@@ -1,0 +1,1460 @@
+{
+    "1.json": {
+        "Path": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "ancestor": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "child": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "2.json": {
+        "LevelDB": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "Put": {
+            "is_correct": "n",
+            "reason": "not Put"
+        },
+        "Get": {
+            "is_correct": "n",
+            "reason": "key in self.db"
+        },
+        "Delete": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "4.json": {
+        "Client": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "get": {
+            "is_correct": "y",
+            "reason": "get_response"
+        },
+        "data": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "mimetype": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "status_code": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "content_length": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "5.json": {
+        "command": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "argument": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "option": {
+            "is_correct": "y",
+            "reason": "usually path and str "
+        },
+        "version_option": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "echo": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "6.json": {
+        "SSHClient": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "load_system_host_keys": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "set_missing_host_key_policy": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "connect": {
+            "is_correct": "n",
+            "reason": "key_filename kwarg not exist"
+        },
+        "open_sftp": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "close": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "exec_command": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "recv_exit_status": {
+            "is_correct": "n",
+            "reason": "no line"
+        },
+        "put": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "8.json": {
+        "StrongRandom": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "randint": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get_random_bytes": {
+            "is_correct": "n",
+            "reason": "no Random"
+        },
+        "new": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "encrypt": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "decrypt": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "9.json": {
+        "Bottle": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "post": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "abort": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "read": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "run": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "headers": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "13.json": {
+        "ArgumentParser": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "add_argument": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "parse_args": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "set_defaults": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "Namespace": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "new_version": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "working_path": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "dry_run": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "interactive": {
+            "is_correct": "n",
+            "reason": "not?"
+        }
+    },
+    "20.json": {
+        "BertForTokenClassification": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "XLNetPreTrainedModel": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "XLNetModel": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "28.json": {
+        "Flask": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "route": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "method": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "secret_key": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "form": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "files": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "flash": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "render_template": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "send_from_directory": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "send_file": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "run": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "36.json": {
+        "spawn_n": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "sleep": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "monkey_patch": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "setdefaulttimeout": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "time": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "39.json": {
+        "Http": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "request": {
+            "is_correct": "n",
+            "reason": "post argument"
+        },
+        "status": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "decode": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "60.json": {
+        "acquire": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "LockFile": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "i_am_locking": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "release": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "break_lock": {
+            "is_correct": "n",
+            "reason": "using with break_lock disappear"
+        }
+    },
+    "65.json": {
+        "attributes": {
+            "is_correct": "n",
+            "reason": "no kwarg called default_factory"
+        },
+        "Attribute": {
+            "is_correct": "n",
+            "reason": "no kwarg called default_factory"
+        }
+    },
+    "85.json": {
+        "run": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "sudo": {
+            "is_correct": "n",
+            "reason": "validation Config wrong sem"
+        },
+        "get": {
+            "is_correct": "n",
+            "reason": "scp_client"
+        },
+        "disconnect_all": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "put": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "user": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "hosts": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "password": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "host_string": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "warn_only": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "86.json": {
+        "PyQuery": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        ".bicycle_station": {
+            "is_correct": "n",
+            "reason": "div"
+        },
+        "div": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "attrib": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "text_content": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "100.json": {
+        "KafkaProducer": {
+            "is_correct": "n",
+            "reason": "no kwarg value.seriazlier"
+        },
+        "send": {
+            "is_correct": "n",
+            "reason": "produce should be used"
+        },
+        "add_callback": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "add_errback": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "107.json": {
+        "IPv4Address": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "IPv4Network": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "110.json": {
+        "is_empty_string": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "IntegerType": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "try_convert": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "is_not_empty_string": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "117.json": {
+        "wait_for_edge": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "setmode": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "setup": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "118.json": {
+        "Pool": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "imap": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "close": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "join": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "119.json": {
+        "get_service": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "get_session": {
+            "is_correct": "n",
+            "reason": "wrong kwarg region_name"
+        },
+        "get_endpoint": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "get_operation": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "120.json": {
+        "Consumer": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "Token": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "Client": {
+            "is_correct": "n",
+            "reason": "no client_id"
+        },
+        "set_verifier": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "125.json": {
+        "IPAddress": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "IPNetwork": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "126.json": {
+        "KafkaConsumer": {
+            "is_correct": "n",
+            "reason": "no kwarg max.poll.records"
+        },
+        "KafkaProducer": {
+            "is_correct": "n",
+            "reason": "sasl.username` only applies when `sasl.mechanism"
+        },
+        "poll": {
+            "is_correct": "n",
+            "reason": "only consume single msg"
+        },
+        "commit": {
+            "is_correct": "n",
+            "reason": "parse error"
+        },
+        "close": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "send": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "KafkaError": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "ConsumerNoMoreData": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "SelectSelector": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "DefaultSelector": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "132.json": {
+        "Sentry": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "init_app": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "logging": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "level": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "register_logger_signal": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "register_signal": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "149.json": {
+        "open": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "PrimaryHDU": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "ImageHDU": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "153.json": {
+        "RequestHandler": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "body": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "query_string": {
+            "is_correct": "n",
+            "reason": "encode in task"
+        },
+        "WSGIApplication": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "154.json": {
+        "Sniffer": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "reader": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Error": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "175.json": {
+        "PANDOC_PATH": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "Document": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "markdown": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "rst": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "176.json": {
+        "ConfigParser": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "read": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "177.json": {
+        "get": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "status_code": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "reason": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "json": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "190.json": {
+        "request": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Resource": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "post": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "status_int": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "status": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "body_string": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "body_stream": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "read": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "191.json": {
+        "route": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Flask": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "config": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "after_request": {
+            "is_correct": "?",
+            "reason": "-"
+        },
+        "run": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Response": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "request": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "jsonify": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "SQLAlchemy": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "APIManager": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "loads": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "193.json": {
+        "IPNetwork": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "IPAddress": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "value": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "network": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "prefixlen": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "197.json": {
+        "gensalt": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "hashpw": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "199.json": {
+        "StrictRedis": {
+            "is_correct": "n",
+            "reason": "no charset"
+        },
+        "set": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "delete": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "200.json": {
+        "noqa": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "match": {
+            "is_correct": "n",
+            "reason": "parse error"
+        },
+        "register_check": {
+            "is_correct": "n",
+            "reason": "wrong api "
+        },
+        "expand_indent": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Checker": {
+            "is_correct": "n",
+            "reason": "reporter no report"
+        },
+        "ARITHMETIC_OP": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "_checks": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "202.json": {
+        "initialize": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "search_s": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "SCOPE_SUBTREE": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "INVALID_CREDENTIALS": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "simple_bind_s": {
+            "is_correct": "n",
+            "reason": "omi tlines"
+        },
+        "UNWILLING_TO_PERFORM": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "INVALID_DN_SYNTAX": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "SERVER_DOWN": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "unbind_s": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "203.json": {
+        "RTMClient": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "WebClient": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "run_on": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "chat_postMessage": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "users_list": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "start": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "205.json": {
+        "parse": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "getroot": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "findall": {
+            "is_correct": "n",
+            "reason": "cannot access nsmap"
+        },
+        "get": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "207.json": {
+        "HTMLParser": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "HTMLSanitizer": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "parseFragment": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "childNodes": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "toxml": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "218.json": {
+        "load": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "dump": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "221.json": {
+        "ArgumentParser": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "add_argument": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "parse_args": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "225.json": {
+        "dumps": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "loads": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "233.json": {
+        "code": {
+            "is_correct": "?",
+            "reason": "-"
+        },
+        "response_data": {
+            "is_correct": "?",
+            "reason": "-"
+        },
+        "tweets": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "show": {
+            "is_correct": "n",
+            "reason": "parse error"
+        },
+        "TwitterHTTPError": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "verified": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "location": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "description": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "screen_name": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "name": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "statuses_count": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "followers_count": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Twitter": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "OAuth": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "user": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "user_timeline": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "236.json": {
+        "WSGIServer": {
+            "is_correct": "n",
+            "reason": "wrong kwarg"
+        },
+        "serve_forever": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "patch_all": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "238.json": {
+        "ib": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "s": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "251.json": {
+        "create": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "start_subscribe": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "subscribe": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "next_published": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "close": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "254.json": {
+        "local": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "lcd": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "settings": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "265.json": {
+        "parse": {
+            "is_correct": "n",
+            "reason": "not all lines"
+        },
+        "compare": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "match": {
+            "is_correct": "n",
+            "reason": "opeartor used so just == doesn't make sense"
+        }
+    },
+    "268.json": {
+        "ArgumentParser": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "add_argument": {
+            "is_correct": "n",
+            "reason": "wrong kwarg dest"
+        },
+        "add_subparsers": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "add_parser": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "set_defaults": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "parse_args": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "272.json": {
+        "update": {
+            "is_correct": "n",
+            "reason": "wrong semantic as update in tqdm updates one by one"
+        },
+        "wrap_stderr": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "flush": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "Timer": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "ETA": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "Bar": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "ProgressBar": {
+            "is_correct": "n",
+            "reason": "no kwarg called amx_value"
+        }
+    },
+    "273.json": {
+        "Collect": {
+            "is_correct": "n",
+            "reason": "order_ref?"
+        },
+        "Client": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "WebFault": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "HttpAuthenticated": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "Reply": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "Text": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "addcredentials": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "unescape": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "decode": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "280.json": {
+        "Browser": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "set_handle_robots": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "addheaders": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "open": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "read": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "282.json": {
+        "ConstantLR": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "WarmupCosineWithWarmupRestartsSchedule": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "BertAdam": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "WarmupCosineSchedule": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "WarmupConstantSchedule": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "WarmupLinearSchedule": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "WarmupCosineWithHardRestartsSchedule": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "from_pretrained": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "BertLayerNorm": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "283.json": {
+        "IPv4Address": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "AddressValueError": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "IPv6Address": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "284.json": {
+        "ClientSession": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get": {
+            "is_correct": "n",
+            "reason": "wrong kwarg"
+        },
+        "status": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "ClientConnectorError": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "293.json": {
+        "white": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QThread": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QCoreApplication": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Vertical": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "Horizontal": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "instance": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QMainWindow": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QWidget": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QApplication": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QAction": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QPushButton": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QLineEdit": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QTextEdit": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QVBoxLayout": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QGridLayout": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QSplitter": {
+            "is_correct": "uy",
+            "reason": "-"
+        },
+        "QLabel": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QFileDialog": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QMessageBox": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "QComboBox": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QScrollArea": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QStyle": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "QGroupBox": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "QCheckBox": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "303.json": {
+        "HTTPError": {
+            "is_correct": "?",
+            "reason": "-"
+        },
+        "parse_url": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "scheme": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "connection_from_url": {
+            "is_correct": "-",
+            "reason": "-"
+        },
+        "request_uri": {
+            "is_correct": "-",
+            "reason": "-"
+        }
+    },
+    "304.json": {
+        "load_cert_der_string": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get_subject": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "as_text": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "get_issuer": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "get_pubkey": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    }
+}

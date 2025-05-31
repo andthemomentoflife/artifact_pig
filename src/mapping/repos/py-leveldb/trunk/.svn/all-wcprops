@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 22
+/svn/!svn/ver/68/trunk
+END
+leveldb_object.cc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/66/trunk/leveldb_object.cc
+END
+setup.py
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/!svn/ver/52/trunk/setup.py
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/30/trunk/README
+END
+compile_leveldb.sh
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/55/trunk/compile_leveldb.sh
+END
+leveldb_ext.cc
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/68/trunk/leveldb_ext.cc
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/28/trunk/LICENSE
+END
+leveldb_ext.h
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/68/trunk/leveldb_ext.h
+END

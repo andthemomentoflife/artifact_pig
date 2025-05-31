@@ -1,0 +1,29 @@
+{
+    "bef_file": "528b.py",
+    "aft_file": "528a.py",
+    "libo": "ed25519",
+    "libn": "pynacl",
+    "apio": [
+        "VerifyingKey",
+        "to_bytes",
+        "verify"
+    ],
+    "apin": [
+        "VerifyKey",
+        "VerifyKey",
+        "encode",
+        "nacl.signing",
+        "VerifyKey",
+        "verify"
+    ],
+    "url": "https://github.com/romanz/trezor-agent/commit/e1bbdb4b",
+    "filepath": "libagent/formats.py",
+    "lines": [
+        "104:106",
+        "164:166",
+        "165:167",
+        "8:8",
+        "91:91-92",
+        "92:93"
+    ]
+}

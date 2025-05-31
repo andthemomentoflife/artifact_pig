@@ -1,0 +1,46 @@
+{
+    "bef_file": "616b.py",
+    "aft_file": "616a.py",
+    "libo": "ipaddr",
+    "libn": "ipaddress",
+    "apio": [
+        "IPv4Network",
+        "IPv6Network",
+        "broadcast",
+        "IPNetwork"
+    ],
+    "apin": [
+        "ipaddress",
+        "ip_interface",
+        "ip_interface",
+        "network",
+        "broadcast_address",
+        "ip_interface",
+        "network"
+    ],
+    "url": "https://github.com/reannz/faucet/commit/4a23ef8e",
+    "filepath": "tests/faucet_mininet_test_base.py",
+    "lines": [
+        "14:14",
+        "210:210",
+        "211:211",
+        "765:753",
+        "766:754",
+        "767:755",
+        "212:212",
+        "213:213",
+        "842:830",
+        "843:831",
+        "844:832",
+        "845:833",
+        "846:834",
+        "448:448",
+        "448:448",
+        "720:717",
+        "736:724",
+        ":739",
+        ":742",
+        ":799",
+        ":802"
+    ]
+}

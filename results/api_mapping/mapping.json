@@ -1,0 +1,1168 @@
+{
+    "1.json": {
+        "Path": [
+            "O",
+            1
+        ],
+        "ancestor": [
+            "X",
+            "-"
+        ]
+    },
+    "2.json": {
+        "LevelDB": [
+            "X",
+            "-"
+        ],
+        "Put": [
+            "O",
+            1
+        ],
+        "Get": [
+            "O",
+            1
+        ],
+        "Delete": [
+            "O",
+            1
+        ]
+    },
+    "4.json": {
+        "get": [
+            "X",
+            "-"
+        ],
+        "data": [
+            "X",
+            "-"
+        ],
+        "mimetype": [
+            "X",
+            "-"
+        ],
+        "status_code": [
+            "O",
+            1
+        ],
+        "content_length": [
+            "O",
+            1
+        ]
+    },
+    "5.json": {
+        "argument": [
+            "O",
+            1
+        ],
+        "option": [
+            "X",
+            "-"
+        ]
+    },
+    "6.json": {
+        "connect": [
+            "O",
+            1
+        ],
+        "close": [
+            "O",
+            1
+        ],
+        "exec_command": [
+            "X",
+            "-"
+        ],
+        "recv_exit_status": [
+            "X",
+            "-"
+        ],
+        "put": [
+            "O",
+            2
+        ]
+    },
+    "8.json": {
+        "new": [
+            "X",
+            "-"
+        ],
+        "encrypt": [
+            "X",
+            "-"
+        ],
+        "decrypt": [
+            "X",
+            "-"
+        ]
+    },
+    "9.json": {
+        "Bottle": [
+            "O",
+            1
+        ],
+        "post": [
+            "X",
+            "-"
+        ],
+        "abort": [
+            "O",
+            1
+        ],
+        "get": [
+            "X",
+            "-"
+        ],
+        "read": [
+            "X",
+            "-"
+        ],
+        "run": [
+            "O",
+            1
+        ],
+        "headers": [
+            "X",
+            "-"
+        ]
+    },
+    "13.json": {
+        "add_argument": [
+            "X",
+            "-"
+        ],
+        "parse_args": [
+            "X",
+            "-"
+        ]
+    },
+    "20.json": {
+        "BertForTokenClassification": [
+            "O",
+            1
+        ],
+        "XLNetPreTrainedModel": [
+            "O",
+            2
+        ],
+        "XLNetModel": [
+            "O",
+            1
+        ]
+    },
+    "28.json": {
+        "Flask": [
+            "O",
+            1
+        ],
+        "route": [
+            "X",
+            "-"
+        ],
+        "method": [
+            "X",
+            "-"
+        ],
+        "secret_key": [
+            "X",
+            "-"
+        ],
+        "form": [
+            "O",
+            1
+        ],
+        "files": [
+            "O",
+            1
+        ],
+        "flash": [
+            "O",
+            1
+        ],
+        "render_template": [
+            "O",
+            1
+        ],
+        "send_from_directory": [
+            "O",
+            1
+        ],
+        "send_file": [
+            "O",
+            1
+        ],
+        "run": [
+            "O",
+            1
+        ]
+    },
+    "36.json": {
+        "spawn_n": [
+            "O",
+            1
+        ],
+        "sleep": [
+            "O",
+            3
+        ],
+        "monkey_patch": [
+            "X",
+            "-"
+        ],
+        "setdefaulttimeout": [
+            "X",
+            "-"
+        ],
+        "time": [
+            "O",
+            1
+        ]
+    },
+    "39.json": {
+        "request": [
+            "O",
+            3
+        ],
+        "status": [
+            "O",
+            1
+        ],
+        "decode": [
+            "X",
+            "-"
+        ]
+    },
+    "60.json": {
+        "acquire": [
+            "O",
+            1
+        ],
+        "LockFile": [
+            "X",
+            "-"
+        ],
+        "release": [
+            "O",
+            1
+        ]
+    },
+    "65.json": {
+        "attributes": [
+            "X",
+            "-"
+        ],
+        "Attribute": [
+            "X",
+            "-"
+        ]
+    },
+    "67.json": {
+        "get_notBefore": [
+            "O",
+            1
+        ],
+        "get_notAfter": [
+            "X",
+            "-"
+        ],
+        "load_certificate": [
+            "X",
+            "-"
+        ],
+        "get_subject": [
+            "O",
+            1
+        ],
+        "get_issuer": [
+            "O",
+            1
+        ],
+        "digest": [
+            "X",
+            "-"
+        ]
+    },
+    "85.json": {
+        "run": [
+            "X",
+            "-"
+        ],
+        "sudo": [
+            "X",
+            "-"
+        ],
+        "get": [
+            "O",
+            1
+        ],
+        "disconnect_all": [
+            "X",
+            "-"
+        ],
+        "put": [
+            "O",
+            1
+        ]
+    },
+    "86.json": {
+        "PyQuery": [
+            "X",
+            "-"
+        ],
+        ".bicycle_station": [
+            "X",
+            "-"
+        ],
+        "div": [
+            "X",
+            "-"
+        ],
+        "attrib": [
+            "X",
+            "-"
+        ],
+        "text_content": [
+            "X",
+            "-"
+        ]
+    },
+    "100.json": {
+        "KafkaProducer": [
+            "O",
+            1
+        ],
+        "send": [
+            "X",
+            "-"
+        ]
+    },
+    "107.json": {
+        "IPv4Address": [
+            "O",
+            3
+        ],
+        "IPv4Network": [
+            "O",
+            3
+        ]
+    },
+    "110.json": {
+        "is_empty_string": [
+            "O",
+            1
+        ],
+        "IntegerType": [
+            "O",
+            2
+        ],
+        "try_convert": [
+            "X",
+            "-"
+        ],
+        "is_not_empty_string": [
+            "O",
+            1
+        ]
+    },
+    "117.json": {
+        "wait_for_edge": [
+            "X",
+            "-"
+        ]
+    },
+    "118.json": {
+        "Pool": [
+            "O",
+            2
+        ],
+        "imap": [
+            "O",
+            1
+        ],
+        "close": [
+            "O",
+            1
+        ],
+        "join": [
+            "O",
+            1
+        ]
+    },
+    "119.json": {
+        "get_session": [
+            "X",
+            "-"
+        ]
+    },
+    "120.json": {
+        "Client": [
+            "O",
+            2
+        ],
+        "set_verifier": [
+            "O",
+            3
+        ]
+    },
+    "125.json": {
+        "IPAddress": [
+            "O",
+            1
+        ],
+        "IPNetwork": [
+            "X",
+            "-"
+        ]
+    },
+    "126.json": {
+        "KafkaConsumer": [
+            "O",
+            2
+        ],
+        "KafkaProducer": [
+            "O",
+            1
+        ],
+        "poll": [
+            "X",
+            "-"
+        ],
+        "commit": [
+            "X",
+            "-"
+        ],
+        "close": [
+            "O",
+            1
+        ],
+        "send": [
+            "X",
+            "-"
+        ],
+        "KafkaError": [
+            "X",
+            "-"
+        ]
+    },
+    "130.json": {
+        "dump": [
+            "X",
+            "-"
+        ]
+    },
+    "132.json": {
+        "init_app": [
+            "X",
+            "-"
+        ],
+        "level": [
+            "O",
+            2
+        ]
+    },
+    "149.json": {
+        "open": [
+            "O",
+            1
+        ],
+        "PrimaryHDU": [
+            "O",
+            1
+        ],
+        "ImageHDU": [
+            "O",
+            1
+        ]
+    },
+    "153.json": {
+        "RequestHandler": [
+            "X",
+            "-"
+        ],
+        "body": [
+            "X",
+            "-"
+        ],
+        "query_string": [
+            "X",
+            "-"
+        ]
+    },
+    "154.json": {
+        "Sniffer": [
+            "O",
+            1
+        ],
+        "reader": [
+            "O",
+            1
+        ],
+        "Error": [
+            "O",
+            1
+        ]
+    },
+    "175.json": {
+        "rst": [
+            "X",
+            "-"
+        ]
+    },
+    "176.json": {
+        "ConfigParser": [
+            "O",
+            1
+        ]
+    },
+    "177.json": {
+        "get": [
+            "O",
+            1
+        ],
+        "status_code": [
+            "O",
+            2
+        ],
+        "reason": [
+            "O",
+            1
+        ],
+        "json": [
+            "X",
+            "-"
+        ]
+    },
+    "190.json": {
+        "request": [
+            "O",
+            2
+        ],
+        "post": [
+            "O",
+            1
+        ],
+        "status_int": [
+            "O",
+            1
+        ],
+        "status": [
+            "X",
+            "-"
+        ],
+        "body_string": [
+            "X",
+            "-"
+        ],
+        "read": [
+            "X",
+            "-"
+        ]
+    },
+    "191.json": {
+        "route": [
+            "O",
+            2
+        ],
+        "Flask": [
+            "O",
+            1
+        ],
+        "config": [
+            "O",
+            1
+        ],
+        "run": [
+            "O",
+            3
+        ],
+        "Response": [
+            "O",
+            1
+        ],
+        "request": [
+            "O",
+            1
+        ]
+    },
+    "193.json": {
+        "IPNetwork": [
+            "X",
+            "-"
+        ],
+        "IPAddress": [
+            "O",
+            1
+        ],
+        "value": [
+            "X",
+            "-"
+        ],
+        "network": [
+            "X",
+            "-"
+        ]
+    },
+    "197.json": {
+        "hashpw": [
+            "X",
+            "-"
+        ]
+    },
+    "199.json": {
+        "StrictRedis": [
+            "O",
+            3
+        ],
+        "set": [
+            "O",
+            1
+        ],
+        "get": [
+            "O",
+            1
+        ],
+        "delete": [
+            "O",
+            1
+        ]
+    },
+    "200.json": {
+        "noqa": [
+            "O",
+            1
+        ],
+        "match": [
+            "X",
+            "-"
+        ],
+        "register_check": [
+            "O",
+            1
+        ],
+        "expand_indent": [
+            "O",
+            1
+        ],
+        "Checker": [
+            "O",
+            1
+        ],
+        "ARITHMETIC_OP": [
+            "O",
+            1
+        ],
+        "_checks": [
+            "X",
+            "-"
+        ]
+    },
+    "202.json": {
+        "initialize": [
+            "X",
+            "-"
+        ],
+        "search_s": [
+            "O",
+            1
+        ],
+        "simple_bind_s": [
+            "X",
+            "-"
+        ]
+    },
+    "203.json": {
+        "RTMClient": [
+            "O",
+            1
+        ],
+        "WebClient": [
+            "O",
+            1
+        ],
+        "run_on": [
+            "O",
+            1
+        ],
+        "chat_postMessage": [
+            "O",
+            1
+        ],
+        "users_list": [
+            "O",
+            1
+        ],
+        "start": [
+            "O",
+            1
+        ]
+    },
+    "205.json": {
+        "parse": [
+            "X",
+            "-"
+        ],
+        "findall": [
+            "X",
+            "-"
+        ],
+        "get": [
+            "X",
+            "-"
+        ]
+    },
+    "206.json": {
+        "dumps": [
+            "X",
+            "-"
+        ],
+        "loads": [
+            "X",
+            "-"
+        ]
+    },
+    "207.json": {
+        "parseFragment": [
+            "X",
+            "-"
+        ]
+    },
+    "218.json": {
+        "load": [
+            "O",
+            1
+        ],
+        "dump": [
+            "O",
+            1
+        ]
+    },
+    "221.json": {
+        "ArgumentParser": [
+            "O",
+            1
+        ],
+        "parse_args": [
+            "O",
+            1
+        ]
+    },
+    "225.json": {
+        "dumps": [
+            "O",
+            1
+        ],
+        "loads": [
+            "O",
+            1
+        ]
+    },
+    "233.json": {
+        "code": [
+            "X",
+            "-"
+        ],
+        "response_data": [
+            "X",
+            "-"
+        ],
+        "tweets": [
+            "X",
+            "-"
+        ],
+        "show": [
+            "X",
+            "-"
+        ],
+        "TwitterHTTPError": [
+            "X",
+            "-"
+        ],
+        "verified": [
+            "O",
+            1
+        ],
+        "location": [
+            "O",
+            1
+        ],
+        "description": [
+            "O",
+            1
+        ],
+        "screen_name": [
+            "X",
+            "-"
+        ],
+        "name": [
+            "O",
+            1
+        ],
+        "statuses_count": [
+            "X",
+            "-"
+        ],
+        "followers_count": [
+            "X",
+            "-"
+        ],
+        "Twitter": [
+            "X",
+            "-"
+        ],
+        "OAuth": [
+            "X",
+            "-"
+        ],
+        "user": [
+            "O",
+            2
+        ],
+        "user_timeline": [
+            "O",
+            1
+        ]
+    },
+    "236.json": {
+        "WSGIServer": [
+            "O",
+            2
+        ],
+        "patch_all": [
+            "X",
+            "-"
+        ]
+    },
+    "238.json": {
+        "s": [
+            "X",
+            "-"
+        ]
+    },
+    "251.json": {
+        "create": [
+            "X",
+            "-"
+        ],
+        "next_published": [
+            "X",
+            "-"
+        ],
+        "close": [
+            "O",
+            1
+        ]
+    },
+    "254.json": {
+        "local": [
+            "X",
+            "-"
+        ],
+        "lcd": [
+            "O",
+            1
+        ]
+    },
+    "265.json": {
+        "parse": [
+            "O",
+            3
+        ],
+        "compare": [
+            "O",
+            1
+        ],
+        "match": [
+            "O",
+            1
+        ]
+    },
+    "268.json": {
+        "add_argument": [
+            "X",
+            "-"
+        ]
+    },
+    "272.json": {
+        "update": [
+            "O",
+            1
+        ],
+        "ProgressBar": [
+            "O",
+            1
+        ]
+    },
+    "273.json": {
+        "Collect": [
+            "X",
+            "-"
+        ],
+        "Client": [
+            "O",
+            1
+        ],
+        "WebFault": [
+            "O",
+            2
+        ]
+    },
+    "280.json": {
+        "addheaders": [
+            "O",
+            3
+        ],
+        "open": [
+            "X",
+            "-"
+        ],
+        "read": [
+            "X",
+            "-"
+        ]
+    },
+    "282.json": {
+        "ConstantLR": [
+            "O",
+            1
+        ],
+        "BertAdam": [
+            "X",
+            "-"
+        ],
+        "WarmupCosineSchedule": [
+            "O",
+            1
+        ],
+        "WarmupConstantSchedule": [
+            "O",
+            1
+        ],
+        "WarmupLinearSchedule": [
+            "O",
+            1
+        ],
+        "WarmupCosineWithHardRestartsSchedule": [
+            "O",
+            1
+        ],
+        "from_pretrained": [
+            "O",
+            3
+        ]
+    },
+    "283.json": {
+        "IPv4Address": [
+            "O",
+            1
+        ],
+        "AddressValueError": [
+            "O",
+            1
+        ],
+        "IPv6Address": [
+            "O",
+            1
+        ]
+    },
+    "284.json": {
+        "ClientSession": [
+            "X",
+            "-"
+        ],
+        "get": [
+            "O",
+            1
+        ],
+        "status": [
+            "O",
+            1
+        ],
+        "ClientConnectorError": [
+            "O",
+            1
+        ]
+    },
+    "293.json": {
+        "white": [
+            "X",
+            "-"
+        ],
+        "QThread": [
+            "O",
+            1
+        ],
+        "QCoreApplication": [
+            "O",
+            1
+        ],
+        "Vertical": [
+            "X",
+            "-"
+        ],
+        "Horizontal": [
+            "X",
+            "-"
+        ],
+        "instance": [
+            "O",
+            1
+        ],
+        "QMainWindow": [
+            "O",
+            1
+        ],
+        "QWidget": [
+            "O",
+            1
+        ],
+        "QApplication": [
+            "O",
+            1
+        ],
+        "QAction": [
+            "O",
+            2
+        ],
+        "QPushButton": [
+            "O",
+            1
+        ],
+        "QLineEdit": [
+            "O",
+            1
+        ],
+        "QTextEdit": [
+            "O",
+            1
+        ],
+        "QVBoxLayout": [
+            "O",
+            1
+        ],
+        "QGridLayout": [
+            "O",
+            1
+        ],
+        "QSplitter": [
+            "O",
+            1
+        ],
+        "QLabel": [
+            "O",
+            1
+        ],
+        "QFileDialog": [
+            "O",
+            1
+        ],
+        "QMessageBox": [
+            "O",
+            1
+        ],
+        "QComboBox": [
+            "O",
+            1
+        ],
+        "QScrollArea": [
+            "O",
+            1
+        ],
+        "QStyle": [
+            "O",
+            1
+        ],
+        "QGroupBox": [
+            "O",
+            1
+        ],
+        "QCheckBox": [
+            "O",
+            1
+        ]
+    },
+    "303.json": {
+        "HTTPError": [
+            "X",
+            "-"
+        ]
+    },
+    "304.json": {
+        "load_cert_der_string": [
+            "X",
+            "-"
+        ],
+        "get_subject": [
+            "O",
+            1
+        ],
+        "as_text": [
+            "X",
+            "-"
+        ],
+        "get_issuer": [
+            "O",
+            1
+        ],
+        "get_pubkey": [
+            "O",
+            3
+        ]
+    },
+    "457.json": {
+        "Ext": [
+            "O",
+            3
+        ],
+        "packb": [
+            "X",
+            "-"
+        ],
+        "unpackb": [
+            "X",
+            "-"
+        ]
+    },
+    "489.json": {
+        "PrettyTable": [
+            "X",
+            "-"
+        ]
+    },
+    "492.json": {
+        "setopt": [
+            "X",
+            "-"
+        ]
+    },
+    "528.json": {
+        "VerifyingKey": [
+            "X",
+            "-"
+        ],
+        "to_bytes": [
+            "X",
+            "-"
+        ],
+        "verify": [
+            "O",
+            3
+        ]
+    },
+    "616.json": {
+        "IPv4Network": [
+            "X",
+            "-"
+        ],
+        "IPv6Network": [
+            "X",
+            "-"
+        ],
+        "broadcast": [
+            "O",
+            1
+        ],
+        "IPNetwork": [
+            "X",
+            "-"
+        ]
+    }
+}

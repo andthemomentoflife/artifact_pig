@@ -1,0 +1,11 @@
+dist
+.tox
+*.pyc
+*~
+doc/build
+AUTHORS
+ChangeLog
+*.egg
+pylockfile.egg-info
+cover
+.coverage

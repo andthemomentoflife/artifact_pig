@@ -1,0 +1,96 @@
+name: CI-macOS
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+    - '.github/workflows/ci.yml'
+    - '.github/workflows/ci-windows.yml'
+    - '.github/workflows/cibuildwheel.yml'
+  pull_request:
+    branches: [ master ]
+    paths-ignore:
+    - '.github/workflows/ci.yml'
+    - '.github/workflows/ci-windows.yml'
+    - '.github/workflows/cibuildwheel.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.runner }}
+    env:
+      PYCURL_CURL_CONFIG: /usr/bin/curl-config
+      PYCURL_SSL_LIBRARY: sectransp
+      VCPKG_BINARY_SOURCES: 'clear;nuget,GitHub,readwrite'
+    strategy:
+      fail-fast: false
+      matrix:
+        curl-version: ["macos"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        runner: ["macOS-14"]
+        include:
+          - curl-version: "vcpkg"
+            python-version: "3.12"
+            runner: "macOS-13"
+            cibw-build: "cp312-macosx_x86_64"
+          - curl-version: "vcpkg"
+            python-version: "3.13"
+            runner: "macOS-14"
+            cibw-build: "cp313-macosx_arm64"
+    permissions:
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: 'Install vcpkg'
+      if: matrix.curl-version == 'vcpkg'
+      run: |
+        if ! which vcpkg >/dev/null 2>&1; then
+            brew install vcpkg
+            git clone https://github.com/microsoft/vcpkg.git "$HOME/vcpkg"
+            echo "VCPKG_ROOT=$HOME/vcpkg" >> "$GITHUB_ENV"
+        else
+            echo "VCPKG_ROOT=/usr/local/share/vcpkg" >> "$GITHUB_ENV"
+        fi
+    - name: 'Setup NuGet credentials'
+      if: matrix.curl-version == 'vcpkg'
+      run: |
+        nuget="$(vcpkg fetch nuget | tail -n 1)"
+        mono "${nuget}" \
+          sources add \
+          -source "https://nuget.pkg.github.com/${GITHUB_REPOSITORY_OWNER}/index.json" \
+          -storepasswordincleartext \
+          -name "GitHub" \
+          -username "${GITHUB_REPOSITORY_OWNER}" \
+          -password "${{ secrets.GITHUB_TOKEN }}"
+        mono "${nuget}" \
+          setapikey "${{ secrets.GITHUB_TOKEN }}" \
+          -source "https://nuget.pkg.github.com/${GITHUB_REPOSITORY_OWNER}/index.json"
+    - name: Install dependencies
+      if: matrix.curl-version == 'macos'
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+        brew install vsftpd
+    - name: Build
+      if: matrix.curl-version == 'macos'
+      run: python setup.py build
+    - name: Test with pytest
+      if: matrix.curl-version == 'macos'
+      env:
+        PYCURL_VSFTPD_PATH: vsftpd
+      run: make do-test
+    - name: Build & test with cibuildwheel
+      if: matrix.curl-version == 'vcpkg'
+      run: |
+        pip install cibuildwheel
+        cibuildwheel --only ${{ matrix.cibw-build }}

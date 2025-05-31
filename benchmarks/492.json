@@ -1,0 +1,25 @@
+{
+    "bef_file": "492b.py",
+    "aft_file": "492a.py",
+    "libo": "pycurl",
+    "libn": "requests",
+    "apio": [
+        "Curl",
+        "BytesIO",
+        "HTTPHeader",
+        "setopt",
+        "contenttype"
+    ],
+    "apin": [
+        "get",
+        "headers",
+        "requests"
+    ],
+    "url": "https://github.com/tasmota/decode-config/commit/5be61417",
+    "filepath": "decode-config.py",
+    "lines": [
+        "1635-1641,1643-1646:1634-1635,1637-1638",
+        "1660:1643",
+        "201:202"
+    ]
+}
