@@ -324,9 +324,6 @@ class ContextRemover(ast.NodeTransformer):
             return node
 
         self.generic_visit(node)
-        # print(self.nodes, 'self.nodes')
-
-        # print(ast.unparse(node), 'node in for', self.check, node.body)
 
         if self.check or node.body == [] or node.body == [ast.Pass]:
             self.check = old
@@ -598,9 +595,6 @@ def find_need_case(
     libo,
     target0,
 ):
-    # print(names, 'names')
-    # print(ast.unparse(target0))
-    # Search for Assign Nodes
     for node in ast.walk(root):
         if (
             isinstance(node, ast.Assign)
@@ -647,12 +641,10 @@ def find_need_case(
 
             if len(targets & names) > 0 and (cond1 or (node in nodes)):
                 nodes.add(node)
-                # print(ast.unparse(node), 'assign')
                 names = names - targets
 
             elif len(targets & names) > 0 and cond1 and (node not in nodes):
                 nodes.add(node)
-                # print(ast.unparse(node), 'assign')
                 names = names - targets
 
             else:
@@ -685,7 +677,6 @@ def need_nodes(
         if target == None or target in history:
             continue
         history.add(target)
-        # print(ast.unparse(target), 'target')
 
         NEC = call.NameExtractor(check1=True, libo=libo)
 
@@ -698,13 +689,10 @@ def need_nodes(
                 if isinstance(t, ast.Attribute):
                     NEC = call.NameExtractor(
                         check=True, check1=True, libo=libo
-                    )  # app.secret_key = ~
+                    ) 
                     NEC.visit(t)
 
-                    # print(names, 'names')
-
                     for name in NEC.list:
-                        # print(name, 'name')
                         if "self." not in name:
                             names.add(name)
 
@@ -714,13 +702,9 @@ def need_nodes(
 
         else:
             for node in ast.walk(target):
-                # Need node로 추가되면 안되는 경우들
+                # Case where it should be skipped
                 if isinstance(node, ast.Assign):
-                    # print(ast.unparse)
-                    # print(ast.unparse(node), 'assign', names)
-
                     for t in node.targets:
-                        # print(ast.unparse(t), 'tt')
                         if isinstance(t, ast.Subscript):
                             NEC = call.NameExtractor(check1=True, libo=libo)
                             NEC.visit(t)
@@ -732,8 +716,6 @@ def need_nodes(
                             NEC = call.NameExtractor(check=True, check1=True, libo=libo)
                             NEC.visit(t)
                             names = names | set(NEC.list)
-
-                    # print(names, 'namessss')
 
                     NEC = call.NameExtractor(check1=True, libo=libo)
                     NEC.visit(node.value)
@@ -819,19 +801,14 @@ def need_nodes(
 
                 # If function arg... no names - args
                 Fparent = call.FindFParent(ParentO, node)
-                # print(ast.unparse(node), names)
                 if isinstance(Fparent, ast.FunctionDef) or isinstance(
                     Fparent, ast.AsyncFunctionDef
                 ):
-                    # print(Fparent.name, 'Fparent')
                     NEC4A = call.NameExtractor(check1=True, libo=libo)
                     NEC4A.visit(Fparent.args)
                     names = names - set(NEC4A.list)
-                # print(names, 'names')
 
         names = names - CENs - Imps
-        # print(nodes, 'nodes')
-        # print(names, 'namess')
 
         if type(target) in [
             ast.FunctionDef,
@@ -872,7 +849,6 @@ def need_nodes(
                 )
 
             elif isinstance(FCP, ast.ClassDef):
-                # print(FCP, 'FCP', FCP.name)
                 init = FCTuple(FCP)
                 if not isinstance(init, ast.ClassDef):
                     nodes.add(init)
@@ -930,7 +906,6 @@ def need_nodes(
 
         stack = ((nodes - nodes_tmp - history) | stack) - {None}
 
-    # print(nodes, 'nodes')
     return nodes
 
 
@@ -1071,7 +1046,6 @@ def remove_context(
                         )
 
                         if UseCase != None:
-                            # print(targets, ast.unparse(UseCase))
                             nodes.add(UseCase)
 
                         if (len(targets) == 0) or (
@@ -1087,7 +1061,6 @@ def remove_context(
                 nodes, codeo, CENs, Imps, indexes, ParentO, funcdefs, classdefs, libo
             )
             nodes_final = nodes | nodes_final
-            # print(nodes, 'nodes')
 
     # 4. Remove the context which are not in targets
     if blank:
@@ -1107,18 +1080,20 @@ def remove_context(
 
 
 if __name__ == "__main__":
-    path = os.path.abspath(os.getcwd()) + "/benchmarks"
-    file_list_json = [file for file in os.listdir(path) if file.endswith(".json")]
+    from pathlib import Path
+    BENCHMARK_PATH = Path(__file__).parent.parent.parent / "benchmarks"
+    file_list_json = [file for file in os.listdir(BENCHMARK_PATH) if file.endswith(".json")]
 
     for j in file_list_json:
-        if j != "265.json":
+        if j != "1.json":
             continue
+
         print("File in progress: ", j)
 
-        with open(path + "/" + j) as f:
+        with open(BENCHMARK_PATH / j) as f:
             data = json.load(f)
-            fileb, filea = open(path + "/" + data["bef_file"], "r"), open(
-                path + "/" + data["aft_file"], "r"
+            fileb, filea = open(BENCHMARK_PATH / data["bef_file"], "r"), open(
+                 BENCHMARK_PATH / data["aft_file"], "r"
             )
             codeb, codea = fileb.read(), filea.read()
 
@@ -1126,8 +1101,6 @@ if __name__ == "__main__":
             apios = list(data["apio"])
 
             for apio in apios:
-                if apio != "match":
-                    continue
                 root = ast.parse(codeb)
                 ParentO = call.ParentAst(root)
                 CPO = call.Preparation([], apios=[apio])

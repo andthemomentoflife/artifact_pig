@@ -13,6 +13,14 @@
                 "n"
             ],
             "signn": []
+        },
+        "child": {
+            "apio": "child",
+            "answer": "",
+            "signo": [
+                "children"
+            ],
+            "signn": []
         }
     },
     "2.json": {
@@ -115,6 +123,17 @@
             "answer": "content_length",
             "signo": [],
             "signn": []
+        },
+        "Client": {
+            "apio": "Client",
+            "answer": "",
+            "signo": [
+                "application",
+                "response_wrapper",
+                "use_cookies",
+                "allow_subdomain_redirects"
+            ],
+            "signn": []
         }
     },
     "5.json": {
@@ -165,6 +184,39 @@
                 "version",
                 "kwargs"
             ]
+        },
+        "command": {
+            "apio": "command",
+            "answer": "",
+            "signo": [
+                "name"
+            ],
+            "signn": []
+        },
+        "version_option": {
+            "apio": "version_option",
+            "answer": "",
+            "signo": [
+                "version",
+                "param_decls",
+                "package_name",
+                "prog_name",
+                "message",
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "echo": {
+            "apio": "echo",
+            "answer": "",
+            "signo": [
+                "message",
+                "file",
+                "nl",
+                "err",
+                "color"
+            ],
+            "signn": []
         }
     },
     "6.json": {
@@ -232,7 +284,8 @@
         "recv_exit_status": {
             "answer": "return_code",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "recv_exit_status"
         },
         "put": {
             "apio": "put",
@@ -247,6 +300,34 @@
                 "args",
                 "kwargs"
             ]
+        },
+        "SSHClient": {
+            "apio": "SSHClient",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "load_system_host_keys": {
+            "apio": "load_system_host_keys",
+            "answer": "",
+            "signo": [
+                "filename"
+            ],
+            "signn": []
+        },
+        "set_missing_host_key_policy": {
+            "apio": "set_missing_host_key_policy",
+            "answer": "",
+            "signo": [
+                "policy"
+            ],
+            "signn": []
+        },
+        "open_sftp": {
+            "apio": "open_sftp",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "8.json": {
@@ -286,6 +367,30 @@
             "signn": [
                 "data"
             ]
+        },
+        "StrongRandom": {
+            "apio": "StrongRandom",
+            "answer": "",
+            "signo": [
+                "rng",
+                "randfunc"
+            ],
+            "signn": []
+        },
+        "randint": {
+            "apio": "randint",
+            "answer": "",
+            "signo": [
+                "a",
+                "b"
+            ],
+            "signn": []
+        },
+        "get_random_bytes": {
+            "apio": "get_random_bytes",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "9.json": {
@@ -344,7 +449,8 @@
         "read": {
             "answer": "get_data",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "read"
         },
         "run": {
             "apio": "run",
@@ -373,7 +479,8 @@
         "headers": {
             "answer": "headers",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "headers"
         }
     },
     "13.json": {
@@ -383,7 +490,8 @@
                 "args",
                 "kwargs"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "add_argument"
         },
         "parse_args": {
             "apio": "parse_args",
@@ -399,6 +507,64 @@
                 "version",
                 "options_first"
             ]
+        },
+        "new_version": {
+            "apio": "new_version",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "working_path": {
+            "apio": "working_path",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "dry_run": {
+            "apio": "dry_run",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "interactive": {
+            "apio": "interactive",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "Namespace": {
+            "apio": "Namespace",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "ArgumentParser": {
+            "apio": "ArgumentParser",
+            "answer": "",
+            "signo": [
+                "prog",
+                "usage",
+                "description",
+                "epilog",
+                "parents",
+                "formatter_class",
+                "prefix_chars",
+                "fromfile_prefix_chars",
+                "argument_default",
+                "conflict_handler",
+                "add_help",
+                "allow_abbrev",
+                "exit_on_error"
+            ],
+            "signn": []
+        },
+        "set_defaults": {
+            "apio": "set_defaults",
+            "answer": "",
+            "signo": [
+                "kwargs"
+            ],
+            "signn": []
         }
     },
     "20.json": {
@@ -467,17 +633,20 @@
                 "rule",
                 "options"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "route"
         },
         "method": {
             "answer": "method",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "method"
         },
         "secret_key": {
             "answer": "secret_key",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "secret_key"
         },
         "form": {
             "apio": "form",
@@ -628,7 +797,8 @@
             "signo": [
                 "timeout"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "setdefaulttimeout"
         },
         "time": {
             "apio": "time",
@@ -666,6 +836,20 @@
             "answer": "json",
             "signo": [],
             "signn": []
+        },
+        "Http": {
+            "apio": "Http",
+            "answer": "",
+            "signo": [
+                "cache",
+                "timeout",
+                "proxy_info",
+                "ca_certs",
+                "disable_ssl_certificate_validation",
+                "tls_maximum_version",
+                "tls_minimum_version"
+            ],
+            "signn": []
         }
     },
     "60.json": {
@@ -699,6 +883,18 @@
         "release": {
             "apio": "release",
             "answer": "release",
+            "signo": [],
+            "signn": []
+        },
+        "i_am_locking": {
+            "apio": "i_am_locking",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "break_lock": {
+            "apio": "break_lock",
+            "answer": "",
             "signo": [],
             "signn": []
         }
@@ -817,6 +1013,36 @@
                 "callback",
                 "confirm"
             ]
+        },
+        "user": {
+            "apio": "user",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "hosts": {
+            "apio": "hosts",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "password": {
+            "apio": "password",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "host_string": {
+            "apio": "host_string",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "warn_only": {
+            "apio": "warn_only",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "86.json": {
@@ -865,12 +1091,14 @@
         "attrib": {
             "answer": "subscript",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "attrib"
         },
         "text_content": {
             "answer": "text, string",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "text_content"
         }
     },
     "100.json": {
@@ -901,6 +1129,26 @@
                 "timestamp",
                 "headers"
             ]
+        },
+        "add_callback": {
+            "apio": "add_callback",
+            "answer": "",
+            "signo": [
+                "f",
+                "args",
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "add_errback": {
+            "apio": "add_errback",
+            "answer": "",
+            "signo": [
+                "f",
+                "args",
+                "kwargs"
+            ],
+            "signn": []
         }
     },
     "107.json": {
@@ -951,7 +1199,8 @@
         "try_convert": {
             "answer": "try_convert",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "try_convert"
         },
         "is_not_empty_string": {
             "apio": "is_not_empty_string",
@@ -973,7 +1222,27 @@
                 "bouncetime",
                 "timeout"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "wait_for_edge"
+        },
+        "setmode": {
+            "apio": "setmode",
+            "answer": "",
+            "signo": [
+                "new_mode"
+            ],
+            "signn": []
+        },
+        "setup": {
+            "apio": "setup",
+            "answer": "",
+            "signo": [
+                "chanlist",
+                "direction",
+                "pull_up_down",
+                "initial"
+            ],
+            "signn": []
         }
     },
     "118.json": {
@@ -1032,6 +1301,34 @@
                 "region_name",
                 "kw_params"
             ]
+        },
+        "get_service": {
+            "apio": "get_service",
+            "answer": "",
+            "signo": [
+                "service_name",
+                "api_version"
+            ],
+            "signn": []
+        },
+        "get_endpoint": {
+            "apio": "get_endpoint",
+            "answer": "",
+            "signo": [
+                "region_name",
+                "is_secure",
+                "endpoint_url",
+                "verify"
+            ],
+            "signn": []
+        },
+        "get_operation": {
+            "apio": "get_operation",
+            "answer": "",
+            "signo": [
+                "operation_name"
+            ],
+            "signn": []
         }
     },
     "120.json": {
@@ -1067,6 +1364,24 @@
                 "verifier"
             ],
             "signn": []
+        },
+        "Consumer": {
+            "apio": "Consumer",
+            "answer": "",
+            "signo": [
+                "key",
+                "secret"
+            ],
+            "signn": []
+        },
+        "Token": {
+            "apio": "Token",
+            "answer": "",
+            "signo": [
+                "key",
+                "secret"
+            ],
+            "signn": []
         }
     },
     "125.json": {
@@ -1077,7 +1392,8 @@
                 "version",
                 "flags"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "IPAddress"
         },
         "IPNetwork": {
             "answer": "Ipv4Netowrk + IPv6Network",
@@ -1087,7 +1403,8 @@
                 "flags",
                 "expand_partial"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "IPNetwork"
         }
     },
     "126.json": {
@@ -1125,7 +1442,8 @@
             "signo": [
                 "offsets"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "commit"
         },
         "close": {
             "apio": "close",
@@ -1160,6 +1478,24 @@
             "answer": "KafkaException",
             "signo": [],
             "signn": []
+        },
+        "ConsumerNoMoreData": {
+            "apio": "ConsumerNoMoreData",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "SelectSelector": {
+            "apio": "SelectSelector",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "DefaultSelector": {
+            "apio": "DefaultSelector",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "132.json": {
@@ -1184,6 +1520,47 @@
             "signn": [
                 "value"
             ]
+        },
+        "Sentry": {
+            "apio": "Sentry",
+            "answer": "",
+            "signo": [
+                "app",
+                "client",
+                "client_cls",
+                "dsn",
+                "logging",
+                "logging_exclusions",
+                "level",
+                "wrap_wsgi",
+                "register_signal"
+            ],
+            "signn": []
+        },
+        "logging": {
+            "apio": "logging",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "register_logger_signal": {
+            "apio": "register_logger_signal",
+            "answer": "",
+            "signo": [
+                "client",
+                "logger",
+                "loglevel"
+            ],
+            "signn": []
+        },
+        "register_signal": {
+            "apio": "register_signal",
+            "answer": "",
+            "signo": [
+                "client",
+                "ignore_expected"
+            ],
+            "signn": []
         }
     },
     "149.json": {
@@ -1266,12 +1643,24 @@
         "body": {
             "answer": "data",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "body"
         },
         "query_string": {
             "answer": "query_string",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "query_string"
+        },
+        "WSGIApplication": {
+            "apio": "WSGIApplication",
+            "answer": "",
+            "signo": [
+                "routes",
+                "debug",
+                "config"
+            ],
+            "signn": []
         }
     },
     "154.json": {
@@ -1320,7 +1709,26 @@
         "rst": {
             "answer": "convert",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "rst"
+        },
+        "PANDOC_PATH": {
+            "apio": "PANDOC_PATH",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "Document": {
+            "apio": "Document",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "markdown": {
+            "apio": "markdown",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "176.json": {
@@ -1345,6 +1753,15 @@
                 "write_empty_values",
                 "_inspec"
             ]
+        },
+        "read": {
+            "apio": "read",
+            "answer": "",
+            "signo": [
+                "filenames",
+                "encoding"
+            ],
+            "signn": []
         }
     },
     "177.json": {
@@ -1454,6 +1871,21 @@
                 "chunk_size",
                 "decode_unicode"
             ]
+        },
+        "body_stream": {
+            "apio": "body_stream",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "Resource": {
+            "apio": "Resource",
+            "answer": "",
+            "signo": [
+                "uri",
+                "client_opts"
+            ],
+            "signn": []
         }
     },
     "191.json": {
@@ -1524,6 +1956,43 @@
             "answer": "request",
             "signo": [],
             "signn": []
+        },
+        "loads": {
+            "apio": "loads",
+            "answer": "",
+            "signo": [
+                "s"
+            ],
+            "signn": []
+        },
+        "SQLAlchemy": {
+            "apio": "SQLAlchemy",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "APIManager": {
+            "apio": "APIManager",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "after_request": {
+            "apio": "after_request",
+            "answer": "",
+            "signo": [
+                "f"
+            ],
+            "signn": []
+        },
+        "jsonify": {
+            "apio": "jsonify",
+            "answer": "",
+            "signo": [
+                "args",
+                "kwargs"
+            ],
+            "signn": []
         }
     },
     "193.json": {
@@ -1554,12 +2023,20 @@
         "value": {
             "answer": "int",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "value"
         },
         "network": {
             "answer": "network_address",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "network"
+        },
+        "prefixlen": {
+            "apio": "prefixlen",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "197.json": {
@@ -1569,7 +2046,17 @@
                 "password",
                 "salt"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "hashpw"
+        },
+        "gensalt": {
+            "apio": "gensalt",
+            "answer": "",
+            "signo": [
+                "rounds",
+                "prefix"
+            ],
+            "signn": []
         }
     },
     "199.json": {
@@ -1662,7 +2149,8 @@
         "match": {
             "answer": "match",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "match"
         },
         "register_check": {
             "apio": "register_check",
@@ -1713,7 +2201,8 @@
         "_checks": {
             "answer": "_checks",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "_checks"
         }
     },
     "202.json": {
@@ -1782,6 +2271,42 @@
                 "read_server_info",
                 "controls"
             ]
+        },
+        "SCOPE_SUBTREE": {
+            "apio": "SCOPE_SUBTREE",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "INVALID_CREDENTIALS": {
+            "apio": "INVALID_CREDENTIALS",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "UNWILLING_TO_PERFORM": {
+            "apio": "UNWILLING_TO_PERFORM",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "INVALID_DN_SYNTAX": {
+            "apio": "INVALID_DN_SYNTAX",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "SERVER_DOWN": {
+            "apio": "SERVER_DOWN",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "unbind_s": {
+            "apio": "unbind_s",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "203.json": {
@@ -1937,12 +2462,20 @@
                 "namespaces",
                 "with_prefixes"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "findall"
         },
         "get": {
             "answer": "get",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "get"
+        },
+        "getroot": {
+            "apio": "getroot",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "207.json": {
@@ -1963,6 +2496,35 @@
                 "strip_comments",
                 "css_sanitizer"
             ]
+        },
+        "HTMLParser": {
+            "apio": "HTMLParser",
+            "answer": "",
+            "signo": [
+                "tree",
+                "strict",
+                "namespaceHTMLElements",
+                "debug"
+            ],
+            "signn": []
+        },
+        "HTMLSanitizer": {
+            "apio": "HTMLSanitizer",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "childNodes": {
+            "apio": "childNodes",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "toxml": {
+            "apio": "toxml",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "218.json": {
@@ -2041,6 +2603,15 @@
                 "config_file_contents",
                 "env_vars"
             ]
+        },
+        "add_argument": {
+            "apio": "add_argument",
+            "answer": "",
+            "signo": [
+                "args",
+                "kwargs"
+            ],
+            "signn": []
         }
     },
     "225.json": {
@@ -2061,19 +2632,22 @@
         "code": {
             "answer": "code",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "code"
         },
         "response_data": {
             "answer": "message",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "response_data"
         },
         "tweets": {
             "answer": "search",
             "signo": [
                 "q"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "tweets"
         },
         "show": {
             "apio": "show",
@@ -2089,7 +2663,8 @@
         "TwitterHTTPError": {
             "answer": "TweepError",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "TwitterHTTPError"
         },
         "verified": {
             "apio": "verified",
@@ -2112,7 +2687,8 @@
         "screen_name": {
             "answer": "screen_name",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "screen_name"
         },
         "name": {
             "apio": "name",
@@ -2123,12 +2699,14 @@
         "statuses_count": {
             "answer": "stasuses_count",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "statuses_count"
         },
         "followers_count": {
             "answer": "followers_count",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "followers_count"
         },
         "Twitter": {
             "apio": "Twitter",
@@ -2252,13 +2830,22 @@
             "signn": [
                 "on"
             ]
+        },
+        "serve_forever": {
+            "apio": "serve_forever",
+            "answer": "",
+            "signo": [
+                "stop_timeout"
+            ],
+            "signn": []
         }
     },
     "238.json": {
         "ib": {
             "answer": "*",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "ib"
         },
         "s": {
             "apio": "s",
@@ -2291,7 +2878,8 @@
                 "loop",
                 "protocol_class"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "create"
         },
         "next_published": {
             "apio": "next_published",
@@ -2307,6 +2895,23 @@
             "apio": "close",
             "answer": "close",
             "signo": [],
+            "signn": []
+        },
+        "start_subscribe": {
+            "apio": "start_subscribe",
+            "answer": "",
+            "signo": [
+                "tr",
+                "a"
+            ],
+            "signn": []
+        },
+        "subscribe": {
+            "apio": "subscribe",
+            "answer": "",
+            "signo": [
+                "channels"
+            ],
             "signn": []
         }
     },
@@ -2333,6 +2938,15 @@
             "signn": [
                 "path"
             ]
+        },
+        "settings": {
+            "apio": "settings",
+            "answer": "",
+            "signo": [
+                "args",
+                "kwargs"
+            ],
+            "signn": []
         }
     },
     "265.json": {
@@ -2378,7 +2992,62 @@
                 "args",
                 "kwargs"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "add_argument"
+        },
+        "ArgumentParser": {
+            "apio": "ArgumentParser",
+            "answer": "",
+            "signo": [
+                "prog",
+                "usage",
+                "description",
+                "epilog",
+                "parents",
+                "formatter_class",
+                "prefix_chars",
+                "fromfile_prefix_chars",
+                "argument_default",
+                "conflict_handler",
+                "add_help",
+                "allow_abbrev",
+                "exit_on_error"
+            ],
+            "signn": []
+        },
+        "add_subparsers": {
+            "apio": "add_subparsers",
+            "answer": "",
+            "signo": [
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "add_parser": {
+            "apio": "add_parser",
+            "answer": "",
+            "signo": [
+                "name",
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "set_defaults": {
+            "apio": "set_defaults",
+            "answer": "",
+            "signo": [
+                "kwargs"
+            ],
+            "signn": []
+        },
+        "parse_args": {
+            "apio": "parse_args",
+            "answer": "",
+            "signo": [
+                "args",
+                "namespace"
+            ],
+            "signn": []
         }
     },
     "272.json": {
@@ -2432,13 +3101,52 @@
                 "gui",
                 "kwargs"
             ]
+        },
+        "wrap_stderr": {
+            "apio": "wrap_stderr",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "flush": {
+            "apio": "flush",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "Timer": {
+            "apio": "Timer",
+            "answer": "",
+            "signo": [
+                "format"
+            ],
+            "signn": []
+        },
+        "ETA": {
+            "apio": "ETA",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "Bar": {
+            "apio": "Bar",
+            "answer": "",
+            "signo": [
+                "marker",
+                "left",
+                "right",
+                "fill",
+                "fill_left"
+            ],
+            "signn": []
         }
     },
     "273.json": {
         "Collect": {
             "answer": "Collect",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "Collect"
         },
         "Client": {
             "apio": "Client",
@@ -2471,6 +3179,51 @@
                 "detail",
                 "subcodes"
             ]
+        },
+        "addcredentials": {
+            "apio": "addcredentials",
+            "answer": "",
+            "signo": [
+                "request"
+            ],
+            "signn": []
+        },
+        "unescape": {
+            "apio": "unescape",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "decode": {
+            "apio": "decode",
+            "answer": "",
+            "signo": [
+                "encoding",
+                "errors"
+            ],
+            "signn": []
+        },
+        "HttpAuthenticated": {
+            "apio": "HttpAuthenticated",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "Reply": {
+            "apio": "Reply",
+            "answer": "",
+            "signo": [
+                "code",
+                "headers",
+                "message"
+            ],
+            "signn": []
+        },
+        "Text": {
+            "apio": "Text",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "280.json": {
@@ -2499,6 +3252,26 @@
             "answer": "text",
             "signo": [
                 "size"
+            ],
+            "signn": []
+        },
+        "Browser": {
+            "apio": "Browser",
+            "answer": "",
+            "signo": [
+                "history",
+                "request_class",
+                "content_parser",
+                "factory_class",
+                "allow_xhtml"
+            ],
+            "signn": []
+        },
+        "set_handle_robots": {
+            "apio": "set_handle_robots",
+            "answer": "",
+            "signo": [
+                "handle"
             ],
             "signn": []
         }
@@ -2608,6 +3381,26 @@
                 "model_args",
                 "kwargs"
             ]
+        },
+        "WarmupCosineWithWarmupRestartsSchedule": {
+            "apio": "WarmupCosineWithWarmupRestartsSchedule",
+            "answer": "",
+            "signo": [
+                "warmup",
+                "t_total",
+                "cycles",
+                "kw"
+            ],
+            "signn": []
+        },
+        "BertLayerNorm": {
+            "apio": "BertLayerNorm",
+            "answer": "",
+            "signo": [
+                "config",
+                "variance_epsilon"
+            ],
+            "signn": []
         }
     },
     "283.json": {
@@ -2616,7 +3409,8 @@
             "signo": [
                 "address"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "IPv4Address"
         },
         "AddressValueError": {
             "apio": "AddressValueError",
@@ -2629,7 +3423,8 @@
             "signo": [
                 "address"
             ],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "IPv6Address"
         }
     },
     "284.json": {
@@ -2725,7 +3520,8 @@
         "white": {
             "answer": "white",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "white"
         },
         "QThread": {
             "apio": "QThread",
@@ -2758,12 +3554,14 @@
         "Vertical": {
             "answer": "Vertical",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "Vertical"
         },
         "Horizontal": {
             "answer": "Horizontal",
             "signo": [],
-            "signn": "No Candidate API"
+            "signn": "No Candidate API",
+            "apio": "Horizontal"
         },
         "instance": {
             "apio": "instance",
@@ -4090,6 +4888,35 @@
                 "args",
                 "kwargs"
             ]
+        },
+        "parse_url": {
+            "apio": "parse_url",
+            "answer": "",
+            "signo": [
+                "url"
+            ],
+            "signn": []
+        },
+        "scheme": {
+            "apio": "scheme",
+            "answer": "",
+            "signo": [],
+            "signn": []
+        },
+        "connection_from_url": {
+            "apio": "connection_from_url",
+            "answer": "",
+            "signo": [
+                "url",
+                "kw"
+            ],
+            "signn": []
+        },
+        "request_uri": {
+            "apio": "request_uri",
+            "answer": "",
+            "signo": [],
+            "signn": []
         }
     },
     "304.json": {

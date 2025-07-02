@@ -1,17 +1,14 @@
-import openai
-import os, json, ast, sys, re
+import os, json, ast, sys
 from os import path
-from openpyxl import Workbook, load_workbook
-import time
+from openpyxl import Workbook
 
 try:
-    from . import prompts, utils
+    from . import prompts
 except:
-    import prompts, utils
+    import prompts
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from synth import call
-from mapping import api_match_difflib, api_mapping_result
 
 try:
     import context_remover_refactor
@@ -21,13 +18,41 @@ except:
 from pathlib import Path
 from ollama import Client
 
-PIG_PATH = Path.home() / "Desktop" / "pig_sal"
+PIG_PATH = Path(__file__).parent.parent.parent
+MAPPING_HISTORY_PATH = PIG_PATH / "src" / "mapping" / "MAPPING_HISTORY.json"
 
-host = "http://163.152.162.226:8000"
+with open(MAPPING_HISTORY_PATH, "r") as f:
+    api_mapping_result = json.load(f)
 
-# CAND_APIS: dict = utils.name_and_signs(utils.parse_mapping_history())
+def name_and_signs(cands: list) -> str:
+    n = 1
+    text = ""
+
+    cands = cands[:3]
+
+    for cand in cands: 
+        try: name, args, name_score, arg_score = cand
+        except: 
+            name, args = cand
+
+        if len(args) == 0:
+            text += f"{n}. API Name: {name} | No Argument\n"
+
+        else:
+            text += f"{n}. API Name: {name} | Argument: {list(args)}\n"
+
+        n += 1
+
+    return text
+
+# Ollama API host
+# Make sure to set the correct host for your Ollama server
+host = "http://163.152.162.226:8000"  # Change this to your Ollama server host
+
 
 model_list = [
+    # Add your models here
+
     "llama3.1:8b",
     "gemma2:9b",
     "qwen2:7b",
@@ -54,8 +79,6 @@ def AskLLM(
     SECOND_QUERY = prompts.second_query(
         libo, libn, apio, apins, codeb, b_api, b_slicing
     )
-
-    print(SECOND_QUERY)
 
     client = Client(host=host)
     client.pull(model=model)
@@ -92,17 +115,6 @@ def run():
         file_list_json.sort(key=lambda x: int(x.split(".")[0]))
 
         for j in file_list_json:
-            if j not in [
-                "67.json",
-                "130.json",
-                "206.json",
-                "457.json",
-                "489.json",
-                "492.json",
-                "528.json",
-                "616.json",
-            ]:
-                continue
             print("File in progress: ", j)
             contents.append(j)
 
@@ -133,19 +145,17 @@ def run():
                             OCNs, root, api, ParentO, libo, libn, funcdefs, classdefs
                         )
                     )  # Should consider the case where real usage lib name is different to the name of it
-                    contents.append(codebb)
+                    contents.append(apio)
 
-                    try:
-                        total_apins = api_mapping_result.result[j]
+                    try: 
+                        total_apins = api_mapping_result[j]
                         apins = total_apins[api]
-                        apins: str = utils.name_and_signs(apins)
-                        print(apins)
-
+                        apins: str = name_and_signs(apins)
+                        
                         answer = AskLLM(
                             libo, libn, api, codebb, model, apins, b_api=True
                         )
                         contents.append(answer)
-                        print(answer)
 
                     except:
                         print("AskLLM Error")
@@ -153,7 +163,7 @@ def run():
                 ws_model.append(contents)
                 contents = []
 
-    write_wb.save(PIG_PATH / "langchain/additional_benchmarks_ours_pig.xlsx")
+    write_wb.save(PIG_PATH / "llm_answer/your_path.xlsx")
 
 
 if __name__ == "__main__":
