@@ -7,7 +7,7 @@ from typing import Union
 from os import path
 
 sys.path.append((path.dirname(path.abspath(__file__))))
-import gits, signs_o
+import gits
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 
@@ -25,8 +25,7 @@ std_libs = [
     file.split(".")[0] for file in os.listdir(STD_LIB_PATH) if not file.startswith("_")
 ]
 
-
-##############################################CYTHON FILE ###############################################
+# Visiting an AST, and collecting all the api names and signature for Cython files
 class GetAllApisCython(CythonTransform):
     def __init__(self, libo, target_api=None):
         self.classes = list()
@@ -89,13 +88,8 @@ class GetAllApisCython(CythonTransform):
                 values.remove("self")
 
         elif isinstance(node, Nodes.CFuncDefNode):
-            # print(name, 'third')
-            # print(node.declarator.args, 'args')
-
             for arg in node.declarator.args:
                 values.append(arg.declarator.declared_name())
-
-            # print(values, 'values')
 
             selfs_num = values.count("self")
 
@@ -103,7 +97,7 @@ class GetAllApisCython(CythonTransform):
                 values.remove("self")
 
         else:
-            print(self.name, "fourth")
+            pass
 
         return values
 
@@ -128,7 +122,6 @@ class GetAllApisCython(CythonTransform):
             if name == self.target_api[0] and self.name == None:
                 self.classes.append((self.target_api[1], vals))
 
-            # 만약에 해당 클래스가 추가된거면, method들도 추가가능함
             self.target_api = None
 
         self.name = name
@@ -203,10 +196,6 @@ class GetAllApisCython(CythonTransform):
             self.visitchildren(node)
             self.name = tmp
 
-
-##############################################CYTHON FILE ###############################################
-
-
 # Visiting an AST, and collecting all the api names and signature
 class GetAllApis(ast.NodeVisitor):
     def __init__(
@@ -260,14 +249,12 @@ class GetAllApis(ast.NodeVisitor):
                 if isinstance(stmt, ast.Assign) and (
                     "field(" in ast.unparse(stmt) or "ib(" in ast.unparse(stmt)
                 ):
-                    # print('attrs has ben used1', ast.unparse(stmt))
                     for target in stmt.targets:
                         if isinstance(target, ast.Name):
                             values.append(target.id)
 
                 # There exist the case where the class uses attrs (using define)
                 if isinstance(stmt, ast.AnnAssign) and dec0:
-                    # print('attrs has ben used2', ast.unparse(stmt))
                     values.append(stmt.target.id)
 
             # There exist the case where the class uses characteristic (using attributes).
@@ -275,7 +262,6 @@ class GetAllApis(ast.NodeVisitor):
                 if "attributes(" in ast.unparse(decorator) and isinstance(
                     decorator, ast.Call
                 ):
-                    # print('characteristic has been used')
                     for arg in decorator.args:
                         if isinstance(arg, ast.Constant):
                             values.append(arg.value)
@@ -315,7 +301,6 @@ class GetAllApis(ast.NodeVisitor):
         return values
 
     def visit_ClassDef(self, node: ast.ClassDef):
-        # print(node.name, "is in progress")
         tmp = self.name
         tmp_target_api = self.target_api
         vals = self.get_signs(node)
@@ -333,11 +318,6 @@ class GetAllApis(ast.NodeVisitor):
         else:
             if node.name == self.target_api[0] and self.name == None:
                 self.classes.append((self.target_api[1], vals))
-
-            # if self.target_api[0] == True and self.name == None:
-            #     self.classes.append((node.name, vals))
-
-            # self.target_api = None
 
         self.name = node.name
         self.generic_visit(node)
@@ -373,9 +353,6 @@ class GetAllApis(ast.NodeVisitor):
             if node.name == self.target_api[0] and self.name == None:
                 self.functions.append((self.target_api[1], vals))
 
-            # if self.target_api[0] == True and self.name == None:
-            #     self.functions.append((node.name, vals))
-
         self.fname = node.name
         self.generic_visit(node)
         self.fname = tmp
@@ -404,9 +381,6 @@ class GetAllApis(ast.NodeVisitor):
         else:
             if node.name == self.target_api[0] and self.name == None:
                 self.functions.append((self.target_api[1], vals))
-
-            # if self.target_api[0] == True and self.name == None:
-            #     self.functions.append((node.name, vals))
 
         self.fname = node.name
         self.generic_visit(node)
@@ -470,7 +444,6 @@ class GetAllApis(ast.NodeVisitor):
                             (node_module).replace(".", "/") + "/__init__.py"
                         )
 
-                        # print(dir_file, "dir_file")
                         module_file_pyx = self.py_path_tmp / Path(
                             (node_module).replace(".", "/") + ".pyx"
                         )
@@ -565,13 +538,10 @@ class GetAllApis(ast.NodeVisitor):
                         )  # Just one depth
 
                         self.classes += tmp_result[node.module.split(".")[0]][0]
-                        # self.properties += tmp_result[node.module.split(".")[0]][1]
                         self.functions += tmp_result[node.module.split(".")[0]][2]
-                        # self.methods += tmp_result[node.module.split(".")[0]][3]
                         self.etcs += tmp_result[node.module.split(".")[0]][4]
 
                     else:
-                        # Should Implement
                         pass
 
         else:
@@ -637,7 +607,7 @@ def get_all_apis(
         file_list_py = [str(lib_path).split("/")[-1]]
         lib_path = lib_path.parent
 
-    # __init__이 먼저...
+    # Iterating __init__ first
     if "__init__.py" in file_list_py:
         file_list_py.remove("__init__.py")
         file_list_py = ["__init__.py"] + file_list_py
@@ -649,7 +619,6 @@ def get_all_apis(
     for file in file_list_py:
         if file in ["examples", "example", "src"]:
             continue
-        # print(imp_path, file, 'is in progress')
         with open(lib_path / file, "r") as f:
             code = f.read().strip()
 
@@ -692,7 +661,6 @@ def get_all_apis(
 
         elif (file != "__init__.py" and file != "__init__.pyi") and py == False:
             try:
-                # v1, v2, v3, v4, v5 = apis[imp_path]
                 apis[imp_path + "." + file.split(".")[0]] = (
                     v1n,
                     v2n,
@@ -712,7 +680,7 @@ def get_all_apis(
                 apis[imp_path] = (v1n, v2n, v3n, v4n, v5n)
 
         else:
-            print("countercase")
+            pass
 
     if typeshed_b == False and py == False:
         folders = [
@@ -759,7 +727,6 @@ def typeshed(lib):
     result = dict()
 
     if pyi.exists():
-        # print(pyi, lib)
         apis = get_all_apis(pyi, lib, lib, typeshed_b=True, py=True)
         result = update_dict(result, apis)
 
@@ -813,30 +780,6 @@ def apio_sign(apio, apios):
 
     return
 
-
-# Extracting signuatres of original libaries APIs (for multiple APIs for a single file)
-def apio_signs(libo, apios, j):
-    """
-    result = dict()
-    result[j] = dict()
-
-    lib_path = gits.HOME_PATH / Path(gits.git_loc_old[libo])
-
-    if '.py' in str(lib_path):
-        apis = get_all_apis(lib_path, str(lib_path).split('/')[-1].split('.')[0], libo, mapping = True)
-    else:
-        apis = get_all_apis(lib_path, str(lib_path).split('/')[-1], libo, mapping = True)
-
-    for apio in apios:
-        sign_o = apio_sign(apio, apis)
-        result[j][apio] = sign_o
-
-    return result
-    """
-
-    return signs_o.result_typ  # already made
-
-
 # Extracting signuatres of original libaries APIs (for multiple APIs for a single file)
 def apin_signs(libn):
     lib_path = gits.HOME_PATH / Path(gits.git_loc[libn])
@@ -870,18 +813,3 @@ def get_apis(lib_path, lib):
         apis = get_all_apis(lib_path, str(lib_path).split("/")[-1], lib)
 
     return apis
-
-
-if __name__ == "__main__":
-    lib_list = gits.git_loc.keys()
-
-    apins = apin_signs("transformers")
-
-    # for lib in lib_list:
-    #     print(lib, "is in progress")
-
-    #     lib_path = gits.HOME_PATH / Path(gits.git_loc[lib])
-
-    #     apis = get_apis(lib_path, lib)
-
-    #     print(apis)

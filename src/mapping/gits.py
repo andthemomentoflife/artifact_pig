@@ -1,12 +1,10 @@
 from pathlib import Path
-import os
 
-HOME_PATH = Path.home() / "desktop" / "pig_sal"
+HOME_PATH = Path(__file__).parent.parent.parent
 HOME_PATH = HOME_PATH / "src/mapping/repos"
 
 git_loc_old = {
     "unipath": "Unipath-master/unipath",
-    # 'leveldb': "",
     "werkzeug": "werkzeug-main/src/werkzeug",
     "click": "click-main/src/click",
     "paramiko": "paramiko-main/paramiko",
@@ -84,7 +82,6 @@ git_loc = {
     "cryptography": "cryptography-main/src/cryptography",
     "flask": "flask-main/src/flask",
     "pytorch-transformers": "pytorch-transformers-master/pytorch_transformers",
-    # "pycryptodomex": "pycryptodomex-main",
     "docopt": "docopt-master/docopt.py",
     "transformers": "transformers-main/src/transformers",
     "quart": "quart-main/src/quart",
@@ -135,10 +132,9 @@ git_loc = {
     "PySide2": "cg-stubs-master/pyside/stubs/PySide2",  # Pyside2 is stub file
     "pynacl": "pynacl-main/src/nacl",
     "tabulate": "python-tabulate-master/tabulate",
-    "ujson": "ujson.pyi",  # ujson is not a git repo, it is a C implementation so stupfile
+    "ujson": "ujson.pyi",  # ujson is not a git repo, it is a C implementation so using stub file
     "cloudpickle": "cloudpickle-master/cloudpickle",
 }
-
 
 # Check Whether each path is valid
 def check_validity():
@@ -150,7 +146,4 @@ def check_validity():
             print(path)
 
 
-check_validity()
-
-# signature - name
-# feedback vs pre-provided ??
+# check_validity()
