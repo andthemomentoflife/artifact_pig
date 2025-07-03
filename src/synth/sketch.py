@@ -5,9 +5,9 @@ from pathlib import Path
 import logging
 
 try:
-    from . import call, synthesis, llm_pre, fix_import, matching, pattern, stmt_types
+    from . import call, synthesis, llm_pre, fix_import, matching, stmt_types
 except:
-    import call, synthesis, llm_pre, fix_import, matching, pattern, stmt_types
+    import call, synthesis, llm_pre, fix_import, matching, stmt_types
 
 from synth import *
 
@@ -211,8 +211,6 @@ def PreRequired(
         # !!!!!!!!!!!! Second, Find the Import Statements !!!!!!!!!!!
         nodes = SurNodes | {val}
 
-        print(remains, 'remains')
-
         for remain in remains:  # 이 remains가 제대로 uav를 할지는 감이 안옴
             if b_imports:  # Find the import stmts with PIG
                 NCImportmp, CENs1 = fix_import.Importfind(
@@ -377,8 +375,6 @@ def SketchMaker(
             if gumtree:
                 check = matching.filter_stmt(NewNode, nodeo, apis, coden, OldApi)
 
-            print(check, "it is filtered or not")
-
             if check: 
                 if isinstance(nodeo, ast.ExceptHandler) and isinstance(
                     NewNode, ast.ExceptHandler
@@ -456,30 +452,6 @@ def SketchMaker(
             )
 
             del_nodes_cands.add(nodeo)
-            # logging.info(
-            #     "Something went wrong in sketch.py or one-to-zero cardinality possible."
-            # )
-
-        # Recording log for default gumtree
-        # _, NewNode1 = matching.matcher(
-        #     codeo_str, coden_str, node4match, coden, h, api=OldApi, gumtree=False
-        # )
-
-        # if NewNode1 == None:
-        #     logging.info(
-        #         "Default: Deleted Node",
-        #     )
-
-        # else:
-        #     text = f"Default: {ast.unparse(NewNode1)}"
-        #     try:
-
-        #         logging.info(text)
-        #     except:
-        #         logging.info("Default: cannot unparse")
-        #         print(NewNode1)
-
-        # logging.info((NewNode2) == (NewNode1))
 
     # Decorator Nodes
     for key, val in Dtemp1.items():  # node, clsorfunc
@@ -522,22 +494,6 @@ def SketchMaker(
             NewNode1 = None
             del_nodes_cands.add(key)
             logging.info("Ours: Deleted Node for")
-            # logging.info(
-            #     "Something went wrong in sketch.py or one-to-zero cardinality possible.",
-            # )
-
-        # _, NewNode2 = matching.matcher(
-        #     codeo_str, coden_str, key, coden, h, dec=HAS_DEC, gumtree=gumtree
-        # )
-
-        # if NewNode2 == None:
-        #     logging.info("Default: Deleted Node")
-        # else:
-        #     try:
-        #         logging.info("Default: %s", ast.unparse(NewNode2))
-        #     except:
-        #         logging.info("Default: cannot unparse")
-                # print(NewNode2)
 
     # Class Base Nodes
     if HAS_CB and not HAS_DEC:
@@ -858,24 +814,6 @@ def run(
     file_list_json.sort(key=lambda x: int(x.split(".")[0]))
 
     for j in file_list_json:
-        if j not in target_files:
-            continue
-
-        # if int(j.split(".")[0]) < 28:
-        #     continue
-
-        if j not in [
-            "67.json",
-            "130.json",
-            "206.json",
-            "457.json",
-            "489.json",
-            "492.json",
-            "528.json",
-            "616.json",
-        ]:
-            continue
-
         print("File in progress: ", j)
 
         with open(BENCHMARK_PATH / j) as f:
@@ -919,9 +857,6 @@ def run(
             apis = api_lst.get_apis(lib_path, libn)
 
             for i in range(len(apios)):
-                # if apios[i] != "new":
-                #     continue
-
                 # llm answer and api name index
                 val = vals[i]
                 apio = apios[i]
@@ -1018,20 +953,3 @@ def run(
                 pass
 
             yield (NewTree, (j.split(".")[0]))
-
-
-# TOTAL_FILES = [file for file in os.listdir(BENCHMARK_PATH) if file.endswith(".json")]
-# TOTAL_FILES.remove("1.json")
-# TOTAL_FILES.remove("2.json")
-# TOTAL_FILES.remove("20.json")
-# TOTAL_FILES.remove("293.json")
-
-# TOTAL_FILES = ["268.json", "303.json", "273.json"]
-
-# for i in run(
-#     "deepseek-r1-32b",
-#     TOTAL_FILES,
-#     b_imports=True,
-# ):
-#     # print("i:", i)
-#     pass

@@ -4,28 +4,9 @@ from os import path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from synth import *
 
-from files import (
-    llama_fail_files,
-    llama_success_files,
-    deepseek_success_files,
-    deepseek_fail_files,
-    qwen_fail_files,
-    qwen_success_files,
-    gemma_fail_files,
-    gemma_success_files,
-)
 from sketch import run
 
 BENCHMARK_PATH = Path(__file__).parent.parent.parent / Path("benchmarks")
-TOTAL_FILES = [file for file in os.listdir(BENCHMARK_PATH) if file.endswith(".json")]
-
-TARGET_FILES = {
-    "llama": (llama_success_files, llama_fail_files),
-    "deepseek": (deepseek_success_files, deepseek_fail_files),
-    "qwen": (qwen_success_files, qwen_fail_files),
-    "gemma": (gemma_success_files, gemma_fail_files),
-}
-
 MODEL_NAMES = {
     "llama": "llama3.1-8b",
     "gemma": "gemma2-9b",
@@ -36,7 +17,6 @@ MODEL_NAMES = {
 }
 
 RESULT_PATH = PIG_PATH / "result"
-TOTAL_FILES = [file for file in os.listdir(BENCHMARK_PATH) if file.endswith(".json")]
 PASS_FILES = []
 
 
@@ -55,9 +35,7 @@ if __name__ == "__main__":
     option = "default"  # success or fail
     model = "gemma"
     model_name = MODEL_NAMES[model]
-    target_files = list((TOTAL_FILES))
-
-    # target_files = ["616.json"]
+    target_files = ["1.json"]
 
     target_files.sort(key=lambda x: int(x.split(".")[0]))
     b_varmap = False

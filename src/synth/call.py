@@ -1,4 +1,4 @@
-import os, json, ast, sys
+import ast, sys
 from os import path
 
 try:
@@ -113,14 +113,11 @@ def FindRealParent(parent: dict, node, depth: int):
             return key
 
         elif node in value:
-            # print('oooooo', key)
-            # print('No Parent Found with input depths.', (key))
             return None
 
         else:
             pass  # Node not in value Find for another
 
-    # print('No Parent Found with input depth.')
     return None
 
 
@@ -907,7 +904,6 @@ class Preparation(ast.NodeVisitor):
                     except:
                         self.nodes[name.attr] = {(node, (), "handler")}
                 else:
-                    print(type(name))
                     print("AttributeError: Not supported!")
 
         elif isinstance(node.type, ast.Attribute):
@@ -919,7 +915,6 @@ class Preparation(ast.NodeVisitor):
                 self.nodes[node.type.attr] = {(node, (), "handler")}
 
         else:
-            print(type(node.type))
             print("Not supported_call.py!")
 
         for stmt in node.body:
@@ -954,42 +949,3 @@ def FixedPoint(d1: dict[str : set[str]], lib) -> dict[str : set[str]]:
                     tmp1[k1] = tmp1[k1].union(v2)
 
     return tmp1
-
-
-if __name__ == "__main__":
-    pass
-#     code = """import torch
-# import torch.nn as nn
-# import numpy as np
-# from numpy.testing import assert_allclose
-
-# def torch_init_layer(torch_layer, constant_init):
-#     params = []
-#     try:
-#         params = torch_layer.parameters()
-#     except:
-#         pass
-#     for param in params:
-#         try:
-#             torch.nn.init.constant_(param.data, constant_init)
-#         except Exception:
-#             pass
-
-# class TorchConv(nn.Module):
-
-#     def __init__(self):
-#         super(TorchConv, self).__init__()
-#         self.bn_1 = nn.BatchNorm2d(3, eps=1.001e-05)
-
-#     def forward(self, x):
-#         x = self.bn_1(x)
-#         return x"""
-
-#     root = ast.parse(code)
-#     NewTree = ast.parse(root)
-#     ParentN = ParentAst(NewTree)
-#     CPN = Preparation([])
-#     CPN.visit(NewTree)
-#     RelationN = FixedPoint(CPN.tableM, ['tensorflow', 'torch'])
-#     NCNs = CPN.nodes
-#     print(CPN.tableM)

@@ -1,21 +1,17 @@
 import openai
-import os, json, ast, sys
+import ast, sys
 from os import path
 from pathlib import Path
 from typing import Union
 
-try:
-    from . import prompts
-except:
-    import prompts
 
 PIG_PATH = Path.home() / "Desktop" / "pig_sal"
 
 try:
-    from synth import call, llm_pre
+    from synth import llm_pre
 except:
     sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-    from synth import call, llm_pre
+    from synth import llm_pre
 
 MODEL = ""
 openai.api_key_path = ""
@@ -36,9 +32,9 @@ def prepare(model: str, option: str = "default") -> dict[str, list[str]]:
     from openpyxl import load_workbook
 
     if option == "+slicing":
-        ollama = PIG_PATH / "langchain" / "wo_api.xlsx"
+        ollama = PIG_PATH / "llm_answer" / "answer_slicing.xlsx"
     else:
-        ollama = PIG_PATH / "langchain" / "ollama_0520.xlsx"
+        ollama = PIG_PATH / "llm_answer" / "answer_pig.xlsx"
     
 
     if model == "llama3.1-8b":

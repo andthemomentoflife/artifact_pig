@@ -1,19 +1,19 @@
 from pathlib import Path
-import os, json
+import os
 
 import ast, sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from typing import Union
 
-from mapping import gits, api_lst
+from mapping import gits
 
 try:
     from . import llm_pre, call
 except:
     import llm_pre, call
 
-HOME_PATH = Path.home() / "desktop" / "pig_sal"
+HOME_PATH = Path(__file__).parent.parent.parent
 BENCHMARK_PATH = HOME_PATH / "benchmarks"
 TEST_PATH = HOME_PATH / "test.py"
 file_list_json = [file for file in os.listdir(BENCHMARK_PATH) if file.endswith(".json")]
@@ -365,7 +365,6 @@ def ImportFindPath(libo: str, libn: str, v1: str, nodes, apis, cmp=None) -> set:
 
             if v1 == path.split(".")[-1]:
                 cand_paths.add((ast.Import, path))
-                print(path, 'path')
                 if path.count(".") > 0:
                     # from A.B import C
                     try: 
@@ -411,7 +410,6 @@ def ImportFindPath(libo: str, libn: str, v1: str, nodes, apis, cmp=None) -> set:
 
             for path in paths:
                 typ = path[-1]
-                print(path, "path11")
 
                 if typ is ast.Import:
                     if path[0] in ast.unparse(node):
@@ -421,15 +419,12 @@ def ImportFindPath(libo: str, libn: str, v1: str, nodes, apis, cmp=None) -> set:
                     path_stack = []
 
                     for _path in path[0].split(".") + [path[1]]:
-                        print(_path, "path2")
-                        print(path_stack, "path_stack")
                         if (_path) not in api_related_names:
                             path_stack.append(_path)
 
                         else:
                             cond0 = ("." + _path) in ast.unparse(node)  # .a
                             cond1 = (_path + ".") in ast.unparse(node)  # a.
-                            print(cond0, cond1, "cond0, cond1", _path, path_stack)
 
                             if cond0 and cond1:  # .a.
                                 path_stack.append(_path)
@@ -515,21 +510,16 @@ def ImportFindPath(libo: str, libn: str, v1: str, nodes, apis, cmp=None) -> set:
     cand_paths = find(v1)
 
     for cand_path in cand_paths:
-        print(cand_path, "candidate path")
         tmp_unparsed = {ast.unparse(r) for r in result}
         tmp_imps: set = check(nodes, cand_path)
-        print(tmp_imps, "tmp_imps")
 
         if len(tmp_imps) > 0:
             tmp_imp = tmp_imps.pop()
-            print(ast.unparse(tmp_imp), "import path")
             if ast.unparse(tmp_imp) not in tmp_unparsed:
                 result.add(tmp_imp)
 
     if len(result) > 1:
         result = duplicate_imports_resolve(result, nodes, libn, v1, cmp)
-
-    print(result)
 
     # if really still duplicate?
     if len(result) > 1:
@@ -664,7 +654,6 @@ def get_accessible_apis(_path: Path, libn: str, name=None, dir=False) -> dict:
                                     ]
 
                 if isinstance(node, ast.ImportFrom):
-                    # print(ast.unparse(node), "importfrom")
                     for _alias in node.names:
                         if name == None:
                             if _alias.asname == None:
@@ -896,7 +885,6 @@ def duplicate_imports_resolve(
                 cond = cond0 and cond1 and cond2 and cond3 and cond4
 
                 if cond:
-                    # print("hihi")
                     return (True, mod_path(apis, var, imp_path, original_path))
                 else:
                     return (False, None)
@@ -995,7 +983,6 @@ def duplicate_imports_resolve(
     info = dict()
 
     for imp in imps:
-        print(ast.unparse(imp), "imp")
 
         if isinstance(imp, ast.Import):
             if imp.names[0].name.count(".") == 0:
@@ -1011,8 +998,6 @@ def duplicate_imports_resolve(
             b2 = Path(lib_path / Path(module + ".pyi")).exists()
             # b3 = path.isfile(lib_path / Path(imp.names[0].name + '.pyx')) Cython File not supported yet
             b4 = Path(lib_path / Path(module)).exists()
-
-            print(b1, b2, b4, "b1 b2 b4")
 
             if b1:
                 # dot_path = imp.names[0].name.replace(".", "/")  # a.b.c -> a/b/c
@@ -1109,7 +1094,6 @@ def duplicate_imports_resolve(
                         info[imp] = ("file", apis1)
 
                     else:
-                        # print(lib_path, module, "mm")
                         info[imp] = ("None", dict())
 
                 else:
@@ -1127,7 +1111,6 @@ def duplicate_imports_resolve(
                 attr = None
 
             lib_name_path = str(lib_path).split("/")[-1]
-            # print(call_records, "call_records")
 
             (b0, new_path) = check(
                 typ,
@@ -1306,119 +1289,3 @@ def check_available_import(import_node: Union[ast.Import, ast.ImportFrom], libn)
     else:
         print("Error: Unknown type")
         raise ValueError("Unknown type")
-
-
-def run_import_find():
-    for j in file_list_json:
-        if j in [
-            "2.json",
-            "100.json",
-            "110.json",  # Code Error
-            "117.json",  # Code Error
-            "118.json",
-            "120.json",  # Lib Error
-            "175.json",
-            "200.json",
-            "202.json",
-            "203.json",
-            "205.json",
-            "221.json",  # cython
-            "225.json",  # cython
-            "233.json",
-            "251.json",
-            "265.json",
-            "293.json",  # Pass
-        ]:
-            continue
-
-        # if int(j.split(".")[0]) != 86:
-        #     continue
-
-        with open(BENCHMARK_PATH / Path(j)) as f:
-            data = json.load(f)
-            fileb = open(BENCHMARK_PATH / Path(data["bef_file"]), "r")
-            codeb = fileb.read()
-            OldTree = ast.parse(codeb)
-            ParentO = call.ParentAst(OldTree)
-            libo, libn = data["libo"], data["libn"]
-            apios = data["apio"]
-
-            apis = api_lst.get_apis(gits.HOME_PATH / Path(gits.git_loc[libn]), libn)
-
-            for apio in apios:
-                print(apio, "apio")
-                var = apio
-                code = ast.Module(body=[ast.Pass()])
-
-                CPO1 = call.Preparation([], apios=apios)
-                CPO1.visit(OldTree)
-                OCNs = CPO1.nodes
-
-                nodes = set()
-
-                if apio in OCNs:
-                    _nodes = OCNs[apio]
-
-                    for node in _nodes:
-                        if isinstance(node, tuple):
-                            if node[-1] == "classbase":
-                                nodes.add(node[1][0])
-
-                            elif node[-1] == "handler":
-                                nodes.add(node[0])
-
-                            else:
-                                nodes.add(node[1])
-
-                        else:
-                            _node = call.FindRealParent(ParentO, node, 1)
-                            if _node == None:
-                                nodes.add(node)
-                            else:
-                                nodes.add(_node)
-
-                    (imps) = Importfind(code, nodes, var, libn, libo, apis, check=True)
-
-                    if len(imps[0]) > 0:
-                        with open(TEST_PATH, "w") as f:
-                            f.write(ast.unparse(imps[0].pop()))
-                            f.write("\n")
-                            for node in nodes:
-                                f.write("\n")
-                                f.write(ast.unparse(node))
-
-                        input("Press Enter to continue...")
-
-                        # printast.unparse(imps[0].pop()), "imps", len(imps[0]))
-
-
-def run_check_available_import():
-    for j in file_list_json:
-        if j in ["11.json", "98.json", "208.json", "275.json"]:
-            continue
-
-        with open(BENCHMARK_PATH / Path(j)) as f:
-            data = json.load(f)
-            fileb = open(BENCHMARK_PATH / Path(data["bef_file"]), "r")
-            filea = open(BENCHMARK_PATH / Path(data["aft_file"]), "r")
-            _, codea = fileb.read(), filea.read()
-            _, libn = data["libo"], data["libn"]
-
-        root = ast.parse(codea)
-
-        for node in ast.walk(root):
-            if (isinstance(node, ast.Import) or isinstance(node, ast.ImportFrom)) and (
-                (" " + llm_pre.libname(libn)) in ast.unparse(node)
-            ):
-                b0 = check_available_import(node, libn)
-
-                if not b0:
-                    print(j, "is in progress")
-                    print("Error: ", ast.unparse(node))
-
-                else:
-                    print(j, "is in progress")
-
-
-if __name__ == "__main__":
-    run_import_find()
