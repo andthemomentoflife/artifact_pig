@@ -866,9 +866,6 @@ class SynthSame(ast.NodeTransformer):
 
     def visit_Return(self, node: Return):
         if (self.OCNP == node) and node not in self.history:
-            # print(ast.unparse(self.OCNP), 'nn')
-            # print(node, 'nn')
-            print(self.NCNP, 'nn')
             if isinstance(self.NCNP, ast.Return):
                 # Return -> Return
                 node.value = self.NCNP.value
@@ -1151,7 +1148,6 @@ class SynthSame(ast.NodeTransformer):
 
     def visit_Attribute(self, node: ast.Attribute):
         FLE = llm_pre.FindLastExpr(self.ParentO, node, 1)
-        # print(self.OCNP, node)
 
         if (self.OCNP == node) and isinstance(self.NCNP, ast.Attribute):
 
@@ -1403,18 +1399,13 @@ def Surround(
     remains = set()  # Variables that cannot be solved by the current code
     exception = set()  # 왜
 
-    print(target_names, "target_names")
-
     while True:
         if len(target_names) == 0:
             break
 
         nv = target_names.pop()
-        print(nv, ": new value that should be added")
 
         if llm_pre.check_two_sim(roota, h, nv, noden, rootb_str, SurNodes):
-            print(nv, 'nv')
-            print(f"skip for {nv}")
             continue
 
         tmp_node = noden
@@ -1515,7 +1506,6 @@ def Surround(
         SurNode = MUVC.visit(SurNode)
 
         # Find the index of the statement that uses nv at the first
-        print(ast.unparse(SurNode), "SurNode", nv)
 
         for node in ast.walk(root):
             if isinstance(SurNode, ast.Assign):
@@ -1922,15 +1912,12 @@ class UnusedVars(ast.NodeVisitor):
                 self.used[self.name] = {"self." + node.attr}
 
         else:
-            # qwen 283 때문에 한건디 너무 많이 import gksm
             if not self.check:
                 try:
                     self.used[self.name].add((node.attr))
                 except:
                     self.used[self.name] = {node.attr}
 
-            # if "sv" in ast.unparse(node):
-            #     # print(ast.unparse(node), self.check, "is sv?")
             self.visit(node.value)
 
     # def visit_Subscript(self, node: ast.Subscript):
@@ -1946,7 +1933,6 @@ class UnusedVars(ast.NodeVisitor):
                     self.assigned[self.name] = {node.id}
 
             else:
-                # print((node.id), "is unassigned")
                 # if assign is false, it is used for looking for used variables
                 if node.id not in self.assigned[self.name]:
                     try:

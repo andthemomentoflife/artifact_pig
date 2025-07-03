@@ -113,10 +113,7 @@ def filter_stmt(noden, nodeo, apins: dict, rootn, apio) -> bool:
         for apis in api_lst:
             for api, _ in apis:
                 if api in names:
-                    print(api, "in names")
                     return True
-
-    print("not in names", apio, names)
 
     return False
 
@@ -297,8 +294,6 @@ def total_mappings(
                     _mappings = llm_pre.extract_var_map(
                         nodeo, noden, rooto, rootn, parento
                     )
-
-                    print(_mappings, "_mapping")
 
                     name = llm_pre.scope_name(nodeo, noden, parento)
 
@@ -592,9 +587,6 @@ def matcher1(codea: str, codec: str, valn) -> Union[str, None]:
            
 
             if noden != None:
-                print(ast.unparse(noden), "noden")
-                print(ast.unparse(valn), "val_n")
-
                 _noden = call.FindRealParent(Parent, noden, 1)
 
                 if (
@@ -620,8 +612,6 @@ def matcher1(codea: str, codec: str, valn) -> Union[str, None]:
 
         depth += 1
 
-    print(tmp_result, "tmp_result", ast.unparse(valn))
-
     # Pick the most matched node
     if len(tmp_result) != 0:
         result = decide_winner(tmp_result)
@@ -631,9 +621,6 @@ def matcher1(codea: str, codec: str, valn) -> Union[str, None]:
 
         else:
             target = result["winner"]
-
-
-            print(ast.unparse(target), "target")
 
             if isinstance(target, ast.Assign) and isinstance(
                 target.targets[0], ast.Name
@@ -720,14 +707,11 @@ def var_divide(target_node, noden, rootb, roota):
                         if ast.unparse(target_node) == ast.unparse(parent_nodeo):
                             # Find the first node that uses the noden's target
                             for i in range(index + 1, len(target_body)):
-                                print(ast.unparse(target_body[i]), "target_body[i]")
                                 for n in ast.walk(target_body[i]):   
                                     if isinstance(n, ast.Name) and n.id == target_name.id:
                                     
                                         if matcher_check(noden, codeb, codea):
                                             noden = target_body[i]
-                                            print("Found the node using the target")
-                                            print(ast.unparse(noden), "noden")
                          
                                         return noden
 
@@ -742,7 +726,6 @@ def var_divide(target_node, noden, rootb, roota):
 
 # Check wheter new node is matched with the new node
 def matcher_check(noden, codeb: str, codea: str) -> bool:
-    print("matcher_check", ast.unparse(noden))
     jar_path = Path(__file__).parent.parent.parent / "ours.jar"
 
     if not (jpype.isJVMStarted()):
@@ -799,7 +782,6 @@ def matcher(
         jar_path = Path(__file__).parent.parent.parent / "ours.jar"
 
     else:
-        print("zero")
         jar_path = Path(__file__).parent.parent.parent / "default.jar"
 
     if not (jpype.isJVMStarted()):
@@ -838,7 +820,6 @@ def matcher(
             )
 
             end1 = start1 + len(ast.unparse(nodeo).strip())
-            print(start1, "start1", end1,"end1")
 
             r = jMatch.PMadtcher(rootb_str, roota_str, nodeo_str, start1, end1)
 
@@ -877,8 +858,6 @@ def matcher(
 
                     _noden = node_minimize(_noden)
 
-                    print("matched once", ast.unparse(_noden))
-
                     return (nodeo, _noden)
 
                 else:
@@ -892,15 +871,12 @@ def matcher(
 
         else:
             if not gumtree:
-                print("No matched node")
                 return (nodeo, None)
 
         if depth == 0 and not gumtree:
             return (nodeo, None)
 
         depth += 1
-
-    print(tmp_result, "tmp_result for general matcher")
 
     # Pick the most matched node
     if len(tmp_result) != 0:

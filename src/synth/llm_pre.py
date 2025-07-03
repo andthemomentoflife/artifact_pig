@@ -1,7 +1,6 @@
 import ast, sys
 from os import path
-from pathlib import Path
-from typing import Union, Set
+from typing import Union
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from llm import context_remover_refactor
@@ -256,12 +255,10 @@ def check_two_sim(roota, rooto, var, noden, rootc, surnodes):
         return None  # something wrong
 
     val_n = find(roota, var)
-    print("val_n", val_n, var)
 
     if val_n != None:
         changed = False
         newname = matching.matcher1(ast.unparse(roota), ast.unparse(rootc), val_n)
-        print(newname, "newname")
         if newname != None and newname != False:
             # Change the name of the node
             for n in ast.walk(noden):
@@ -271,7 +268,6 @@ def check_two_sim(roota, rooto, var, noden, rootc, surnodes):
 
             for surnode in surnodes:
                 for n in ast.walk(surnode):
-                    print('surnode', n, var, newname)
                     if isinstance(n, ast.Name) and n.id == var:
                         n.id = newname
                         changed = True
