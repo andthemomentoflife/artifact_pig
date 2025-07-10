@@ -807,11 +807,9 @@ def run(
     gumtree=False,
     option = "default",
 ):
-    file_list_json = [
-        file for file in os.listdir(BENCHMARK_PATH) if file.endswith(".json")
-    ]
+
     results = prepare(model, option=option)
-    file_list_json.sort(key=lambda x: int(x.split(".")[0]))
+    file_list_json = target_files   
 
     for j in file_list_json:
         print("File in progress: ", j)

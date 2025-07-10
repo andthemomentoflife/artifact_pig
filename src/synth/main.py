@@ -1,4 +1,4 @@
-import os, sys, ast
+import sys, ast, argparse
 from os import path
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
@@ -16,20 +16,17 @@ MODEL_NAMES = {
     "qwen3": "qwen3-32b",
 }
 
-RESULT_PATH = PIG_PATH / "result"
+RESULT_PATH = PIG_PATH / "src" /"result"
 PASS_FILES = []
 
 
 def result_write(answer: str, option, model_name, num):
-    MODEL_RESULT_PATH = RESULT_PATH / model_name / option
-
-    with open(MODEL_RESULT_PATH / f"{num}.py", "w") as f:
-        print("writing", MODEL_RESULT_PATH / f"{num}.py")
+    with open(RESULT_PATH / f"{num}.py", "w") as f:
+        print("writing", RESULT_PATH / f"{num}.py")
         try:
             f.write(answer)
         except:
             f.write(ast.unparse(answer))
-
 
 if __name__ == "__main__":
     option = "default"  # success or fail
@@ -38,11 +35,11 @@ if __name__ == "__main__":
     target_files = ["1.json"]
 
     target_files.sort(key=lambda x: int(x.split(".")[0]))
-    b_varmap = False
-    b_imports = False
-    b_postprocess = False
-    b_surround = False
-    gumtree = False
+    b_varmap = True
+    b_imports = True
+    b_postprocess = True
+    b_surround = True
+    gumtree = True
 
     target_files.sort(key=lambda x: int(x.split(".")[0]))
 
