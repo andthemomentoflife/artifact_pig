@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Union
 
 
-PIG_PATH = Path.home() / "Desktop" / "pig_sal"
+PIG_PATH = Path(__file__).parent.parent.parent
 
 try:
     from synth import llm_pre

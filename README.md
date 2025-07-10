@@ -73,8 +73,8 @@ This directory contains the source code of the work.
 You can execute the transplanting process by running the `src`/`synth`/`main.py`
 Currently, it is not organized and not executable, but it will be updated continuously.
 Followings are the brief description of each directory:
-- `llm`: This directory contains the source code for querying the LLMs, including the code slicing. [**Finish**]
-- `mapping`: This directory contains the source code for the mapping process, which is used to map the APIs in the source library to the APIs in the target library. [**Finish**]
-- `synth`: This directory contains the source code for the transplanting process. [**In progress**]
+- `llm`: This directory contains the source code for querying the LLMs, including the code slicing.
+- `mapping`: This directory contains the source code for the mapping process, which is used to map the APIs in the source library to the APIs in the target library.
+- `synth`: This directory contains the source code for the transplanting process.
 
 Detailed information about the source code can be found in the `README.md` file in each directory.

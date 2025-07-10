@@ -779,10 +779,10 @@ def matcher(
 
     # Load Java
     if gumtree:
-        jar_path = Path(__file__).parent.parent.parent / "ours.jar"
+        jar_path = Path(__file__).parent.parent / "ours.jar"
 
     else:
-        jar_path = Path(__file__).parent.parent.parent / "default.jar"
+        jar_path = Path(__file__).parent.parent / "default.jar"
 
     if not (jpype.isJVMStarted()):
         jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=%s" % jar_path)

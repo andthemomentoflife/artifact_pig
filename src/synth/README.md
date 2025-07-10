@@ -45,3 +45,9 @@ You can customize the settings in the `main.py` file, such as the target files, 
   - `b_postprocess = True | False`: This is the setting for whether to use the post-processing techniques or not. If you set it to `True`, it will use the post-processing techniques.
   - `b_surround = True | False`: This is the setting for whether to add the additional context from the LLM code if needed. If you set it to `True`, it will add the additional context.
   - `gumtree = True | False`: This is the setting for whether to use the GumTree as a default setting or not. If you set it to `False`, it will use the default GumTree (`default.jar`).
+
+After setting the options and running the `main.py` file, it will execute the transplanting process and save the results in the `result` directory. The results will be saved in the format of `.py` files.
+
+### Sample Execution
+To check whether the transplanting process is working correctly, you can run the `main.py` file with the default settings. It will successfully save the result in the `result` directory with the name `1.py`.
+
