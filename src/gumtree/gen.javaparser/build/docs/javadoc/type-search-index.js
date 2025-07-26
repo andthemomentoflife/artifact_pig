@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.github.gumtreediff.gen.javaparser","l":"JavaParserGenerator"},{"p":"com.github.gumtreediff.gen.javaparser","l":"JavaParserVisitor"}];updateSearchResults();

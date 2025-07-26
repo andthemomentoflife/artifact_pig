@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.xml.TestXmlTreeGenerator" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:18:06" hostname="gangmilyeong-ui-iMac.local" time="0.063">
+  <properties/>
+  <testcase name="testSimpleSyntax()" classname="com.github.gumtreediff.gen.xml.TestXmlTreeGenerator" time="0.056"/>
+  <testcase name="testXmlDeclaration()" classname="com.github.gumtreediff.gen.xml.TestXmlTreeGenerator" time="0.006"/>
+  <system-out><![CDATA[students [0,130]
+    list [15,41]
+        xml-text: Students list [21,34]
+    student [46,67]
+        name: foo [55,64]
+    student [72,93]
+        name: bar [81,90]
+    student [98,119]
+        name: baz [107,116]
+root [38,78]
+    foo [44,60]
+        arg: bar [49,57]
+    baz [60,71]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

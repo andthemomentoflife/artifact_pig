@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestGumtreeMatcher" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:57" hostname="gangmilyeong-ui-iMac.local" time="0.009">
+  <properties/>
+  <testcase name="testMappingComparatorPosInParent()" classname="com.github.gumtreediff.test.TestGumtreeMatcher" time="0.001"/>
+  <testcase name="testMinHeightThreshold()" classname="com.github.gumtreediff.test.TestGumtreeMatcher" time="0.002"/>
+  <testcase name="testSimAndSizeThreshold()" classname="com.github.gumtreediff.test.TestGumtreeMatcher" time="0.004"/>
+  <testcase name="testMappingComparatorPosInTree()" classname="com.github.gumtreediff.test.TestGumtreeMatcher" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

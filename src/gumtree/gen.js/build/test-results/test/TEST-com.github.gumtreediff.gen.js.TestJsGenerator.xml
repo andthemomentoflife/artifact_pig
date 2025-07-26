@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.js.TestJsGenerator" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:17:57" hostname="gangmilyeong-ui-iMac.local" time="0.2">
+  <properties/>
+  <testcase name="testStatement()" classname="com.github.gumtreediff.gen.js.TestJsGenerator" time="0.184"/>
+  <testcase name="testComment()" classname="com.github.gumtreediff.gen.js.TestJsGenerator" time="0.002"/>
+  <testcase name="testLambda()" classname="com.github.gumtreediff.gen.js.TestJsGenerator" time="0.003"/>
+  <testcase name="badSyntax()" classname="com.github.gumtreediff.gen.js.TestJsGenerator" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

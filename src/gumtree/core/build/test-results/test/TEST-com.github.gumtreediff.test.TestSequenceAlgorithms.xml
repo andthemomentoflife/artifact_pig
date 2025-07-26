@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestSequenceAlgorithms" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:57" hostname="gangmilyeong-ui-iMac.local" time="0.006">
+  <properties/>
+  <testcase name="testITreeLcssIsomorphism()" classname="com.github.gumtreediff.test.TestSequenceAlgorithms" time="0.003"/>
+  <testcase name="testLcs()" classname="com.github.gumtreediff.test.TestSequenceAlgorithms" time="0.0"/>
+  <testcase name="testITreeLcss()" classname="com.github.gumtreediff.test.TestSequenceAlgorithms" time="0.0"/>
+  <testcase name="testStringLcss()" classname="com.github.gumtreediff.test.TestSequenceAlgorithms" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

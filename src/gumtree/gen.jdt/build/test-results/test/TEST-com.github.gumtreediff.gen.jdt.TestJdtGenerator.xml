@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.jdt.TestJdtGenerator" tests="14" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:17:54" hostname="gangmilyeong-ui-iMac.local" time="1.133">
+  <properties/>
+  <testcase name="testPrefixExpression()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="1.037"/>
+  <testcase name="testArrayCreation()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.004"/>
+  <testcase name="testIds()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.005"/>
+  <testcase name="testMethodInvocation()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.006"/>
+  <testcase name="testJava8Syntax()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.01"/>
+  <testcase name="testSimpleSyntax()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.002"/>
+  <testcase name="testVarargs()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.004"/>
+  <testcase name="testAssignment()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.023"/>
+  <testcase name="testGenericFunctionWithTypeParameter()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.008"/>
+  <testcase name="testTypeDefinition()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.002"/>
+  <testcase name="testJava5Syntax()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.007"/>
+  <testcase name="testPostfixExpression()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.004"/>
+  <testcase name="badSyntax()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.009"/>
+  <testcase name="testInfixOperator()" classname="com.github.gumtreediff.gen.jdt.TestJdtGenerator" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

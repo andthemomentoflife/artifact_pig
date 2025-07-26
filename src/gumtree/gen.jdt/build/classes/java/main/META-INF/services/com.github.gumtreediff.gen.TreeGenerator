@@ -1,0 +1,3 @@
+com.github.gumtreediff.gen.jdt.AbstractJdtTreeGenerator
+com.github.gumtreediff.gen.jdt.JdtTreeGenerator
+com.github.gumtreediff.gen.jdt.cd.CdJdtTreeGenerator

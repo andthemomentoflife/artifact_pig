@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestClassicGumtreeStability" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:56" hostname="gangmilyeong-ui-iMac.local" time="0.104">
+  <properties/>
+  <testcase name="testStability()" classname="com.github.gumtreediff.test.TestClassicGumtreeStability" time="0.104"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

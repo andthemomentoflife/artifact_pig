@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.github.gumtreediff.client.diff"},{"l":"com.github.gumtreediff.client.diff.dotdiff"},{"l":"com.github.gumtreediff.client.diff.swingdiff"},{"l":"com.github.gumtreediff.client.diff.webdiff"}];updateSearchResults();

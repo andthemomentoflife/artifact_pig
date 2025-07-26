@@ -1,0 +1,14 @@
+com.github.gumtreediff.gen.treesitter.AbstractTreeSitterGenerator
+com.github.gumtreediff.gen.treesitter.CMakeTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.CSharpTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.CTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.GoTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.JavaScriptTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.JavaTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.OcamlTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.PhpTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.PythonTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.RTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.RubyTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.RustTreeSitterTreeGenerator
+com.github.gumtreediff.gen.treesitter.TypeScriptTreeSitterTreeGenerator

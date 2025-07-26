@@ -1,0 +1,8 @@
+-classpath '/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.ruby/build/classes/java/main:/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.ruby/build/resources/main:/Users/gangmiryeong/.gradle/caches/modules-2/files-2.1/org.atteo.classindex/classindex/3.13/d2e0137bd75224fcb3115abbf28b997c05a74837/classindex-3.13.jar:/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/core/build/libs/core-4.0.0-beta3-SNAPSHOT.jar:/Users/gangmiryeong/.gradle/caches/modules-2/files-2.1/org.jruby/jrubyparser/0.5.3/16e160b04981e671bb7b35320ff510798fa9ba19/jrubyparser-0.5.3.jar'
+-d '/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.ruby/build/docs/javadoc'
+-doctitle 'gen.ruby 4.0.0-beta3-SNAPSHOT API'
+-html5 
+-notimestamp 
+-quiet 
+-windowtitle 'gen.ruby 4.0.0-beta3-SNAPSHOT API'
+'/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.ruby/src/main/java/com/github/gumtreediff/gen/ruby/RubyTreeGenerator.java'

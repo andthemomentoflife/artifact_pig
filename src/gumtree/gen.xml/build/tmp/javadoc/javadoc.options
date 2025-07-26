@@ -1,0 +1,8 @@
+-classpath '/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.xml/build/classes/java/main:/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.xml/build/resources/main:/Users/gangmiryeong/.gradle/caches/modules-2/files-2.1/org.atteo.classindex/classindex/3.13/d2e0137bd75224fcb3115abbf28b997c05a74837/classindex-3.13.jar:/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/core/build/libs/core-4.0.0-beta3-SNAPSHOT.jar:/Users/gangmiryeong/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.17.2/1e75b08d7019546a954f1e359477f916f537a34d/jsoup-1.17.2.jar'
+-d '/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.xml/build/docs/javadoc'
+-doctitle 'gen.xml 4.0.0-beta3-SNAPSHOT API'
+-html5 
+-notimestamp 
+-quiet 
+-windowtitle 'gen.xml 4.0.0-beta3-SNAPSHOT API'
+'/Users/gangmiryeong/Desktop/pig_sal/code/code_sim_test/gumtree/gen.xml/src/main/java/com/github/gumtreediff/gen/xml/XmlTreeGenerator.java'

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestActionGenerator" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:56" hostname="gangmilyeong-ui-iMac.local" time="0.085">
+  <properties/>
+  <testcase name="testAlignChildren()" classname="com.github.gumtreediff.test.TestActionGenerator" time="0.029"/>
+  <testcase name="testWithUnmappedRoot()" classname="com.github.gumtreediff.test.TestActionGenerator" time="0.002"/>
+  <testcase name="testWithActionExample()" classname="com.github.gumtreediff.test.TestActionGenerator" time="0.034"/>
+  <testcase name="testWithZsCustomExample()" classname="com.github.gumtreediff.test.TestActionGenerator" time="0.011"/>
+  <testcase name="testWithActionExampleNoMove()" classname="com.github.gumtreediff.test.TestActionGenerator" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

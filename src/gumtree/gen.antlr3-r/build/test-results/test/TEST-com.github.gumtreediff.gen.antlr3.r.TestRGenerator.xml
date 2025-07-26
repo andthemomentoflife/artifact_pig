@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.antlr3.r.TestRGenerator" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:17:42" hostname="gangmilyeong-ui-iMac.local" time="0.058">
+  <properties/>
+  <testcase name="[1] v &lt;- c(1,2,3);, SEQUENCE, 8" classname="com.github.gumtreediff.gen.antlr3.r.TestRGenerator" time="0.058"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
