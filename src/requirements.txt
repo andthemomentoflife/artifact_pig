@@ -1,0 +1,6 @@
+openai
+jpype
+asttokens
+autoflake
+opnepyxl
+Cython
