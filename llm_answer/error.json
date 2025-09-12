@@ -1,0 +1,3554 @@
+{
+    "llama": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "wronog API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "wrong API (not compatible with self.conn)",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "wrong API",
+                "SEM": "wrong argument of hosts (changed)",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "wrong API (set_level is not used)",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "body": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "not using libn",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "post": {
+                "API": "",
+                "SEM": "wrong argument (action is in url now)",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status_int": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "read": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "",
+                "SEM": "argument of config is changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "jsonify": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "some existing modules are not defined"
+            },
+            "loads": {
+                "API": "not using bottle",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "match": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "register_check": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "expand_indent": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "Checker": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "ARITHMETIC_OP": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "_checks": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "wrong API",
+                "SEM": "semantic changed with only using WebClient",
+                "MIG": "",
+                "ETC": "imp"
+            },
+            "run_on": {
+                "API": "should used with RTMClient",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "loads": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "no import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "no imp of click",
+                "SEM": "uusage of function is wrong",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "no imp of click",
+                "SEM": "usage of function is wrong",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "addheaders": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "open": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertAdam": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupConstantSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupLinearSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": " ",
+                "ETC": ""
+            },
+            "BertLayerNorm": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "import is wrong",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": "some basic import is not defined"
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "broadcast": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPNetwork": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        }
+    },
+    "gemma": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "wrogn API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "wrong API (boto3)",
+                "SEM": "",
+                "MIG": "boto3",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "wrong API (boto3)",
+                "SEM": "",
+                "MIG": "boto3",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "wrong API (Consumer)",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": "not importing basic modules"
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "no import",
+                "SEM": "no init",
+                "MIG": "",
+                "ETC": "no tags defined"
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "body": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "API error",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "post": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "status_int": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "status": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse error"
+            },
+            "jsonify": {
+                "API": "API error",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse error"
+            },
+            "loads": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse error"
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "match": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "register_check": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "expand_indent": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "Checker": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "ARITHMETIC_OP": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "_checks": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "IMP",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "run_on": {
+                "API": "IMP",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "loads": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "no lcd",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "",
+                "SEM": "wrong usage of function projects()",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "",
+                "SEM": "wrong usage of function projects()",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "addheaders": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "open": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertAdam": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupConstantSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupLinearSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertLayerNorm": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "wrong usage of arg (order should be changed)",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "broadcast": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPNetwork": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        }
+    },
+    "qwen": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "argument omitted",
+                "MIG": "not all migrated",
+                "ETC": ""
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "wrong API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "wrong APi (using boto)",
+                "SEM": "",
+                "MIG": "not using boto",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "wrong API (using boto)",
+                "SEM": "",
+                "MIG": "not using boto",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "wrong argument",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "set_level should be in outside",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "body": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "wrong import of API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "",
+                "SEM": "argument changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "post": {
+                "API": "",
+                "SEM": "structure chagned and line omitted",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status_int": {
+                "API": "",
+                "SEM": "line omitted ",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status": {
+                "API": "",
+                "SEM": "line omitted",
+                "MIG": "",
+                "ETC": ""
+            },
+            "read": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "",
+                "SEM": "omitted",
+                "MIG": "",
+                "ETC": ""
+            },
+            "jsonify": {
+                "API": "",
+                "SEM": "omitted and structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "",
+                "SEM": "line omit",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "match": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "register_check": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "expand_indent": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "Checker": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "ARITHMETIC_OP": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "_checks": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "not using RTMClient (replaced with WebClient)",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "run_on": {
+                "API": "no event",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "loads": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "imp, we do not know c",
+                "SEM": "added c",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "no imp click",
+                "SEM": "wrong usage of function",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "no imp click",
+                "SEM": "wrong usage of function",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "addheaders": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "open": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BertAdam": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupCosineSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupConstantSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupLinearSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BertLayerNorm": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "msg and sig...",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "broadcast": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPNetwork": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        }
+    },
+    "deepseek": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "arguments not delivered",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "not using libn",
+                "ETC": ""
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "not using libn",
+                "ETC": ""
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "not using libn",
+                "ETC": ""
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "not using libn",
+                "ETC": ""
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "location",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "sasl.mechanism is not set",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "no set_level",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "body": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "api issue",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "code changed",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "read": {
+                "API": "",
+                "SEM": "code changed",
+                "MIG": "not usling libn",
+                "ETC": ""
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "",
+                "SEM": "arg value changed (requests.get)",
+                "MIG": "",
+                "ETC": ""
+            },
+            "post": {
+                "API": "",
+                "SEM": "value changded",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status_int": {
+                "API": "",
+                "SEM": "",
+                "MIG": "omit line",
+                "ETC": ""
+            },
+            "status": {
+                "API": "",
+                "SEM": "",
+                "MIG": "omit line",
+                "ETC": ""
+            },
+            "read": {
+                "API": "",
+                "SEM": "codes trcuure",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "",
+                "SEM": "omit line",
+                "MIG": "",
+                "ETC": ""
+            },
+            "jsonify": {
+                "API": "",
+                "SEM": "omit line",
+                "MIG": "",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "",
+                "SEM": "omit",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "match": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "register_check": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "expand_indent": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "Checker": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "ARITHMETIC_OP": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "_checks": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "no slack_sdk",
+                "SEM": "deleted RTM",
+                "MIG": "using slcak",
+                "ETC": ""
+            },
+            "run_on": {
+                "API": "no slack_sdk",
+                "SEM": "deleted RTM",
+                "MIG": "using slcak",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "code changed",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "",
+                "SEM": "code changed",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "wrong PAI",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "",
+                "SEM": "wrong uage of function",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "",
+                "SEM": "wrong usage of function",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "addheaders": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "open": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BertAdam": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupCosineSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupConstantSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupLinearSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BertLayerNorm": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "no lib",
+                "ETC": ""
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "no lib",
+                "ETC": ""
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "no tabulate",
+                "ETC": ""
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "tabulate",
+                "ETC": ""
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "tabulate",
+                "ETC": ""
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "tabulate",
+                "ETC": ""
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "wrong usage of api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "broadcast": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPNetwork": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        }
+    },
+    "gemma3": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "wrong usage of it",
+                "MIG": "",
+                "ETC": ""
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "omit",
+                "ETC": ""
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "omit",
+                "ETC": ""
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "argument is wrong",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "body": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "no api",
+                "SEM": "semantic issue",
+                "MIG": "",
+                "ETC": ""
+            },
+            "post": {
+                "API": "no api",
+                "SEM": "semantic code changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status_int": {
+                "API": "no api",
+                "SEM": "semantic code changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status": {
+                "API": "no api",
+                "SEM": "semantic code changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "read": {
+                "API": "no api",
+                "SEM": "semantic code changed",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "why in comments",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "jsonify": {
+                "API": "no api jsonify and even not imported",
+                "SEM": "code omit",
+                "MIG": "",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "wrong api ",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "match": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "register_check": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "expand_indent": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "Checker": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "ARITHMETIC_OP": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "_checks": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "wrong imp",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "run_on": {
+                "API": "wron gimp",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "loads": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "cd with imp",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "",
+                "SEM": "wrong sem ",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "",
+                "SEM": "wrogn sem",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "addheaders": {
+                "API": "no api used",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "open": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "",
+                "ETC": ""
+            },
+            "read": {
+                "API": "",
+                "SEM": "code structure changed",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertAdam": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineSchedule": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupConstantSchedule": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupLinearSchedule": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertLayerNorm": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "",
+                "MIG": "not all code",
+                "ETC": ""
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "",
+                "MIG": "not all code",
+                "ETC": ""
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "code tructure"
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "n",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "IPv6Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "broadcast": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "IPNetwork": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        }
+    },
+    "qwen3": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "not all code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "API",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "",
+                "SEM": "codestructure",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "enable.auto.commit",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "n",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "body": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "no api ",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "post": {
+                "API": "",
+                "SEM": "code structure and arg value",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status_int": {
+                "API": "no status_int",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "status": {
+                "API": "no statsu",
+                "SEM": "code structre",
+                "MIG": "",
+                "ETC": ""
+            },
+            "read": {
+                "API": "no statsu",
+                "SEM": "code structre",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "no config",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "jsonify": {
+                "API": "no api",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "no api",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "match": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "register_check": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "expand_indent": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "Checker": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "ARITHMETIC_OP": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "_checks": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "run_on": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "nocode",
+                "MIG": "",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "",
+                "SEM": "nocode",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "imp",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "",
+                "SEM": "usage of general function",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "",
+                "SEM": "usage of general function",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "addheaders": {
+                "API": "",
+                "SEM": "code structure",
+                "MIG": "",
+                "ETC": ""
+            },
+            "open": {
+                "API": "",
+                "SEM": "code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "read": {
+                "API": "",
+                "SEM": "codestructure",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertAdam": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupConstantSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupLinearSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertLayerNorm": {
+                "API": "",
+                "SEM": "not a full code",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "IPv6Address": {
+                "API": "nocode",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPv6Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "broadcast": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "IPNetwork": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        }
+    },
+    "gptoss": {
+        "20.json": {
+            "BertForTokenClassification": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetPreTrainedModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "XLNetModel": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "28.json": {
+            "render_template": {
+                "API": "",
+                "SEM": "sem: value of profie is changed",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "110.json": {
+            "is_empty_string": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "is_not_empty_string": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "118.json": {
+            "Pool": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "imap": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "close": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "join": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "119.json": {
+            "get_endpoint": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "get_operation": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "126.json": {
+            "KafkaConsumer": {
+                "API": "wrong usage of api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "132.json": {
+            "level": {
+                "API": "no set_level",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "153.json": {
+            "RequestHandler": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "body": {
+                "API": "wrong api (body)",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "query_string": {
+                "API": "",
+                "SEM": "",
+                "MIG": "wrong lib",
+                "ETC": ""
+            },
+            "WSGIApplication": {
+                "API": "",
+                "SEM": "semantic of code changed",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "175.json": {
+            "PANDOC_PATH": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "176.json": {
+            "ConfigParser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            }
+        },
+        "190.json": {
+            "request": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "post": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "status_int": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "status": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            }
+        },
+        "191.json": {
+            "config": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "jsonify": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "loads": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "200.json": {
+            "noqa": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "match": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "register_check": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "expand_indent": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "Checker": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "ARITHMETIC_OP": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "_checks": {
+                "API": "no api",
+                "SEM": "",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "203.json": {
+            "RTMClient": {
+                "API": "wrong imp",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "run_on": {
+                "API": "wrong imp",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "206.json": {
+            "dumps": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "wrong with code"
+            },
+            "loads": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "wrong with code"
+            }
+        },
+        "254.json": {
+            "lcd": {
+                "API": "wrong api",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "268.json": {
+            "ArgumentParser": {
+                "API": "",
+                "SEM": "--",
+                "MIG": "",
+                "ETC": ""
+            },
+            "add_argument": {
+                "API": "",
+                "SEM": "--",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "280.json": {
+            "Browser": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "wrong code"
+            },
+            "addheaders": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "wrong code"
+            },
+            "open": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "wrong code"
+            },
+            "read": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "wrong code"
+            }
+        },
+        "282.json": {
+            "ConstantLR": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithWarmupRestartsSchedule": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertAdam": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineSchedule": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupConstantSchedule": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupLinearSchedule": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "WarmupCosineWithHardRestartsSchedule": {
+                "API": "no proper api import",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            },
+            "BertLayerNorm": {
+                "API": "no proper pai",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "283.json": {
+            "IPv4Address": {
+                "API": "",
+                "SEM": "code smeanit",
+                "MIG": "",
+                "ETC": ""
+            },
+            "AddressValueError": {
+                "API": "",
+                "SEM": "code semantic",
+                "MIG": "",
+                "ETC": ""
+            },
+            "IPv6Address": {
+                "API": "",
+                "SEM": "code sem",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "293.json": {
+            "QThread": {
+                "API": "",
+                "SEM": "semantic code",
+                "MIG": "",
+                "ETC": ""
+            },
+            "QMessageBox": {
+                "API": "",
+                "SEM": "",
+                "MIG": "omit",
+                "ETC": ""
+            }
+        },
+        "457.json": {
+            "packb": {
+                "API": "",
+                "SEM": "code sem",
+                "MIG": "libn",
+                "ETC": ""
+            },
+            "unpackb": {
+                "API": "",
+                "SEM": "code sem",
+                "MIG": "libn",
+                "ETC": ""
+            }
+        },
+        "489.json": {
+            "PrettyTable": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "align": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "float_format": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            },
+            "add_row": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "parse"
+            }
+        },
+        "492.json": {
+            "Curl": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "BytesIO": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "HTTPHeader": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "setopt": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            },
+            "contenttype": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        },
+        "528.json": {
+            "verify": {
+                "API": "argument usage",
+                "SEM": "",
+                "MIG": "",
+                "ETC": ""
+            }
+        },
+        "616.json": {
+            "IPv4Network": {
+                "API": "",
+                "SEM": "",
+                "MIG": "",
+                "ETC": "nocode"
+            }
+        }
+    }
+}
