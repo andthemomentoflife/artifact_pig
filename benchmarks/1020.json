@@ -1,0 +1,18 @@
+{
+    "url": "https://github.com/TheSpaghettiDetective/OctoPrint-Obico/commit/4f130c1f6436ef458c900c9c163140b6873b4f07",
+    "bef_file": "1020b.py",
+    "aft_file": "1020a.py",
+    "libo": "netaddr",
+    "libn": "ipaddress",
+    "apio": [
+        "IPAddress",
+        "is_private",
+        "is_loopback"
+    ],
+    "apin": [
+        "ip_address",
+        "is_private",
+        "is_loopback"
+    ],
+    "filepath": "octoprint_obico/printer_discovery.py"
+}

@@ -1,0 +1,17 @@
+{
+    "url": "https://github.com/mlcommons-science/benchmark/commit/4e7ff8242160129e5410f368a9824a7d6776a3a2",
+    "bef_file": "1007b.py",
+    "aft_file": "1007a.py",
+    "libo": "argparse",
+    "libn": "docopt",
+    "apio": [
+        "ArgumentParser",
+        "add_argument",
+        "parse_args",
+        "error"
+    ],
+    "apin": [
+        "docopt"
+    ],
+    "filepath": "bin/generate.py"
+}

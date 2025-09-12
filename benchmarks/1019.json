@@ -1,0 +1,22 @@
+{
+    "url": "https://github.com/dwariyar/podcast_transcriber/commit/af489edb9de3fa52338c276bf251beb2b6264f79",
+    "bef_file": "1019b.py",
+    "aft_file": "1019a.py",
+    "libo": "flask",
+    "libn": "quart",
+    "apio": [
+        "Flask",
+        "request",
+        "jsonify",
+        "route",
+        "run"
+    ],
+    "apin": [
+        "Quart",
+        "request",
+        "jsonify",
+        "route",
+        "run"
+    ],
+    "filepath": "backend/app.py"
+}

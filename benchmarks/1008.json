@@ -1,0 +1,14 @@
+{
+    "url": "https://github.com/JNRowe/penelopise/commit/09375d2ebf8b9a83619930377695b085d2f74324",
+    "bef_file": "1008b.py",
+    "aft_file": "1008a.py",
+    "libo": "attrs",
+    "libn": "dataclasses",
+    "apio": [
+        "define"
+    ],
+    "apin": [
+        "dataclass"
+    ],
+    "filepath": "src/penelopise/__init__.py"
+}

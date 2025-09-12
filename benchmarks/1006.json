@@ -1,0 +1,19 @@
+{
+    "url": "https://github.com/XpycTee/smsru_api/commit/37599d02807e088a2fe93387bc4722700e8718ba",
+    "bef_file": "1006b.py",
+    "aft_file": "1006a.py",
+    "libo": "aiohttp",
+    "libn": "httpx",
+    "apio": [
+        "ClientSession",
+        "post",
+        "json"
+    ],
+    "apin": [
+        "AsyncClient",
+        "post",
+        "raise_for_status",
+        "json"
+    ],
+    "filepath": "smsru_api/aioclient.py"
+}

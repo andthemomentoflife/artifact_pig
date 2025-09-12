@@ -1,0 +1,16 @@
+{
+    "url": "https://github.com/AeroMaximus/image-volume-research-tools/commit/0b94a5ecd81777d86b4b4cbefa94fbaa3d59eabc",
+    "bef_file": "1001b.py",
+    "aft_file": "1001a.py",
+    "libo": "progressbar",
+    "libn": "tqdm",
+    "apio": [
+        "ProgressBar",
+        "update",
+        "finish"
+    ],
+    "apin": [
+        "tqdm"
+    ],
+    "filepath": "training_data_selector.py"
+}

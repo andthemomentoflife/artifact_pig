@@ -1,0 +1,19 @@
+{
+    "url": "https://github.com/harvardnlp/NeuralSteganography/commit/9fb2f9b3525acd4dc97fc3eef80eace4801d62b6",
+    "bef_file": "1015b.py",
+    "aft_file": "1015a.py",
+    "libo": "requests",
+    "libn": "aiohttp",
+    "apio": [
+        "post",
+        "status_code",
+        "json"
+    ],
+    "apin": [
+        "ClientSession",
+        "post",
+        "status",
+        "json"
+    ],
+    "filepath": "custom_components/winix/helpers.py"
+}

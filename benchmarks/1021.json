@@ -1,0 +1,20 @@
+{
+    "url": "https://github.com/harvardnlp/NeuralSteganography/commit/9fb2f9b3525acd4dc97fc3eef80eace4801d62b6",
+    "bef_file": "1021b.py",
+    "aft_file": "1021a.py",
+    "libo": "pytorch_transformers",
+    "libn": "transformers",
+    "apio": [
+        "GPT2LMHeadModel",
+        "GPT2Tokenizer",
+        "to",
+        "eval"
+    ],
+    "apin": [
+        "AutoModelForCausalLM",
+        "AutoTokenizer",
+        "to",
+        "eval"
+    ],
+    "filepath": "utils.py"
+}

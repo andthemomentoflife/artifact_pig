@@ -1,0 +1,16 @@
+{
+    "url": "https://github.com/polpolcharchar/brawlboltbackend/commit/5fdb8bbf064182451e9a34fb30fa70740c88b922",
+    "bef_file": "1016b.py",
+    "aft_file": "1016a.py",
+    "libo": "bcrypt",
+    "libn": "passlib",
+    "apio": [
+        "hashpw",
+        "checkpw"
+    ],
+    "apin": [
+        "hash",
+        "verify"
+    ],
+    "filepath": "DatabaseUtility/accountVerificationUtility.py"
+}

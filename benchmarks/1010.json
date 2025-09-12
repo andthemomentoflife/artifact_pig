@@ -1,0 +1,16 @@
+{
+    "url": "https://github.com/bondbox/xkeys/commit/9c9ba8335a2c692fb7f4238f3e1b4a8f664a09bc",
+    "bef_file": "1010b.py",
+    "aft_file": "1010a.py",
+    "libo": "pyopenssl",
+    "libn": "cryptography",
+    "apio": [
+        "load_certificate",
+        "get_notAfter"
+    ],
+    "apin": [
+        "load_pem_x509_certificate",
+        "not_valid_after"
+    ],
+    "filepath": "xpw_keys/mkcert.py"
+}

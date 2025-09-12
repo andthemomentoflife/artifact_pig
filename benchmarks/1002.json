@@ -1,0 +1,20 @@
+{
+    "url": "https://github.com/tim-fry/earthmarsbot/commit/122749551fd74591c053d7d0d416d766769f785b",
+    "bef_file": "1002b.py",
+    "aft_file": "1002a.py",
+    "libo": "twitter",
+    "libn": "tweepy",
+    "apio": [
+        "Api",
+        "TwitterError",
+        "PostUpdate",
+        "message",
+        "text"
+    ],
+    "apin": [
+        "Client",
+        "TweepyException",
+        "create_tweet"
+    ],
+    "filepath": "bot.py"
+}

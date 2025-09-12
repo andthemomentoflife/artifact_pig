@@ -1,0 +1,18 @@
+{
+    "url": "https://github.com/karllabatista/AsynNotify/commit/4e5cb4214543cc122e647d4b55202978fb02a1fe",
+    "bef_file": "1012b.py",
+    "aft_file": "1012a.py",
+    "libo": "redis",
+    "libn": "aioredis",
+    "apio": [
+        "Redis",
+        "blpop",
+        "ConnectionError"
+    ],
+    "apin": [
+        "Redis",
+        "blpop",
+        "RedisError"
+    ],
+    "filepath": "notification-dispatch-service/src/infrastructure/ports/event_bus/redis_event_bus.py"
+}

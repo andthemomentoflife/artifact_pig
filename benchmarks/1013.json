@@ -1,0 +1,20 @@
+{
+    "url": "https://github.com/Erdemozer01/dreampi/commit/6e800c06dad30fe6d615474ccb6add290ef2a7aa",
+    "bef_file": "1013b.py",
+    "aft_file": "1013a.py",
+    "libo": "RPi.GPIO",
+    "libn": "gpiozero",
+    "apio": [
+        "setmode",
+        "setup",
+        "output",
+        "cleanup"
+    ],
+    "apin": [
+        "DistanceSensor",
+        "DistanceSensorNoEcho",
+        "distance",
+        "is_active"
+    ],
+    "filepath": "test_sensors.py"
+}

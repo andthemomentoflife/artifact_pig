@@ -1,0 +1,24 @@
+{
+    "url": "https://github.com/ianlintner/AI-Pipeline/commit/eff6f82d86ebe5fd402bda58b455d5c1564f1af0",
+    "bef_file": "1004b.py",
+    "aft_file": "1004a.py",
+    "libo": "kafka-python",
+    "libn": "confluent-kafka",
+    "apio": [
+        "KafkaConsumer",
+        "KafkaProducer",
+        "KafkaError",
+        "send",
+        "close"
+    ],
+    "apin": [
+        "Consumer",
+        "Producer",
+        "subscribe",
+        "poll",
+        "close",
+        "produce",
+        "flush"
+    ],
+    "filepath": "kafka_utils.py"
+}

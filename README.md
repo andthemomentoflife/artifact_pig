@@ -8,6 +8,8 @@ This directory contains the benchmark data used in the paper. It includes the fo
 - `<file_num>.json`: The json files containing the basic information about the benchmark, such as the source and target libraries, the client repository, commit hash, target apis to be changed and etc. 
 - `<file_num>.py`: The python files containing the original and migrated code. The file containing the original code is named `<file_num>b.py`, and the file containing the migrated code is named `<file_num>a.py`.
 
+**The benchmarks which have number upper than 1000 are free from data leakage.**
+
 ### LLM source data directory: `llm_answer`
 This directory contains the LLM generated code for the benchmark data, for each experiment run. Followings are the brief description of the files:
 - `answer_baseline.xlsx`: The naive baseline of our experiments.
@@ -26,10 +28,12 @@ The results of the experiments are in this directory. For each research question
 
 #### RQ1 directory: `rq1`
 This directory contains the results of RQ1, which is about the correctness of the naive baseline, slicing and PIG models. For each model, there is a subdirectory named `<model>`, which contains the following files:
-- `LLM1json`: The migration resulsts of the navie baselie model per API.
-- `LLM2json`: The migration results of the slicing model per API.
-- `LLM4json`: The migration results of the PIG model per API.
-  
+- `baseline.json`: The migration results of the baseline per API.
+- `slicing.json`: The migration results of the slicing model per API.
+- `pig.json`: The migration results of the PIG model per API.
+- `baseline_leakage.json`: The migration results of the baseline in data leakage benchmarks.
+- `pig_leakage.json`: The migration results of the PIG model in data leakage
+
 Each top-level key represents a filename (e.g., `528.json`, `616.json`), and the corresponding value is a dictionary of test results for specific APIs.
 
 #### Structure
@@ -67,6 +71,12 @@ This directory contains the results of RQ3, which is about the limitations.
   },
 }
 ```
+
+### To check for the figure of tables
+You can check the results of each research question by running the corresponding python files in the `results` directory.
+- `effectiveness.py`: This file contains the code for generating the figure and table for effectiveness of Pig (main table).
+- `ablation.py`: This file contains the code for generating the figure and table for ablation study.
+- `leakage.py`: This file contains the code for generating the figure and table for data leakage benchmarks.
 
 ### Src directory: `src`
 This directory contains the source code of the work. 

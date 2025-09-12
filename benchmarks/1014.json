@@ -1,0 +1,17 @@
+{
+    "url": "https://github.com/tristan-harris/python-chess-tui/commit/2a87867240e6945622342ac19753acb65737e878",
+    "bef_file": "1014b.py",
+    "aft_file": "1014a.py",
+    "libo": "click",
+    "libn": "argparse",
+    "apio": [
+        "command",
+        "option"
+    ],
+    "apin": [
+        "ArgumentParser",
+        "add_argument",
+        "parse_args"
+    ],
+    "filepath": "run.py"
+}

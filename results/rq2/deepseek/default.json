@@ -1255,7 +1255,7 @@
             "reason": "-"
         },
         "BertAdam": {
-            "is_correct": "n",
+            "is_correct": "y",
             "reason": "-"
         },
         "WarmupCosineSchedule": {

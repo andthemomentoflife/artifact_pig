@@ -1,0 +1,370 @@
+{
+    "1000.json": {
+        "Flask": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "route": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "run": {
+            "is_correct": "n",
+            "reason": "arg is not deliverd in Thread (wrong usage)"
+        }
+    },
+    "1001.json": {
+        "ProgressBar": {
+            "is_correct": "n",
+            "reason": "currently, importing tqdm just as a module"
+        },
+        "update": {
+            "is_correct": "n",
+            "reason": "as tqdm is a module, it does not do any update"
+        },
+        "finish": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1002.json": {
+        "Api": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "TwitterError": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "PostUpdate": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "message": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "text": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1003.json": {
+        "PoolManager": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "request": {
+            "is_correct": "n",
+            "reason": "headers..."
+        },
+        "status": {
+            "is_correct": "n",
+            "reason": "line omitted"
+        },
+        "data": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "status_code": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "1004.json": {
+        "KafkaConsumer": {
+            "is_correct": "n",
+            "reason": "ConsumerGropu..."
+        },
+        "KafkaProducer": {
+            "is_correct": "n",
+            "reason": "key.serializer no"
+        },
+        "KafkaError": {
+            "is_correct": "n",
+            "reason": "wrong imp"
+        },
+        "send": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "close": {
+            "is_correct": "n",
+            "reason": "no close for producer"
+        }
+    },
+    "1005.json": {
+        "patch_all": {
+            "is_correct": "n",
+            "reason": "wrong imp"
+        }
+    },
+    "1006.json": {
+        "ClientSession": {
+            "is_correct": "n",
+            "reason": "wrong arg for transport"
+        },
+        "post": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "json": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1007.json": {
+        "ArgumentParser": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "add_argument": {
+            "is_correct": "y",
+            "reason": "not sure"
+        },
+        "parse_args": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "error": {
+            "is_correct": "n",
+            "reason": "error should not remain same"
+        }
+    },
+    "1008.json": {
+        "define": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1009.json": {
+        "new": {
+            "is_correct": "n",
+            "reason": "Cipher -> nononce"
+        },
+        "decrypt_and_verify": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "1010.json": {
+        "load_certificate": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "get_notAfter": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1011.json": {
+        "QApplication": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QWidget": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "Qt": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QTimer": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QPoint": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QRect": {
+            "is_correct": "n",
+            "reason": " nocode"
+        },
+        "QObject": {
+            "is_correct": "n",
+            "reason": "nocjode"
+        },
+        "pyqtSignal": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QMutex": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QPointF": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QPainter": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QColor": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QBrush": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QPen": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QPainterPath": {
+            "is_correct": "n",
+            "reason": "nocode"
+        },
+        "QGuiApplication": {
+            "is_correct": "n",
+            "reason": "nocode"
+        }
+    },
+    "1012.json": {
+        "Redis": {
+            "is_correct": "n",
+            "reason": "no AsyncRedis"
+        },
+        "blpop": {
+            "is_correct": "n",
+            "reason": "bls..blpop"
+        },
+        "ConnectionError": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "1013.json": {
+        "setmode": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "setup": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "output": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "cleanup": {
+            "is_correct": "n",
+            "reason": "no close or something"
+        }
+    },
+    "1014.json": {
+        "command": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "option": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1015.json": {
+        "post": {
+            "is_correct": "n",
+            "reason": "await..."
+        },
+        "status_code": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "json": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1016.json": {
+        "hashpw": {
+            "is_correct": "n",
+            "reason": "-"
+        },
+        "checkpw": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "1017.json": {
+        "WebClient": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "channels_history": {
+            "is_correct": "n",
+            "reason": "no chat_history"
+        },
+        "chat_postMessage": {
+            "is_correct": "n",
+            "reason": "when handling exception with the api, it uses unexisting api (SlackApiError)"
+        },
+        "users_list": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1018.json": {
+        "monkey_patch": {
+            "is_correct": "n",
+            "reason": "-"
+        }
+    },
+    "1019.json": {
+        "Flask": {
+            "is_correct": "y",
+            "reason": ""
+        },
+        "request": {
+            "is_correct": "y",
+            "reason": ""
+        },
+        "jsonify": {
+            "is_correct": "y",
+            "reason": ""
+        },
+        "route": {
+            "is_correct": "y",
+            "reason": ""
+        },
+        "run": {
+            "is_correct": "n",
+            "reason": "run function is right, but when calling main ..."
+        }
+    },
+    "1020.json": {
+        "IPAddress": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "is_private": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "is_loopback": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    },
+    "1021.json": {
+        "GPT2LMHeadModel": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "GPT2Tokenizer": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "to": {
+            "is_correct": "y",
+            "reason": "-"
+        },
+        "eval": {
+            "is_correct": "y",
+            "reason": "-"
+        }
+    }
+}

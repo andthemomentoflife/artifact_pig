@@ -1255,8 +1255,8 @@
             "reason": " wrong lib"
         },
         "BertAdam": {
-            "is_correct": "n",
-            "reason": " wrong lib"
+            "is_correct": "y",
+            "reason": "-"
         },
         "WarmupCosineSchedule": {
             "is_correct": "n",

@@ -1,0 +1,14 @@
+{
+    "url": "https://github.com/er456258/baccarat-game/commit/477927bce948ba6f302a14379edf3c0480ba01f1",
+    "bef_file": "1018b.py",
+    "aft_file": "1018a.py",
+    "libo": "eventlet",
+    "libn": "gevent",
+    "apio": [
+        "monkey_patch"
+    ],
+    "apin": [
+        "patch_all"
+    ],
+    "filepath": "app.py"
+}

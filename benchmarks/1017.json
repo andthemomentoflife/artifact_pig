@@ -1,0 +1,20 @@
+{
+    "url": "https://github.com/junho85/garden5/commit/101e25625c1fabb71a2f9c2b57e1453b667a72d0",
+    "bef_file": "1017b.py",
+    "aft_file": "1017a.py",
+    "libo": "slackclient",
+    "libn": "slack-sdk",
+    "apio": [
+        "WebClient",
+        "channels_history",
+        "chat_postMessage",
+        "users_list"
+    ],
+    "apin": [
+        "WebClient",
+        "channels_history",
+        "chat_postMessage",
+        "users_list"
+    ],
+    "filepath": "attendance/garden.py"
+}

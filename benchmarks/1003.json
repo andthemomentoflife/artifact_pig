@@ -1,0 +1,20 @@
+{
+    "url": "https://github.com/stackupdev/dbs_pred/commit/623fd95d36dbb774d26f1dc81de2164bc0dddce5",
+    "bef_file": "1003b.py",
+    "aft_file": "1003a.py",
+    "libo": "urllib3",
+    "libn": "requests",
+    "apio": [
+        "PoolManager",
+        "request",
+        "status",
+        "data",
+        "status_code"
+    ],
+    "apin": [
+        "get",
+        "status_code",
+        "json"
+    ],
+    "filepath": "app.py"
+}
