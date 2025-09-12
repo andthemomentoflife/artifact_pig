@@ -811,20 +811,21 @@ def matcher(
 
         all_indexes = find_all_indexes(rootb_str, nodeo_str)
 
-        try:
-            start1 = find_nearest_index(
-                all_indexes,
-                rootb_str.find(ast.unparse(nodeo).strip()),
-                rootb_str.find(ast.unparse(nodeo).strip())
-                + len(ast.unparse(nodeo).strip()),
-            )
 
-            end1 = start1 + len(ast.unparse(nodeo).strip())
+        start1 = find_nearest_index(
+            all_indexes,
+            rootb_str.find(ast.unparse(nodeo).strip()),
+            rootb_str.find(ast.unparse(nodeo).strip())
+            + len(ast.unparse(nodeo).strip()),
+        )
 
-            r = jMatch.PMadtcher(rootb_str, roota_str, nodeo_str, start1, end1)
+        end1 = start1 + len(ast.unparse(nodeo).strip())
 
-        except:
-            continue
+        r = jMatch.PMadtcher(rootb_str, roota_str, nodeo_str, start1, end1)
+        print(r, 'r')
+
+
+            # continue
 
         if len(r) != 0:
             start, end = r[0], r[1]

@@ -1,0 +1,13 @@
+students [0,130]
+    list [15,41]
+(        xml-text: Students list [21,34]
+    student [46,67]
+        name: foo [55,64]
+    student [72,93]
+        name: bar [81,90]
+    student [98,119]
+        name: baz [107,116]
+root [38,78]
+    foo [44,60]
+        arg: bar [49,57]
+    baz [60,71]

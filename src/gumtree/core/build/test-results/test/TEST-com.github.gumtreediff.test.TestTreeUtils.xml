@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestTreeUtils" tests="15" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:58" hostname="gangmilyeong-ui-iMac.local" time="0.021">
+  <properties/>
+  <testcase name="testPostOrder()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testPreOrderList()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.002"/>
+  <testcase name="testBfs()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testDepth()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.002"/>
+  <testcase name="testBfs2()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testBfs3()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testHash()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testSize()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testBfsList()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testPostOrderNumbering()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testLeafIterator()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testPostOrder2()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.0"/>
+  <testcase name="testPostOrder3()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testHashValue()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <testcase name="testHeight()" classname="com.github.gumtreediff.test.TestTreeUtils" time="0.001"/>
+  <system-out><![CDATA[0: a [0,100]
+    1: b [0,10]
+        3: c [0,5]
+        3: d [6,16]
+    2: e [11,100]
+0: a [0,100]
+    1: b [0,10]
+        3: c [0,5]
+        3: d [6,16]
+    2: e [11,100]
+0: a [0,100]
+    1: b [0,10]
+        3: c [0,5]
+        3: d [6,16]
+    2: e [11,100]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.javaparser.TestJavaParserGenerator" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:17:52" hostname="gangmilyeong-ui-iMac.local" time="0.205">
+  <properties/>
+  <testcase name="testBadSyntax()" classname="com.github.gumtreediff.gen.javaparser.TestJavaParserGenerator" time="0.145"/>
+  <testcase name="testRange()" classname="com.github.gumtreediff.gen.javaparser.TestJavaParserGenerator" time="0.007"/>
+  <testcase name="[1] CompilationUnit, 12, package foo.bar; public class Foo { public int foo; }" classname="com.github.gumtreediff.gen.javaparser.TestJavaParserGenerator" time="0.021"/>
+  <testcase name="[2] CompilationUnit, 37, public class Foo&lt;A&gt; { public List&lt;A&gt; foo; public void foo() { for (A f : foo) { System.out.println(f); } } }" classname="com.github.gumtreediff.gen.javaparser.TestJavaParserGenerator" time="0.009"/>
+  <testcase name="[3] CompilationUnit, 23, public class Foo {&#10;&#9;public void foo() {&#10;&#9;&#9;new ArrayList&lt;Object&gt;().stream().forEach(a -&gt; {});&#10;&#9;}&#10;}" classname="com.github.gumtreediff.gen.javaparser.TestJavaParserGenerator" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

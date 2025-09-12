@@ -80,8 +80,10 @@ You can check the results of each research question by running the corresponding
 
 ### Src directory: `src`
 This directory contains the source code of the work. 
-You can execute the transplanting process by running the `src`/`synth`/`main.py`
-Currently, it is not organized and not executable, but it will be updated continuously.
+You can execute the transplanting process by running the `src`/`synth`/`main.py` in current directory(`artifact_pig`). Required dependencies are listed in the `requirements.txt` file in the `src` directory.
+Additionally, you have to install the openjdk package for the `GumTree` library. As the class files version is 61.0, you need to install the optimal version of openjdk (at least openjdk@17).
+More additional dependencies are listed in the `README.md` file in the `src` directory.
+
 Followings are the brief description of each directory:
 - `llm`: This directory contains the source code for querying the LLMs, including the code slicing.
 - `mapping`: This directory contains the source code for the mapping process, which is used to map the APIs in the source library to the APIs in the target library.

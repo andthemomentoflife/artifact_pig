@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestTree" tests="17" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:57" hostname="gangmilyeong-ui-iMac.local" time="1.031">
+  <properties/>
+  <testcase name="testGetDescendants()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testImmutable()" classname="com.github.gumtreediff.test.TestTree" time="0.004"/>
+  <testcase name="testChildUrl()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testToString()" classname="com.github.gumtreediff.test.TestTree" time="0.0"/>
+  <testcase name="testTypeThreading()" classname="com.github.gumtreediff.test.TestTree" time="1.008"/>
+  <testcase name="testInsertChild()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testGetParents()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testIsomophism()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testTypesAndLabels()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testIsostructure()" classname="com.github.gumtreediff.test.TestTree" time="0.002"/>
+  <testcase name="testTreesBetweenPositions()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testDeepCopy()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testSearchSubtree()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testIsRoot()" classname="com.github.gumtreediff.test.TestTree" time="0.0"/>
+  <testcase name="testFakeTree()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testIsClone()" classname="com.github.gumtreediff.test.TestTree" time="0.001"/>
+  <testcase name="testChildManipulation()" classname="com.github.gumtreediff.test.TestTree" time="0.0"/>
+  <system-out><![CDATA[2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

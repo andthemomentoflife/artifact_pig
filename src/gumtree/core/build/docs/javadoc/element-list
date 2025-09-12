@@ -1,0 +1,14 @@
+com.github.gumtreediff.actions
+com.github.gumtreediff.actions.model
+com.github.gumtreediff.gen
+com.github.gumtreediff.io
+com.github.gumtreediff.matchers
+com.github.gumtreediff.matchers.heuristic
+com.github.gumtreediff.matchers.heuristic.cd
+com.github.gumtreediff.matchers.heuristic.gt
+com.github.gumtreediff.matchers.optimal
+com.github.gumtreediff.matchers.optimal.rted
+com.github.gumtreediff.matchers.optimal.zs
+com.github.gumtreediff.matchers.optimizations
+com.github.gumtreediff.tree
+com.github.gumtreediff.utils

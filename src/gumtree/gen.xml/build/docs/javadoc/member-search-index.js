@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.github.gumtreediff.gen.xml","c":"XmlTreeGenerator","l":"generate(Reader)","u":"generate(java.io.Reader)"},{"p":"com.github.gumtreediff.gen.xml","c":"XmlTreeGenerator","l":"XmlTreeGenerator()","u":"%3Cinit%3E()"}];updateSearchResults();

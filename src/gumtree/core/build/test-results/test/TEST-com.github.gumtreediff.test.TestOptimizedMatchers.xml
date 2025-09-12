@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.test.TestOptimizedMatchers" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:16:57" hostname="gangmilyeong-ui-iMac.local" time="0.028">
+  <properties/>
+  <testcase name="testRtedThetaMatcher()" classname="com.github.gumtreediff.test.TestOptimizedMatchers" time="0.018"/>
+  <testcase name="testChangeDistillerThetaParMatcher()" classname="com.github.gumtreediff.test.TestOptimizedMatchers" time="0.006"/>
+  <testcase name="testClassicGumtreeThetaMatcher()" classname="com.github.gumtreediff.test.TestOptimizedMatchers" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

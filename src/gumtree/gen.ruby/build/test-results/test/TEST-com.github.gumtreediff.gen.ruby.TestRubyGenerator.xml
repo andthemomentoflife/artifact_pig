@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.ruby.TestRubyGenerator" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:18:01" hostname="gangmilyeong-ui-iMac.local" time="0.362">
+  <properties/>
+  <testcase name="testRuby2Syntax()" classname="com.github.gumtreediff.gen.ruby.TestRubyGenerator" time="0.301"/>
+  <testcase name="testSimpleSyntax()" classname="com.github.gumtreediff.gen.ruby.TestRubyGenerator" time="0.003"/>
+  <testcase name="testFileParsing()" classname="com.github.gumtreediff.gen.ruby.TestRubyGenerator" time="0.049"/>
+  <testcase name="testPosition()" classname="com.github.gumtreediff.gen.ruby.TestRubyGenerator" time="0.001"/>
+  <testcase name="badSyntax()" classname="com.github.gumtreediff.gen.ruby.TestRubyGenerator" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

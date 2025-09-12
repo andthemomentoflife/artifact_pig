@@ -1,0 +1,5 @@
+com.github.gumtreediff.gen.srcml.AbstractSrcmlTreeGenerator
+com.github.gumtreediff.gen.srcml.SrcmlCTreeGenerator
+com.github.gumtreediff.gen.srcml.SrcmlCppTreeGenerator
+com.github.gumtreediff.gen.srcml.SrcmlCsTreeGenerator
+com.github.gumtreediff.gen.srcml.SrcmlJavaTreeGenerator

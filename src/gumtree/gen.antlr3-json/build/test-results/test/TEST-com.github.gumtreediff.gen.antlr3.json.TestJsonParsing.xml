@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gumtreediff.gen.antlr3.json.TestJsonParsing" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-08T09:17:36" hostname="gangmilyeong-ui-iMac.local" time="0.026">
+  <properties/>
+  <testcase name="testJsonParsing()" classname="com.github.gumtreediff.gen.antlr3.json.TestJsonParsing" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

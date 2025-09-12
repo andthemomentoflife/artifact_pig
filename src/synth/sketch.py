@@ -1,4 +1,4 @@
-import ast, os, json, sys, autoflake
+import ast, json, sys, autoflake
 from os import path
 from typing import Union
 from pathlib import Path

@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.github.gumtreediff.gen.ruby","c":"RubyTreeGenerator","l":"generate(Reader)","u":"generate(java.io.Reader)"},{"p":"com.github.gumtreediff.gen.ruby","c":"RubyTreeGenerator","l":"RubyTreeGenerator()","u":"%3Cinit%3E()"}];updateSearchResults();
