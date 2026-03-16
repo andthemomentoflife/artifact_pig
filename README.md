@@ -6,7 +6,7 @@ This repository contains the data and results of the "PIG: Leveraging Large Lang
 
 📄 **Accepted Paper**  
 [PIG: Leveraging Large Language Models for Python Library Migrations](paper/fse2026-pig.pdf)
-Accepted at <FSE> 2026
+Accepted at FSE 2026
 
 # Directory Structure
 ### Benchmark directory: `benchmarks`
