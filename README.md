@@ -23,17 +23,43 @@ stored in `results/rq1/`, `results/rq2/`, and `results/rq3/` respectively.
 To reproduce each table, run:
 
 ```bash
-# RQ1: Effectiveness
+# Table1: Effectiveness
 python results/effectiveness.py
 
-# RQ2: Ablation Study
+# Figure 6: Ablation Study
 python results/ablation.py
 
-# RQ3: Data Leakage
+# Talbe 2: Data Leakage
 python results/leakage.py
 ```
 
 > **Note:** `results/ablation.py` generates a bar chart (`ablation_result.png`) in addition to printing the table. Running this script will open a matplotlib window.
+
+---
+ 
+## 📉 Error Analysis (Fig. 2)
+ 
+`llm_answer/error_analysis.py` reproduces the error type proportion chart (Fig. 2) using the manually labeled error data in `llm_answer/error.json`.
+ 
+```bash
+python results/error_analysis.py
+```
+ 
+Entries where `ETC` is `"nocode"` are excluded from all counts, as mentioned in paper.
+
+> **Note:** Running this script will open a matplotlib window.
+
+---
+
+## 🔍 Limitations and Future Work (Section 4.3)
+ 
+`results/discussion.py` analyzes the failure cases discussed in Section 4.3, using the manually labeled data in `results/rq3/discussion.json`.
+ 
+```bash
+python results/leakage_discussion.py
+```
+ 
+This script prints a breakdown of failure types and their proportions to the terminal.
 
 ---
 
