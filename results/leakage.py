@@ -3,54 +3,89 @@ import json
 
 MODELS = [
     "qwen", "gemma", "llama", "qwen3", "gemma3", "deepseek", "gptoss"
-    ]
+]
+MODEL_LABELS = [
+    "qwen2", "gemma2", "llama3.1", "qwen3", "gemma3", "deepseek-r1", "gpt-oss"
+]
 RQ1_PATH = Path(__file__).parent / Path("rq1")
 
+
+def compute_correct(data: dict) -> int:
+    return sum(
+        1 for vals in data.values()
+        for v in vals.values()
+        if v["is_correct"] == "y"
+    )
+
+
+def pct_increase(base, new):
+    if base == 0:
+        return 0.0
+    return (new - base) / base * 100
+
+
 def main():
-    total_yes_baseline = 0
-    total_yes_pig = 0
+    baseline_counts = []
+    pig_counts = []
 
     for model in MODELS:
-        BASELINE_PATH = RQ1_PATH / Path(model) / Path("baseline_leakage.json")
-        PIG_PATH = RQ1_PATH / Path(model) / Path("pig_leakage.json")
+        with open(RQ1_PATH / model / "baseline_leakage.json") as f:
+            baseline = json.load(f)
+        with open(RQ1_PATH / model / "pig_leakage.json") as f:
+            pig = json.load(f)
 
-        with open(BASELINE_PATH, "r") as f:
-            BASELINE = json.load(f)
-        with open(PIG_PATH, "r") as f:
-            PIG = json.load(f)  
+        baseline_counts.append(compute_correct(baseline))
+        pig_counts.append(compute_correct(pig))
 
-        baseline_yes = 0
-        pig_yes = 0
+    avg_baseline = sum(baseline_counts) / len(MODELS)
+    avg_pig      = sum(pig_counts) / len(MODELS)
+    avg_increase = pct_increase(avg_baseline, avg_pig)
 
+    # Column widths
+    cw_type   = 12
+    cw_model  = 11
+    cw_avg    = 9
 
-        for file, vals in BASELINE.items():
-            for api, val in vals.items():
-                if val["is_correct"] == "y":
-                    baseline_yes += 1
+    all_labels = MODEL_LABELS + ["Average"]
+    all_baseline = baseline_counts + [avg_baseline]
+    all_pig      = pig_counts      + [avg_pig]
 
-        for file, vals in PIG.items():
-            for api, val in vals.items():
-                if val["is_correct"] == "y":
-                    pig_yes += 1
+    sep = "-" * (cw_type + cw_model * len(MODELS) + cw_avg + len(MODELS))
 
+    # Header
+    header = f"{'Model':<{cw_type}}" + "".join(f"{l:^{cw_model}}" for l in all_labels)
+    print(sep)
+    print(header)
+    print(sep)
 
-        print(f"Model: {model}")
-        # Just check for instance counts
-        print(f"Slicing: {baseline_yes}")
-        print(f"Pig: {pig_yes}")
-        percentage_increase = ((pig_yes - baseline_yes) / baseline_yes) * 100 if baseline_yes != 0 else 0
-        print(f"Percentage Increase: {percentage_increase:.1f}%")
+    # Baseline row
+    row_b = f"{'BASELINE':<{cw_type}}"
+    for i, v in enumerate(all_baseline):
+        if i < len(MODELS):
+            row_b += f"{v:^{cw_model}}"
+        else:
+            row_b += f"{v:^{cw_model}.1f}"
+    print(row_b)
 
-        total_yes_baseline += baseline_yes
-        total_yes_pig += pig_yes
+    # PIG row
+    row_p = f"{'PIG':<{cw_type}}"
+    for i, v in enumerate(all_pig):
+        if i < len(MODELS):
+            row_p += f"{v:^{cw_model}}"
+        else:
+            row_p += f"{v:^{cw_model}.1f}"
+    print(row_p)
 
-    total_yes_baseline = total_yes_baseline / len(MODELS)
-    total_yes_pig = total_yes_pig / len(MODELS)
-    percentage_increase = ((total_yes_pig - total_yes_baseline) / total_yes_baseline) * 100
+    # % Increase row
+    row_i = f"{'% Increase':<{cw_type}}"
+    for b, p in zip(baseline_counts, pig_counts):
+        pct = pct_increase(b, p)
+        val = f"\u25b2{pct:.1f}%"
+        row_i += f"{val:^{cw_model}}"
+    row_i += f"{'\u25b2' + f'{avg_increase:.1f}%':^{cw_avg}}"
+    print(row_i)
 
-    print("Summary:")
-    print(f"Total Baseline: {total_yes_baseline:.1f}")
-    print(f"Total Pig: {total_yes_pig:.1f}")
-    print(f"Percentage Increase: {percentage_increase:.1f}%")
+    print(sep)
+
 
 main()

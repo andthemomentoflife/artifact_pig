@@ -1,48 +1,98 @@
-# PIG Result
+# PIG: Leveraging Large Language Models for Python Library Migrations
 
-This repository contains the data and results of the "PIG: Leveraging Large Language Models for Python Library Migrations". 
+This repository contains the data and results for the paper **"PIG: Leveraging Large Language Models for Python Library Migrations"**.
 
-# Paper
+## 📄 Paper
 
-📄 **Accepted Paper**  
-[PIG: Leveraging Large Language Models for Python Library Migrations](paper/fse2026-pig.pdf)
-Accepted at FSE 2026
+[PIG: Leveraging Large Language Models for Python Library Migrations](paper/fse2026-pig.pdf)  
 
-# Directory Structure
-### Benchmark directory: `benchmarks`
-This directory contains the benchmark data used in the paper. It includes the following files:
-- `<file_num>.json`: The json files containing the basic information about the benchmark, such as the source and target libraries, the client repository, commit hash, target apis to be changed and etc. 
-- `<file_num>.py`: The python files containing the original and migrated code. The file containing the original code is named `<file_num>b.py`, and the file containing the migrated code is named `<file_num>a.py`.
+---
 
-**The benchmarks which have number upper than 1000 are free from data leakage.**
+## 📊 Reproducing Tables
 
-### LLM source data directory: `llm_answer`
-This directory contains the LLM generated code for the benchmark data, for each experiment run. Followings are the brief description of the files:
-- `answer_baseline.xlsx`: The naive baseline of our experiments.
-- `answer_slicing.xlsx`: The LLM generated code for the model where only slicing technique is used.
-- `answer_pig.xlsx`: The LLM generated code for the model where slicing and API candidate provide techniques are used.
-- `error.json`: The json file containing the error information of the LLM generated code in `answer_baseline.xlsx`. This file is used to generate the prompt for generatingi the LLM generated code in `answer_slicing.xlsx` and `answer_pig.xlsc`.
+The following scripts reproduce the main tables reported in the paper.
+Each script computes the results from manually reviewed data recorded per model,
+stored in `results/rq1/`, `results/rq2/`, and `results/rq3/` respectively.
 
-### Prompt directory: `prompt`
-This directory contains the prompt templates we used in the experiments.
-- `baseline.txt`: The prompt template for the baseline, using prior work's prompt referred in the paper.
-- `slicing.txt`: The prompt template for the model where only slicing technique is used (Only the part where guiding API candidates are omitted from pig.txt).
-- `pig.txt`: The prompt template for the model where slicing and API candidate provide techniques are used.
+| Script | Data | Table |
+|--------|------|-------|
+| `results/effectiveness.py` | `results/rq1/` | End-to-end effectiveness |
+| `results/ablation.py` | `results/rq2/` | Ablation Study |
+| `results/leakage.py` | `results/rq1/` and `results/rq2/` | Data Leakage |
 
-### Results directory: `results`
-The results of the experiments are in this directory. For each research question, there are corresponding subdirectories.
+To reproduce each table, run:
 
-#### RQ1 directory: `rq1`
-This directory contains the results of RQ1, which is about the correctness of the naive baseline, slicing and PIG models. For each model, there is a subdirectory named `<model>`, which contains the following files:
-- `baseline.json`: The migration results of the baseline per API.
-- `slicing.json`: The migration results of the slicing model per API.
-- `pig.json`: The migration results of the PIG model per API.
-- `baseline_leakage.json`: The migration results of the baseline in data leakage benchmarks.
-- `pig_leakage.json`: The migration results of the PIG model in data leakage
+```bash
+# RQ1: Effectiveness
+python results/effectiveness.py
 
-Each top-level key represents a filename (e.g., `528.json`, `616.json`), and the corresponding value is a dictionary of test results for specific APIs.
+# RQ2: Ablation Study
+python results/ablation.py
 
-#### Structure
+# RQ3: Data Leakage
+python results/leakage.py
+```
+
+> **Note:** `results/ablation.py` generates a bar chart (`ablation_result.png`) in addition to printing the table. Running this script will open a matplotlib window.
+
+---
+
+## 📁 Directory Structure
+
+### `benchmarks/`
+
+Contains the benchmark data used in the paper.
+
+- `<file_num>.json`: Basic information about each benchmark (source/target libraries, client repository, commit hash, target APIs, etc.)
+- `<file_num>b.py`: Original code before migration.
+- `<file_num>a.py`: Migrated code after migration.
+
+> **Note:** Benchmarks numbered above 1000 are free from data leakage.
+
+---
+
+### `llm_answer/`
+
+Contains LLM-generated code for each experiment run.
+
+| File | Description |
+|------|-------------|
+| `answer_baseline.xlsx` | Outputs from the naive baseline. |
+| `answer_slicing.xlsx` | Outputs using the slicing technique only. |
+| `answer_pig.xlsx` | Outputs using both slicing and API candidate guidance (PIG). |
+| `error.json` | Error information from `answer_baseline.xlsx`, used to generate prompts for subsequent runs. |
+
+---
+
+### `prompt/`
+
+Contains prompt templates used in the experiments.
+
+| File | Description |
+|------|-------------|
+| `baseline.txt` | Prompt for the baseline (based on prior work's prompt). |
+| `slicing.txt` | Prompt using slicing only (API candidate guidance omitted from `pig.txt`). |
+| `pig.txt` | Prompt using both slicing and API candidate guidance. |
+
+---
+
+### `results/`
+
+Contains manually reviewed results for each research question, organized by subdirectory.
+
+#### `rq1/` — Effectiveness
+
+Results on the correctness of the baseline, slicing, and PIG models. Each model has a subdirectory `<model>/` containing:
+
+| File | Description |
+|------|-------------|
+| `baseline.json` | Baseline migration results per API. |
+| `slicing.json` | Slicing model migration results per API. |
+| `pig.json` | PIG model migration results per API. |
+| `baseline_leakage.json` | Baseline results on data-leakage-free benchmarks. |
+| `pig_leakage.json` | PIG results on data-leakage-free benchmarks. |
+
+Each top-level key is a filename (e.g., `528.json`), mapping to per-API evaluation results:
 
 ```json
 {
@@ -50,49 +100,53 @@ Each top-level key represents a filename (e.g., `528.json`, `616.json`), and the
     "ObjectOrFunctionName": {
       "is_correct": "y" | "n",
       "reason": "short reason string"
-    },
-  },
+    }
+  }
 }
 ```
 
-#### RQ2 directory: `rq2`
-This directory contains the results of RQ2, which is about the ablation study of the PIG model. Similar to `rq`, for each model, there is a subdirectory named `<model>`, which contains the following files:
-- `default.json`: This file contains the results of the settings where only the default settings of gumtree is used. (settings *API* in paper)
-- `nopost.json`: This file contains the results of the settings where the post-processing step is not used. (settings *MATCH* in paper*)
-- `post.json`: This file contains the results of the settings where the post-processing step is used. (settings *PIG* in paper)
+#### `rq2/` — Ablation Study
 
-### RQ3 directory: `rq3`
-This directory contains the results of RQ3, which is about the limitations.
-`discussion.json` includes the discussion of the limitations of the PIG model, which is based on the results of the experiments.
+Results on the ablation study of PIG. Each model has a subdirectory `<model>/` containing:
 
-#### Structure
+| File | Description |
+|------|-------------|
+| `default.json` | Default GumTree settings only. (Setting *API* in paper) |
+| `nopost.json` | Without post-processing. (Setting *MATCH* in paper) |
+| `post.json` | With post-processing. (Setting *PIG* in paper) |
+
+#### `rq3/` — Discussion
+
+Contains `discussion.json`, which discusses the limitations of PIG based on experimental results.
+
+Each top-level key is a filename, mapping to per-API candidate ranking results:
 
 ```json
 {
   "FILENAME.json": {
     "ObjectOrFunctionName": [
-        "O" | "X",
-        "ranking of the API candidates"
+      "O" | "X",
+      "ranking of the API candidates"
     ]
-  },
+  }
 }
 ```
 
-### To check for the figure of tables
-You can check the results of each research question by running the corresponding python files in the `results` directory.
-- `effectiveness.py`: This file contains the code for generating the figure and table for effectiveness of Pig (main table).
-- `ablation.py`: This file contains the code for generating the figure and table for ablation study.
-- `leakage.py`: This file contains the code for generating the figure and table for data leakage benchmarks.
+---
 
-### Src directory: `src`
-This directory contains the source code of the work. 
-You can execute the transplanting process by running the `src`/`synth`/`main.py` in current directory(`artifact_pig`). Required dependencies are listed in the `requirements.txt` file in the `src` directory.
-Additionally, you have to install the openjdk package for the `GumTree` library. As the class files version is 61.0, you need to install the optimal version of openjdk (at least openjdk@17).
-More additional dependencies are listed in the `README.md` file in the `src` directory.
+### `src/`
 
-Followings are the brief description of each directory:
-- `llm`: This directory contains the source code for querying the LLMs, including the code slicing.
-- `mapping`: This directory contains the source code for the mapping process, which is used to map the APIs in the source library to the APIs in the target library.
-- `synth`: This directory contains the source code for the transplanting process.
+Contains the source code of PIG.
 
-Detailed information about the source code can be found in the `README.md` file in each directory.
+To run the transplanting process, execute `src/synth/main.py` from the root directory (`artifact_pig`).
+
+**Dependencies:**
+- Python dependencies: see `src/requirements.txt`
+- Java: requires OpenJDK 17 or later (for GumTree; class file version 61.0)
+- Additional details: see `src/README.md`
+
+| Subdirectory | Description |
+|--------------|-------------|
+| `llm/` | LLM querying and code slicing. |
+| `mapping/` | API mapping from source to target library. |
+| `synth/` | Transplanting (code migration) process. |
