@@ -1,8 +1,9 @@
 from django.core.exceptions import ImproperlyConfigured
-from __future__ import unicode_literals, absolute_import, print_function, division
+from __future__ import absolute_import, print_function, division, unicode_literals
+from pathlib import Path
 import datetime
-import sys
 import os
+import sys
 env = os.environ.get
 true_values = ['1', 'true', 'y', 'yes', 1, True]
 
@@ -11,6 +12,7 @@ def require_env(name):
     if not value:
         raise ImproperlyConfigured('Missing {} env variable'.format(name))
     return value
+PROJECT_ROOT = Path(__file__).parent.parent
 ADMINS = (('Studentenportal Team', 'team@studentenportal.ch'),)
 MANAGERS = ADMINS
 DEBUG = env('DJANGO_DEBUG', 'True').lower() in true_values
@@ -30,7 +32,9 @@ DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'NA
 SECRET_KEY = env('SECRET_KEY', 'DEBUG_SECRET_KEY')
 if SECRET_KEY == 'DEBUG_SECRET_KEY' and DEBUG is False:
     raise ImproperlyConfigured('Missing SECRET_KEY env variable')
+MEDIA_ROOT = env('DJANGO_MEDIA_ROOT', PROJECT_ROOT / 'media')
 MEDIA_URL = '/media/'
+STATIC_ROOT = env('DJANGO_STATIC_ROOT', PROJECT_ROOT / 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ()
 STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder', 'compressor.finders.CompressorFinder')

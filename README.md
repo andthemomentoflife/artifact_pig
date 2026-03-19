@@ -42,7 +42,7 @@ python results/leakage.py
 `llm_answer/error_analysis.py` reproduces the error type proportion chart (Fig. 2) using the manually labeled error data in `llm_answer/error.json`.
  
 ```bash
-python results/error_analysis.py
+python llm_answer/error_analysis.py
 ```
  
 Entries where `ETC` is `"nocode"` are excluded from all counts, as mentioned in paper.
@@ -56,7 +56,7 @@ Entries where `ETC` is `"nocode"` are excluded from all counts, as mentioned in 
 `results/discussion.py` analyzes the failure cases discussed in Section 4.3, using the manually labeled data in `results/rq3/discussion.json`.
  
 ```bash
-python results/leakage_discussion.py
+python results/discussion.py
 ```
  
 This script prints a breakdown of failure types and their proportions to the terminal.
