@@ -63,7 +63,7 @@ if __name__ == "__main__":
         "--file",
         type=str,
         nargs="+",
-        default="1.json",
+        default=["1.json"],
         help="Target file to process (e.g. 1.json)",
     )
 

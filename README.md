@@ -142,4 +142,4 @@ python src/synth/main.py --model gptoss --file 177.json --gumtree False --postpr
 python src/synth/main.py --model gptoss --file 177.json --postprocess False
 ```
 
-These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case.
+These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case. Final synthesized code can be found in `src/result` with the name you specified in the `--file` argument (e.g., `177.json`).
