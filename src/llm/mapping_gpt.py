@@ -27,6 +27,7 @@ def ExtractLLM(libo: str, libn: str, answer: str) -> dict[str]:
 
     return result
 
+
 # current file: default setting (gpt3.5-turbo api)
 def prepare(model: str, option: str = "default") -> dict[str, list[str]]:
     from openpyxl import load_workbook
@@ -35,7 +36,6 @@ def prepare(model: str, option: str = "default") -> dict[str, list[str]]:
         ollama = PIG_PATH / "llm_answer" / "answer_slicing.xlsx"
     else:
         ollama = PIG_PATH / "llm_answer" / "answer_pig.xlsx"
-    
 
     if model == "llama3.1-8b":
         load_wb = load_workbook(ollama, data_only=True)
@@ -60,6 +60,10 @@ def prepare(model: str, option: str = "default") -> dict[str, list[str]]:
     elif model == "gemma3-27b":
         load_wb = load_workbook(ollama, data_only=True)
         load_ws = load_wb["gemma3-27b"]
+
+    elif model == "gpt-oss-20b":
+        load_wb = load_workbook(ollama, data_only=True)
+        load_ws = load_wb["gpt-oss-20b"]
 
     else:
         print("Invalid model name")

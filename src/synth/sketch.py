@@ -796,8 +796,6 @@ def preparation(code: str, apios: list[str], libo, libn):
 def run(
     model: str,
     target_files: list[str],
-    model_simp: str,
-    directory: str,
     b_imports=False,
     b_varmap=False,
     b_surround=False,
