@@ -1,5 +1,5 @@
 openai
-jpype
+jpype1
 asttokens
 autoflake
 opnepyxl
