@@ -27,7 +27,12 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     tzdata \
     jq \
-    vim
+    vim \
+    default-jdk
+
+# Set JAVA_HOME
+ENV JAVA_HOME=/usr/lib/jvm/default-java
+ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Set the timezone
 RUN ln -fs /usr/share/zoneinfo/Asia/Seoul /etc/localtime && \

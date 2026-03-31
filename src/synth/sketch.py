@@ -16,11 +16,10 @@ try:
     from llm import context_remover_refactor
     from mapping import gits, api_lst
 except:
-    if __package__ is None:
-        sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-        from llm.mapping_gpt import ExtractLLM, prepare
-        from llm import context_remover_refactor
-        from mapping import gits, api_lst
+    sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+    from llm.mapping_gpt import ExtractLLM, prepare
+    from llm import context_remover_refactor
+    from mapping import gits, api_lst
 
 
 # file open should not be changed
@@ -83,7 +82,7 @@ def PreRequired(
     roota_str: str,
     rooto: ast.AST,
     roota: ast.AST,
-    has_dec = False
+    has_dec=False,
 ):
     Vars = synthesis.UnusedVars()
     Vars.visit(h)
@@ -140,7 +139,6 @@ def PreRequired(
 
     if oldapi != None and assign_oldapi == None:
         target_names.add(oldapi)
-
 
     if len(target_names) != 0:
         # First, Find Unassigned Variables in the New Code (It might be Function or Class or additional variables)
@@ -262,7 +260,6 @@ def SketchMaker(
     b_postprocess=True,
     gumtree=True,
 ) -> ast.AST:
-    
 
     # Variable Extracting
     VarsO = synthesis.VarExtractor()
@@ -375,7 +372,7 @@ def SketchMaker(
             if gumtree:
                 check = matching.filter_stmt(NewNode, nodeo, apis, coden, OldApi)
 
-            if check: 
+            if check:
                 if isinstance(nodeo, ast.ExceptHandler) and isinstance(
                     NewNode, ast.ExceptHandler
                 ):
@@ -413,9 +410,9 @@ def SketchMaker(
                     temp2.append(NewNode)
 
             else:
-                if gumtree: 
+                if gumtree:
                     NewNode1 = matching.var_divide(nodeo, NewNode, OldTree1, coden)
-                
+
                     if NewNode != NewNode1:
                         try:
                             result[MNresult] = NewNode1
@@ -426,12 +423,12 @@ def SketchMaker(
                             logging.info(f"Ours: {ast.unparse(NewNode)}")
                         except:
                             logging.info("Ours: cannot unparse")
-                        
+
                     else:
                         del_nodes_cands.add(nodeo)
                         logging.info(f"Deleted Node for: {ast.unparse(nodeo)}")
 
-                else: 
+                else:
                     try:
                         result[MNresult] = NewNode
                     except:
@@ -442,13 +439,14 @@ def SketchMaker(
                     except:
                         logging.info("Ours: cannot unparse")
 
-
-
-
         else:
             # NewNode2 = None
             logging.info(
-                "Ours: Deleted Nodefor Node %s" % ast.unparse(nodeo) if nodeo else "None",
+                (
+                    "Ours: Deleted Nodefor Node %s" % ast.unparse(nodeo)
+                    if nodeo
+                    else "None"
+                ),
             )
 
             del_nodes_cands.add(nodeo)
@@ -473,10 +471,11 @@ def SketchMaker(
             # Simple Implementation Now
             val.body += NewNode.body
             del_nodes_cands.add(key)
-        
 
         # Decorator to other nodes
-        elif NewNode != None and not isinstance(NewNode, (ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)):
+        elif NewNode != None and not isinstance(
+            NewNode, (ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)
+        ):
             if val.name in dec_to_stmt:
                 # Find the existing node
                 index = val.body.index(dec_to_stmt[val.name][0])
@@ -687,13 +686,11 @@ def SketchMaker(
             coden_str,
             OldTree1,
             coden,
-            has_dec= True
+            has_dec=True,
         )
 
         NCImport = NCImport | NCImportmp
         CENs = CENs1 | CENs
-
-        
 
     # ============================================Recording Import history=============================================
 
@@ -717,7 +714,8 @@ def FinalSynth(
     Imports = set()
 
     for i in history["import"]:
-        try: Imports.add(ast.parse(i))
+        try:
+            Imports.add(ast.parse(i))
         except SyntaxError:
             continue
 
@@ -805,11 +803,11 @@ def run(
     b_surround=False,
     b_postprocess=False,
     gumtree=False,
-    option = "default",
+    option="default",
 ):
 
     results = prepare(model, option=option)
-    file_list_json = target_files   
+    file_list_json = target_files
 
     for j in file_list_json:
         print("File in progress: ", j)
@@ -865,7 +863,7 @@ def run(
                     NewCode = r["codes"][-1].strip()
 
                 elif model == "qwen3-32b":
-                    # The longest code 
+                    # The longest code
                     NewCode = max(r["codes"], key=len).strip()
 
                 else:
