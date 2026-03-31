@@ -5,3 +5,5 @@ autoflake
 openpyxl
 Cython
 matplotlib
+parso
+pythonparser

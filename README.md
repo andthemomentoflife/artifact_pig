@@ -76,7 +76,7 @@ This script prints a breakdown of failure types and their proportions to the ter
 
 ---
 # How to execute the transplanting process
-As described in the paper, Pig includes a LLM-based approach. As LLM outputs can vary across runs, we provide the LLM-generated code for each experiment run in `llm_answer/` for reference. Based on the LLM-generated code, you can reproduce the transplanting process and results by running the code in `src/synth/`. Specifically,
+As described in the paper, Pig includes a LLM-based approach. As LLM resources may not be available to everyone, we provide the LLM-generated code for each experiment run in `llm_answer/` for reference. Based on the LLM-generated code, you can reproduce the transplanting process and results by running the code in `src/synth/`. Specifically,
 
 ```bash
 python src/synth/main.py
