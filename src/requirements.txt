@@ -2,5 +2,5 @@ openai
 jpype1
 asttokens
 autoflake
-opnepyxl
+openpyxl
 Cython
