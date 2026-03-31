@@ -1,7 +1,0 @@
-[
-  {
-    "category": "``serverlessrepo``", 
-    "description": "Update serverlessrepo client to latest version", 
-    "type": "api-change"
-  }
-]

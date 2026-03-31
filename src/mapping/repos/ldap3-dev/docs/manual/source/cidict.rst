@@ -1,4 +1,0 @@
-Case Insensitive Dictionary
-###########################
-
-tbd

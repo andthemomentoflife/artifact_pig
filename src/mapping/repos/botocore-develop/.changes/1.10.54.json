@@ -1,7 +1,0 @@
-[
-  {
-    "category": "``application-autoscaling``", 
-    "description": "Update application-autoscaling client to latest version", 
-    "type": "api-change"
-  }
-]

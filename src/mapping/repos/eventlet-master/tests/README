@@ -1,4 +1,0 @@
-The tests are intended to be run using pytest.
-
-To run tests, simply install pytest, and then, in the eventlet tree, do:
-   $ pytest

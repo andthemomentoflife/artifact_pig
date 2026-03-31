@@ -1,8 +1,0 @@
-\.py[co]$
-\.DS_Store$
-\.coverage
-\.egg-info
-dist/
-temp/
-docs/_build/
-\.egg-info$

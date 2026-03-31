@@ -1,20 +1,22 @@
 from pathlib import Path
 import json
 
-MODELS = [
-    "qwen", "gemma", "llama", "qwen3", "gemma3", "deepseek", "gptoss"
-]
+MODELS = ["qwen", "gemma", "llama", "qwen3", "gemma3", "deepseek", "gptoss"]
 MODEL_LABELS = [
-    "qwen2", "gemma2", "llama3.1", "qwen3", "gemma3", "deepseek-r1", "gpt-oss"
+    "qwen2",
+    "gemma2",
+    "llama3.1",
+    "qwen3",
+    "gemma3",
+    "deepseek-r1",
+    "gpt-oss",
 ]
 RQ1_PATH = Path(__file__).parent / Path("rq1")
 
 
 def compute_correct(data: dict) -> int:
     return sum(
-        1 for vals in data.values()
-        for v in vals.values()
-        if v["is_correct"] == "y"
+        1 for vals in data.values() for v in vals.values() if v["is_correct"] == "y"
     )
 
 
@@ -38,17 +40,17 @@ def main():
         pig_counts.append(compute_correct(pig))
 
     avg_baseline = sum(baseline_counts) / len(MODELS)
-    avg_pig      = sum(pig_counts) / len(MODELS)
+    avg_pig = sum(pig_counts) / len(MODELS)
     avg_increase = pct_increase(avg_baseline, avg_pig)
 
     # Column widths
-    cw_type   = 12
-    cw_model  = 11
-    cw_avg    = 9
+    cw_type = 12
+    cw_model = 11
+    cw_avg = 9
 
     all_labels = MODEL_LABELS + ["Average"]
     all_baseline = baseline_counts + [avg_baseline]
-    all_pig      = pig_counts      + [avg_pig]
+    all_pig = pig_counts + [avg_pig]
 
     sep = "-" * (cw_type + cw_model * len(MODELS) + cw_avg + len(MODELS))
 
@@ -82,7 +84,9 @@ def main():
         pct = pct_increase(b, p)
         val = f"\u25b2{pct:.1f}%"
         row_i += f"{val:^{cw_model}}"
-    row_i += f"{'\u25b2' + f'{avg_increase:.1f}%':^{cw_avg}}"
+
+    arrow = "\u25b2"  # Upward arrow
+    row_i += f"{arrow + f'{avg_increase:.1f}%':^{cw_avg}}"
     print(row_i)
 
     print(sep)

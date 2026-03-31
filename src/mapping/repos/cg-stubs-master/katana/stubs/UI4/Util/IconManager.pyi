@@ -1,9 +1,0 @@
-# mypy: disable-error-code="misc, override, attr-defined, no-redef, assignment"
-
-import KatanaResources as KatanaResources
-import PyQt5.QtGui as QtGui
-from typing import Set, Tuple
-
-def GetIcon(path): ...
-def GetPixmap(path): ...
-def GetSize(path): ...

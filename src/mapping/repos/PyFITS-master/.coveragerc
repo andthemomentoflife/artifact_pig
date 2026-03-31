@@ -1,8 +1,0 @@
-[run]
-source=pyfits
-
-[report]
-include=lib/*
-exclude_lines =
-    except ImportError
-    pragma: py3

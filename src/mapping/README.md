@@ -4,7 +4,7 @@ This directory contains the phase of the PIG model responsible for mapping simil
 
 
 # Directory Structure 
-### Results directory: `repos`
+### Repository directory: `repos`
 This directory contains the library implementations used in the experiments. Each library is stored in a subdirectory or a python file. These implementations are used to extract the APIs and their arguments, which are then used in the mapping process.
 
 ### API Mapping Answer: `answer.json`
@@ -57,4 +57,4 @@ To add new data, you can follow these steps:
 2. Copy the relevant files to the `repos` directory.
 3. Update the `gits.py` file with the path to the libraries.
 4. Update the `answer.json` file with the expected mapping results for the new APIs.
-5. Run the `compare_arg.py` file to extract the APIs and compare them with the expected results. (It will automatically )
+5. Run the `compare_arg.py` file to extract the APIs and compare them with the expected results.

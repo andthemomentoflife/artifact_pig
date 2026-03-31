@@ -1,1 +1,0 @@
-Adds a lock to ``aioredis.connection.ConnectionPool``

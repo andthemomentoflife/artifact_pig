@@ -13,7 +13,7 @@ This directory contains the source code for the transplanting process.
 
 ### `gumtree` directory, `default.jar` and `ours.jar` files
 These files are the package files of `GumTree`, which is used for the code matching.
-PIG uses `jar` files for the code matching process. As the class file uses pythonparse, you need to install the `pythonparser` package from the following [repository](https://github.com/GumTreeDiff/pythonparser). Please refer to the installation guide in the [repository](https://github.com/GumTreeDiff/gumtree/wiki/Getting-Started) for more details. 
+PIG uses `jar` files for the code matching process. As the class file uses pythonparse, you need to install the `pythonparser` package from the following pythonparser [repository](https://github.com/GumTreeDiff/pythonparser). Please refer to the installation guide in the GumTree [repository](https://github.com/GumTreeDiff/gumtree/wiki/Getting-Started) for more details. 
 After all dependency downloaded, go to `artifact_pig/src/gumtree/client/src/main/java/com/github/gumtreediff/client/PMatcher.java` and compile the `PMatcher.java` file to generate the `default.jar` and `ours.jar` files. Each `jar` file has different settings for the code matching process. 
 
 ```java 

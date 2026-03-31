@@ -1,6 +1,0 @@
-# mypy: disable-error-code="misc, override, attr-defined, no-redef, assignment"
-
-from typing import Set, Tuple
-
-def BuildLogMesasgeWithCaller(message): ...
-def BuildLogMessageWithCaller(message, frameIndex: int = ...): ...

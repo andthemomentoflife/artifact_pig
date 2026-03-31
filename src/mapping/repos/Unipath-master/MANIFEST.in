@@ -1,5 +1,0 @@
-include BUGS.txt
-include CHANGES
-include README.html
-include README.rst
-include tox.ini

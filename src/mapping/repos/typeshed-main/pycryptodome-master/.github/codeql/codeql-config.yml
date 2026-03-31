@@ -1,4 +1,0 @@
-paths-ignore:
-  - lib/Crypto/SelfTest
-  - lib/Cryptodome/SelfTest
-

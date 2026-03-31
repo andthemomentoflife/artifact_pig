@@ -1,7 +1,0 @@
-[
-  {
-    "category": "``organizations``", 
-    "description": "Update organizations client to latest version", 
-    "type": "api-change"
-  }
-]
