@@ -28,7 +28,7 @@ This command will start the Docker container and open an interactive terminal se
 
 The following scripts reproduce the main tables reported in the paper.
 Each script computes the results from manually reviewed data recorded per model,
-stored in `results/rq1/`, `results/rq2/`, and `results/rq3/` respectively.
+stored in [rq1](results/rq1/), [rq2](results/rq2/), and [rq3](results/rq3/) respectively. The scripts will read the data from these directories, perform the necessary calculations, and print the results to the terminal.
 
 To reproduce each table, run:
 
@@ -143,3 +143,87 @@ python src/synth/main.py --model gptoss --file 177.json --postprocess False
 ```
 
 These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case. Final synthesized code can be found in `src/result` with the name you specified in the `--file` argument (e.g., `177.json`).
+
+
+# How to run the LLM answering process
+We currently only support ollama as the LLM backend. We plan to add support for more LLM backends in the future. You should have an ollama server running with the models you want to use before executing the LLM answering process. Also, make sure to update the envinronment variable `OLLAMA_HOST` to point to your ollama server if it's not running on the default `http://localhost:11434`.
+
+To run the LLM answering process, you can execute the following command:
+
+```bash
+python src/llm/mapping_llama.py [OPTIONS]
+```
+
+### CLI Arguments   
+| Argument | Type | Default | Description |
+|---|---|---|---|
+| `--output_path` | str | `llm_answer/your_path.xlsx` |
+| `--model` | str | `llama3.1:8b` | Model to use |
+| `--file` | list | `1.json` | Target files to process |
+| `--b_api` | bool | `True` | Enable API candidate information in the prompt (True/False) |
+
+
+# How to run the API mapping process
+To run the API mapping process, you can execute the following command:
+
+```bash
+python src/mapping/compare_arg.py
+```
+
+### CLI Arguments
+| Argument | Type | Default | Description |
+|---|---|---|---|
+| `--libo` | str | `unipath` | Original library name |
+| `--libn` | str | `pathlib` | Target library name |
+| `--apio` | str | `joinpath` | API name to find candidates for |
+| `--signo` | bool | str | Orignal API signature |
+
+
+# Extra Files to refer
+## LLM Prompts used for querying the LLM
+The prompts used for querying the LLM are located in [prompt](./prompt). This directory contains the prompt templates for all baseline, ablation and Pig's pipeline.
+
+## API Mapping
+As API mapping process might take time, we provide the mapping results in `mapping/MAPPING_RESULT.json` and `mapping/MAPPING_HISTORY.json` files.
+
+# How to extend the benchmark data
+## 📦 Adding a New Benchmark
+
+To add a new benchmark, prepare the following three files in the `benchmarks` directory:
+
+- A JSON file containing the benchmark data  
+- A *before* file with the original code snippet  
+- An *after* file with the migrated code snippet  
+
+All files must follow the existing naming convention (e.g., `1.json`, `1b.py`, `1a.py`).  
+Make sure the index number does not overlap with existing benchmarks.
+
+---
+
+## 🔧 Registering Library Implementations
+
+Upload the library implementations to the `src/mapping/repos` directory.
+
+- If the library consists of a single Python file, it can be placed directly in the `repos` directory.
+
+Then update the following configuration files:
+
+- `src/mapping/gits.py`  
+  - Add original library path to the `git_loc_old` dictionary
+  - Add target library path to the `git_loc` dictionary
+
+- `src/mapping/answer.json`  
+  - Add the corresponding file name, API, and its original signature  
+  - If the expected API is unavailable, use `"N/A"` for both the API name and signature (see existing entries for reference)
+
+---
+
+## 🚀 Running the Mapping
+
+After completing the setup, run the following script to generate LLM answers for the new benchmark:
+
+```bash
+python src/llm/mapping_llama.py
+```
+
+The generated code will be used for subsequent transplanting processes.

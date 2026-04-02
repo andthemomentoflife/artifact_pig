@@ -1,9 +1,9 @@
 from pathlib import Path
 import os, sys, json
-from itertools import product
 from difflib import SequenceMatcher
 
 sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).parent))
 
 import api_lst
 
@@ -14,37 +14,25 @@ MAPPING_PATH = PIG_PATH / Path("src/mapping")
 MAPPING_HISTORY = MAPPING_PATH / Path("MAPPING_HISTORY.json")
 mapping_history = dict()
 
+
 def compute_greedy_arg_mapping(args_a, args_b, libo, libn):
-    # Step 1: Compute all possible similarities
-    all_pairs = [
-        (a, b, compute_string_similarity(a, b, libo, libn))
-        for a, b in product(args_a, args_b)
-    ]
+    from scipy.optimize import linear_sum_assignment
+    import numpy as np
 
-    # Step 2: Sort by descending similarityclear
-    sorted_pairs = sorted(all_pairs, key=lambda x: x[2], reverse=True)
+    if not args_a and not args_b:
+        return 1.0
 
-    matched_a = set()
-    matched_b = set()
-    final_matches = []
+    cost_matrix = np.zeros((len(args_a), len(args_b)))
 
-    # Step 3: Greedy match
-    for a, b, score in sorted_pairs:
-        if a not in matched_a and b not in matched_b:
-            final_matches.append((a, b, score))
-            matched_a.add(a)
-            matched_b.add(b)
+    for i, a in enumerate(args_a):
+        for j, b in enumerate(args_b):
+            cost_matrix[i][j] = -compute_string_similarity(a, b, libo, libn)
 
-    # Step 4: Normalize by number of matches (not argument list lengths)
-    if final_matches:
-        total_score = sum(score for _, _, score in final_matches)
-        max_arg_num = max(len(args_a), len(args_b))
-        normalized_score = total_score / (max_arg_num - len(final_matches) + 1) ** (
-            1 / 2
-        )
+    row_ind, col_ind = linear_sum_assignment(cost_matrix)
+    total_score = -cost_matrix[row_ind, col_ind].sum()
 
-    else:
-        normalized_score = 0.0
+    max_arg_num = max(len(args_a), len(args_b))
+    normalized_score = total_score / (max_arg_num - len(row_ind) + 1) ** (1 / 2)
 
     return normalized_score
 
@@ -146,7 +134,6 @@ def api_mapping():
 
                     if len(cands) == 3:
                         break
-                
 
                 mapping_history[j][apio] = cands
 
@@ -360,17 +347,82 @@ def api_mapping():
                     not_found_num += 1
                     RESULT[j][apio] = ("X", "-")
 
-                with open(
-                    MAPPING_PATH / Path("MAPPING_RESULT.json"), "w"
-                ) as f:
+                with open(MAPPING_PATH / Path("MAPPING_RESULT.json"), "w") as f:
                     json.dump(RESULT, f, indent=4)
 
-                with open(
-                    MAPPING_HISTORY, "w"
-                ) as f:
+                with open(MAPPING_HISTORY, "w") as f:
                     json.dump(mapping_history, f, indent=4)
 
     return RESULT
 
+
+def find_candidate_apis(libo: str, apio, signo: list, libn: str):
+    candidates = set()
+
+    apins = api_lst.apin_signs(libn)
+
+    for path, val in apins.items():
+        for i in range(len(val)):
+            for apin, sign in val[i]:
+                name_similarity = compute_string_similarity(apio, apin, libo, libn)
+
+                if not isinstance(sign, list):
+                    sign = sign[0]
+
+                if len(signo) == 0 and len(sign) == 0:
+                    arg_similarity = 1
+
+                else:
+                    _apio_sign = set(signo) - {"self", "args", "kwargs"}
+                    _sign = set(sign) - {"self", "args", "kwargs"}
+
+                    arg_similarity = compute_greedy_arg_mapping(
+                        _apio_sign, _sign, libo, libn
+                    )
+
+                candidates.add(
+                    (
+                        apin,
+                        tuple(set(sign)),
+                        name_similarity,
+                        arg_similarity,
+                        path,
+                    )
+                )
+
+    candidates = sorted(candidates, key=lambda x: (x[2], x[3]), reverse=True)
+
+    return candidates[:3]
+
+
 if __name__ == "__main__":
-    api_mapping()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="API mapping script")
+    parser.add_argument(
+        "--libo",
+        type=str,
+        required=True,
+        help='Original library name (e.g., "requests")',
+    )
+    parser.add_argument(
+        "--apio", type=str, required=True, help='Original API name (e.g., "get")'
+    )
+    parser.add_argument(
+        "--signo",
+        type=str,
+        nargs="*",
+        default=[],
+        help='Original API argument names (e.g., "url", "params")',
+    )
+    parser.add_argument(
+        "--libn", type=str, required=True, help='Target library name (e.g., "httpx")'
+    )
+
+    args = parser.parse_args()
+    libo = args.libo
+    apio = args.apio
+    signo = args.signo
+    libn = args.libn
+
+    print(find_candidate_apis(libo, apio, signo, libn))

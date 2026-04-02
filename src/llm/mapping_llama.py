@@ -1,6 +1,8 @@
 import os, json, ast, sys
+import argparse
 from os import path
 from openpyxl import Workbook
+from regex import W
 
 try:
     from . import prompts
@@ -9,6 +11,7 @@ except:
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from synth import call
+from mapping.compare_arg import find_candidate_apis
 
 try:
     import context_remover_refactor
@@ -24,15 +27,17 @@ MAPPING_HISTORY_PATH = PIG_PATH / "src" / "mapping" / "MAPPING_HISTORY.json"
 with open(MAPPING_HISTORY_PATH, "r") as f:
     api_mapping_result = json.load(f)
 
+
 def name_and_signs(cands: list) -> str:
     n = 1
     text = ""
 
     cands = cands[:3]
 
-    for cand in cands: 
-        try: name, args, name_score, arg_score = cand
-        except: 
+    for cand in cands:
+        try:
+            name, args, name_score, arg_score = cand
+        except:
             name, args = cand
 
         if len(args) == 0:
@@ -45,21 +50,10 @@ def name_and_signs(cands: list) -> str:
 
     return text
 
+
 # Ollama API host
 # Make sure to set the correct host for your Ollama server
-host = ">REMOVED"  # Change this to your Ollama server host
-
-
-model_list = [
-    # Add your models here
-
-    "llama3.1:8b",
-    "gemma2:9b",
-    "qwen2:7b",
-    "deepseek-r1:32b",
-    "gemma3:27b",
-    "qwen3:32b",
-]
+host = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 
 
 def AskLLM(
@@ -99,72 +93,103 @@ def AskLLM(
     return INIT_RESPONSE
 
 
-def run():
+def run(output_path: str, model: str, files: list, b_api: bool):
     contents = []
     path = PIG_PATH / "benchmarks"
-    file_list = os.listdir(path)
-    file_list_json = [file for file in file_list if file.endswith(".json")]
-    file_list_json.sort(key=lambda x: int(x.split(".")[0]))
 
     write_wb = Workbook()
+    print(">>> Model: ", model)
 
-    for model in model_list:
-        print(">>> Model: ", model)
-        sheet_name = model.replace(":", "-")
-        ws_model = write_wb.create_sheet(sheet_name)
-        file_list_json.sort(key=lambda x: int(x.split(".")[0]))
+    sheet_name = model.replace(":", "-")
+    ws_model = write_wb.create_sheet(sheet_name)
 
-        for j in file_list_json:
-            print("File in progress: ", j)
-            contents.append(j)
+    for j in files:
+        print("File in progress: ", j)
+        contents.append(j)
 
-            with open(path / j) as f:
-                data = json.load(f)
-                fileb = open(path / data["bef_file"], "r")
+        with open(path / j) as f:
+            data = json.load(f)
+            fileb = open(path / data["bef_file"], "r")
+            codeb = fileb.read()
 
-                codeb = fileb.read()
+            libo = data["libo"]
+            libn = data["libn"]
+            apio = list(data["apio"])
 
-                libo = data["libo"]
-                libn = data["libn"]
-                apio = list(data["apio"])
+            for api in apio:
+                print("=" * 10, api, "=" * 10)
+                root = ast.parse(codeb)
+                ParentO = call.ParentAst(root)
 
-                for api in apio:
-                    print("=" * 10, api, "=" * 10)
-                    root = ast.parse(codeb)
+                CPO = call.Preparation([], apios=api)
+                CPO.visit(root)
+                OCNs = CPO.nodes
+                funcdefs = CPO.funcdefs
+                classdefs = CPO.classdefs
 
-                    ParentO = call.ParentAst(root)
+                codebb = ast.unparse(
+                    context_remover_refactor.remove_context(
+                        OCNs, root, api, ParentO, libo, libn, funcdefs, classdefs
+                    )
+                )  # Should consider the case where real usage lib name is different to the name of it
+                contents.append(api)
 
-                    CPO = call.Preparation([], apios=api)
-                    CPO.visit(root)
-                    OCNs = CPO.nodes
-                    funcdefs = CPO.funcdefs
-                    classdefs = CPO.classdefs
+                try:
+                    if j not in api_mapping_result:
+                        apins = find_candidate_apis(libo, api, [], libn)
 
-                    codebb = ast.unparse(
-                        context_remover_refactor.remove_context(
-                            OCNs, root, api, ParentO, libo, libn, funcdefs, classdefs
-                        )
-                    )  # Should consider the case where real usage lib name is different to the name of it
-                    contents.append(apio)
-
-                    try: 
+                    else:
                         total_apins = api_mapping_result[j]
                         apins = total_apins[api]
-                        apins: str = name_and_signs(apins)
-                        
-                        answer = AskLLM(
-                            libo, libn, api, codebb, model, apins, b_api=True
-                        )
-                        contents.append(answer)
 
-                    except:
-                        print("AskLLM Error")
+                    apins: str = name_and_signs(apins)
+                    answer = AskLLM(libo, libn, api, codebb, model, apins, b_api)
+                    contents.append(answer)
 
-                ws_model.append(contents)
-                contents = []
+                except:
+                    print("AskLLM Error")
+                    contents.append("AskLLM Error")
 
-    write_wb.save(PIG_PATH / "llm_answer/your_path.xlsx")
+            print(contents)
+
+            ws_model.append(contents)
+            contents = []
+
+    write_wb.save(output_path)
 
 
 if __name__ == "__main__":
-    run()
+    parser = argparse.ArgumentParser(description="LLM Mapping Runner")
+    parser.add_argument(
+        "--model",
+        type=str,
+        default="llama:3.1:8b",
+        help="Model to use (e.g., llama3.1:8b, gemma2:9b, qwen2:7b, deepseek-r1:32b, gemma3:27b, qwen3:32b)",
+    )
+
+    parser.add_argument(
+        "--output_path", type=str, help="Path to save the output Excel file"
+    )
+
+    parser.add_argument(
+        "--file",
+        type=str,
+        nargs="+",
+        default=["1.json"],
+        help="Target file to process (e.g. 1.json)",
+    )
+
+    parser.add_argument(
+        "--b_api",
+        type=bool,
+        default=True,
+        help="Enable API candidate information in the prompt (True/False)",
+    )
+
+    args = parser.parse_args()
+    output_path = args.output_path
+    model = args.model
+    file = args.file
+    b_api = args.b_api
+
+    run(output_path, model, args.file, b_api)

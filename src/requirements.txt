@@ -7,3 +7,4 @@ Cython
 matplotlib
 parso
 pythonparser
+scipy
