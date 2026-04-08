@@ -356,10 +356,12 @@ def api_mapping():
     return RESULT
 
 
-def find_candidate_apis(libo: str, apio, signo: list, libn: str):
+def find_candidate_apis(
+    libo: str, apio, signo: list, libn: str, libo_path=None, libn_path=None
+):
     candidates = set()
 
-    apins = api_lst.apin_signs(libn)
+    apins = api_lst.apin_signs(libn, libn_path)
 
     for path, val in apins.items():
         for i in range(len(val)):

@@ -1,0 +1,23 @@
+{
+    "libo": "unipath",
+    "libn": "pathlib",
+    "libo_path": "Unipath-master/unipath",
+    "libn_path": "pathlib.py",
+    "codeo": "src/sample/codeo.py",
+    "apios": [
+        "Path",
+        "parent"
+    ],
+    "signos": {
+        "Path": {
+            "args": [
+                "*args",
+                "**kwargs"
+            ]
+        },
+        "parent": {
+            "args": []
+        }
+    },
+    "model": "gpt-oss:20b"
+}

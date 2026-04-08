@@ -51,7 +51,7 @@ def filter_stmt(noden, nodeo, apins: dict, rootn, apio) -> bool:
         if isinstance(n, ast.Constant):
             if n.s == apio:
                 return True
-            
+
     nameso = set()
     for n in ast.walk(nodeo):
         if isinstance(n, ast.Name) and isinstance(n.ctx, ast.Load):
@@ -536,8 +536,8 @@ def matcher1(codea: str, codec: str, valn) -> Union[str, None]:
     except:
         print("Error in AST parsing")
         return False
-    
-    jar_path=   Path(__file__).parent.parent.parent / "ours.jar"
+
+    jar_path = Path(__file__).parent.parent.parent / "ours.jar"
 
     if not (jpype.isJVMStarted()):
         jpype.startJVM(jpype.getDefaultJVMPath(), "-Djava.class.path=%s" % jar_path)
@@ -584,7 +584,6 @@ def matcher1(codea: str, codec: str, valn) -> Union[str, None]:
             # code, start, end
             noden = BestMap(codec, tree, start, end)
             Parent = call.ParentAst(tree)
-           
 
             if noden != None:
                 _noden = call.FindRealParent(Parent, noden, 1)
@@ -637,7 +636,8 @@ def matcher1(codea: str, codec: str, valn) -> Union[str, None]:
 
     return False
 
-# LLM sometimes divdes variables 
+
+# LLM sometimes divdes variables
 def var_divide(target_node, noden, rootb, roota):
     jar_path = Path(__file__).parent.parent.parent / "ours.jar"
 
@@ -666,7 +666,6 @@ def var_divide(target_node, noden, rootb, roota):
     else:
         print("No matched node")
         return noden
-
 
     if isinstance(noden, ast.Assign):
         value = noden.value
@@ -698,25 +697,27 @@ def var_divide(target_node, noden, rootb, roota):
                 nodeo = BestMap(codeb, tree, start, end)
 
                 parent1 = call.ParentAst(tree)
-                 
 
                 if nodeo != None:
                     parent_nodeo = call.FindRealParent(parent1, nodeo, 1)
-                    if parent_nodeo != None: 
+                    if parent_nodeo != None:
 
                         if ast.unparse(target_node) == ast.unparse(parent_nodeo):
                             # Find the first node that uses the noden's target
                             for i in range(index + 1, len(target_body)):
-                                for n in ast.walk(target_body[i]):   
-                                    if isinstance(n, ast.Name) and n.id == target_name.id:
-                                    
+                                for n in ast.walk(target_body[i]):
+                                    if (
+                                        isinstance(n, ast.Name)
+                                        and n.id == target_name.id
+                                    ):
+
                                         if matcher_check(noden, codeb, codea):
                                             noden = target_body[i]
-                         
+
                                         return noden
 
                 else:
-                    return noden 
+                    return noden
 
             else:
                 return noden
@@ -811,7 +812,6 @@ def matcher(
 
         all_indexes = find_all_indexes(rootb_str, nodeo_str)
 
-
         start1 = find_nearest_index(
             all_indexes,
             rootb_str.find(ast.unparse(nodeo).strip()),
@@ -822,10 +822,9 @@ def matcher(
         end1 = start1 + len(ast.unparse(nodeo).strip())
 
         r = jMatch.PMadtcher(rootb_str, roota_str, nodeo_str, start1, end1)
-        print(r, 'r')
+        # print(r, 'r')
 
-
-            # continue
+        # continue
 
         if len(r) != 0:
             start, end = r[0], r[1]
@@ -842,7 +841,7 @@ def matcher(
                 return (nodeo.annotation, noden.annotation)
 
             if noden != None:
-                if dec: 
+                if dec:
                     _noden = noden
 
                 else:
@@ -853,9 +852,9 @@ def matcher(
                     and _noden != None
                     and not isinstance(_noden, (ast.Import, ast.ImportFrom))
                 ):
-                    
+
                     tmp_result[_noden] = 1
-                    depth+=1
+                    depth += 1
 
                     _noden = node_minimize(_noden)
 
@@ -890,7 +889,7 @@ def matcher(
             noden = result["winner"]
             noden = node_minimize(noden)
 
-            if gumtree and isinstance(noden, tuple(single_stmt)): 
+            if gumtree and isinstance(noden, tuple(single_stmt)):
                 if matcher_check(noden, rootb_str, roota_str):
                     return (nodeo, noden)
                 else:

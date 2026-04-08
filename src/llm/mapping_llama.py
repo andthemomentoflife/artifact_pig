@@ -36,7 +36,7 @@ def name_and_signs(cands: list) -> str:
 
     for cand in cands:
         try:
-            name, args, name_score, arg_score = cand
+            name, args, name_score, arg_score, _ = cand
         except:
             name, args = cand
 

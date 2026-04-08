@@ -25,6 +25,7 @@ std_libs = [
     file.split(".")[0] for file in os.listdir(STD_LIB_PATH) if not file.startswith("_")
 ]
 
+
 # Visiting an AST, and collecting all the api names and signature for Cython files
 class GetAllApisCython(CythonTransform):
     def __init__(self, libo, target_api=None):
@@ -195,6 +196,7 @@ class GetAllApisCython(CythonTransform):
             self.name = node.declarator.base.name
             self.visitchildren(node)
             self.name = tmp
+
 
 # Visiting an AST, and collecting all the api names and signature
 class GetAllApis(ast.NodeVisitor):
@@ -780,9 +782,13 @@ def apio_sign(apio, apios):
 
     return
 
+
 # Extracting signuatres of original libaries APIs (for multiple APIs for a single file)
-def apin_signs(libn):
-    lib_path = gits.HOME_PATH / Path(gits.git_loc[libn])
+def apin_signs(libn, lib_path=None):
+    try:
+        lib_path = gits.HOME_PATH / Path(gits.git_loc[libn])
+    except:
+        lib_path = gits.HOME_PATH / Path(lib_path)
 
     if ".py" in str(lib_path):
         apis = get_all_apis(

@@ -294,8 +294,8 @@ def SketchMaker(
     mappings = dict()
     del_nodes_cands = set()
 
-    print("=" * 50)
-    print("OldApi:", OldApi)
+    # print("=" * 50)
+    # print("OldApi:", OldApi)
 
     if OldApi in OCNs.keys():
         for o in OCNs[OldApi]:
@@ -528,7 +528,7 @@ def SketchMaker(
                 type_params=[],
             )
 
-            print("Class | key:", ast.unparse(ukey), "| val:", ast.unparse(uval))
+            # print("Class | key:", ast.unparse(ukey), "| val:", ast.unparse(uval))
 
         elif isinstance(key, (ast.FunctionDef, ast.AsyncFunctionDef)) and isinstance(
             val, (ast.FunctionDef, ast.AsyncFunctionDef)
@@ -540,11 +540,12 @@ def SketchMaker(
                 name=val.name, args=val.args, decorator_list=val.decorator_list, body=[]
             )
 
-            print("Function | key:", ast.unparse(ukey), "| val:", ast.unparse(uval))
+            # print("Function | key:", ast.unparse(ukey), "| val:", ast.unparse(uval))
 
         else:
+            pass
 
-            print("key:", ast.unparse(key), "| val:", ast.unparse(val), key, val)
+            # print("key:", ast.unparse(key), "| val:", ast.unparse(val), key, val)
 
         name1 = llm_pre.scope_name(key, val, ParentO)
         name2 = llm_pre.scope_name(val, key, ParentN)
@@ -570,7 +571,7 @@ def SketchMaker(
                 name2=name2,
             )  # key: old, val: new
 
-        print("mappings:", mappings)
+        # print("mappings:", mappings)
 
         # Modify LLM code if needed (var def change)
         if val != None and (not isinstance(val, ast.Name)) and b_varmap:

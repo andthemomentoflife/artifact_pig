@@ -142,7 +142,7 @@ python src/synth/main.py --model gptoss --file 177.json --gumtree False --postpr
 python src/synth/main.py --model gptoss --file 177.json --postprocess False
 ```
 
-These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case. Final synthesized code can be found in `src/result` with the name you specified in the `--file` argument (e.g., `177.json`).
+These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case. Final synthesized code is printed to the terminal for each run.
 
 
 # How to run the LLM answering process
@@ -182,48 +182,74 @@ python src/mapping/compare_arg.py
 # Extra Files to refer
 ## LLM Prompts used for querying the LLM
 The prompts used for querying the LLM are located in [prompt](./prompt). This directory contains the prompt templates for all baseline, ablation and Pig's pipeline.
+ㄴ
 
-## API Mapping
-As API mapping process might take time, we provide the mapping results in `mapping/MAPPING_RESULT.json` and `mapping/MAPPING_HISTORY.json` files.
+# How to Extend the Benchmark Data
 
-# How to extend the benchmark data
 ## 📦 Adding a New Benchmark
 
-To add a new benchmark, prepare the following three files in the `benchmarks` directory:
+Follow these steps to add a new migration benchmark (e.g., library A → library B):
 
-- A JSON file containing the benchmark data  
-- A *before* file with the original code snippet  
-- An *after* file with the migrated code snippet  
+### 1. Fill in `src/sample/sample.json`
 
-All files must follow the existing naming convention (e.g., `1.json`, `1b.py`, `1a.py`).  
-Make sure the index number does not overlap with existing benchmarks.
+Edit `sample.json` with the appropriate values for your migration target:
 
----
-
-## 🔧 Registering Library Implementations
-
-Upload the library implementations to the `src/mapping/repos` directory.
-
-- If the library consists of a single Python file, it can be placed directly in the `repos` directory.
-
-Then update the following configuration files:
-
-- `src/mapping/gits.py`  
-  - Add original library path to the `git_loc_old` dictionary
-  - Add target library path to the `git_loc` dictionary
-
-- `src/mapping/answer.json`  
-  - Add the corresponding file name, API, and its original signature  
-  - If the expected API is unavailable, use `"N/A"` for both the API name and signature (see existing entries for reference)
-
----
-
-## 🚀 Running the Mapping
-
-After completing the setup, run the following script to generate LLM answers for the new benchmark:
-
-```bash
-python src/llm/mapping_llama.py
+```json
+{
+    "libo": "unipath",
+    "libn": "pathlib",
+    "libo_path": "Unipath-master/unipath",
+    "libn_path": "pathlib.py",
+    "codeo": "src/sample/codeo.py",
+    "apios": [
+        "Path",
+        "parent"
+    ],
+    "signos": {
+        "Path": {
+            "args": ["*args", "**kwargs"]
+        },
+        "parent": {
+            "args": []
+        }
+    },
+    "model": "gpt-oss:20b"
+}
 ```
 
-The generated code will be used for subsequent transplanting processes.
+| Field | Description |
+|-------|-------------|
+| `libo` | Source library name |
+| `libn` | Target library name |
+| `libo_path` | Path to the source library implementation |
+| `libn_path` | Path to the target library implementation |
+| `codeo` | Path to the source code file to migrate |
+| `apios` | List of API names to migrate |
+| `signos` | Signature of each API (argument names) |
+| `model` | LLM model to use for migration |
+
+### 2. Prepare the source code to migrate
+
+Save the code you want to migrate as:
+
+```
+src/sample/codeo.py
+```
+
+### 3. Add library repositories
+
+Place both the source and target library implementations under `src/mapping/repos/`:
+
+```
+src/mapping/repos/
+├── unipath/
+└── pathlib.py
+```
+
+### 4. Run the migration
+
+```bash
+python src/main.py src/sample/sample.json
+```
+
+> **Note:** If an LLM API is not available, the pipeline will fall back to a predefined sample output instead of a real model response. This allows you to run and test the full pipeline without requiring API access.

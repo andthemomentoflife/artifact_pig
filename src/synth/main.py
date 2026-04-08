@@ -1,5 +1,8 @@
 import sys, ast, argparse
 from os import path
+from rich.panel import Panel
+from rich.syntax import Syntax
+from rich import print
 
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from synth import *
@@ -98,9 +101,17 @@ if __name__ == "__main__":
         gumtree=gumtree,
         option=option,
     ):
-        result_write(
-            answer,
-            option,
-            model,
-            file_num,
+        # result_write(
+        #     answer,
+        #     option,
+        #     model,
+        #     file_num,
+        # )
+
+        print(
+            Panel(
+                Syntax(answer, "python", theme="monokai", line_numbers=True),
+                title="[bold green]Final Migrated Code[/]",
+                border_style="green",
+            )
         )
