@@ -253,3 +253,15 @@ python src/main.py src/sample/sample.json
 ```
 
 > **Note:** If an LLM API is not available, the pipeline will fall back to a predefined sample output instead of a real model response. This allows you to run and test the full pipeline without requiring API access.
+
+---
+
+## 📦 Artifact Documentation
+
+This repository includes additional documentation required for artifact evaluation:
+
+- `REQUIREMENTS`: Describes the hardware and software dependencies required to run the artifact, including Docker environment and Python dependencies.
+- `STATUS`: explains the badge(s) applied for and justifies why the artifact satisfies the criteria.
+- `LICENSE`: specifies the distribution terms of this artifact.
+
+These documents focus on technical details of artifact usage that are not fully described in the paper, in accordance with the FSE 2026 artifact evaluation guidelines.
