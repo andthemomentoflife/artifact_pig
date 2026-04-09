@@ -8,3 +8,5 @@ matplotlib
 parso
 pythonparser
 scipy
+rich
+ollama

@@ -163,26 +163,9 @@ python src/llm/mapping_llama.py [OPTIONS]
 | `--b_api` | bool | `True` | Enable API candidate information in the prompt (True/False) |
 
 
-# How to run the API mapping process
-To run the API mapping process, you can execute the following command:
-
-```bash
-python src/mapping/compare_arg.py
-```
-
-### CLI Arguments
-| Argument | Type | Default | Description |
-|---|---|---|---|
-| `--libo` | str | `unipath` | Original library name |
-| `--libn` | str | `pathlib` | Target library name |
-| `--apio` | str | `joinpath` | API name to find candidates for |
-| `--signo` | bool | str | Orignal API signature |
-
-
 # Extra Files to refer
 ## LLM Prompts used for querying the LLM
 The prompts used for querying the LLM are located in [prompt](./prompt). This directory contains the prompt templates for all baseline, ablation and Pig's pipeline.
-ㄴ
 
 # How to Extend the Benchmark Data
 
