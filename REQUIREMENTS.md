@@ -3,7 +3,7 @@
 ## Hardware Requirements
 - Minimum: 8 GB RAM
 - Recommended: 16 GB RAM for smooth Docker execution
-- Storage: At least 5 GB free disk space for Docker image and artifacts
+- Storage: At least 7 GB free disk space for Docker image and artifacts
 
 ## Software Requirements
 - Operating System: Linux, macOS, or Windows (with Docker support)
