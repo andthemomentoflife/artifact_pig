@@ -6,11 +6,22 @@ This repository contains the data and results for the paper **"PIG: Leveraging L
 
 [PIG: Leveraging Large Language Models for Python Library Migrations](paper/fse2026-pig.pdf)  
 
+## 📦 Artifact Documentation
+
+This repository includes additional documentation required for artifact evaluation:
+
+- `REQUIREMENTS`: Describes the hardware and software dependencies required to run the artifact, including Docker environment and Python dependencies.
+- `STATUS`: explains the badge(s) applied for and justifies why the artifact satisfies the criteria.
+- `LICENSE`: specifies the distribution terms of this artifact.
+  
+
 ## Running Via Docker (Recommended)
 To run the code using Docker, follow these steps:
 1. **Build the Docker Image**: Run the following command in the terminal from the root directory of the repository:
 
 ```bash
+git clone https://github.com/andthemomentoflife/artifact_pig.git
+cd pig_artifact
 docker build -t pig dockerfile/.
 ```
 
@@ -136,14 +147,22 @@ python src/synth/main.py --model gptoss --file 177.json
 ```bash
 python src/synth/main.py --model gptoss --file 177.json --gumtree False --postprocess False
 ```
+- In this configuration, Pig's AST-based matching is entirely disabled.  
+- As a result, the system cannot establish a correspondence between `requests` API calls and their `aiohttp` counterparts.  
+- In particular, `aiohttp` introduces an asynchronous request pattern (e.g., `async with`, `session.request`), which cannot be reliably handled.
+- With standard AST matching, the system fails to locate and transform the relevant request nodes, leading to a breakdown in the synthesis process (line 89).
 
 ❌ **Failed** — post-processing disabled only:
 ```bash
 python src/synth/main.py --model gptoss --file 177.json --postprocess False
 ```
 
-These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case. Final synthesized code is printed to the terminal for each run.
+- In this case, Pig's AST matching is enabled, so the system successfully maps `requests` calls to `aiohttp` APIs.
+- However, `aiohttp` requires additional structural components, such as creating and managing a `ClientSession`, rather than issuing standalone request calls.  
+- Without post-processing, the system cannot introduce or propagate these required auxiliary constructs (e.g., session initialization and usage).  
+- Consequently, the generated code is incomplete and fails to execute properly (line 89).
 
+These results indicate that both Pig's AST matching and post-processing are crucial steps for successful synthesis in this case. Final synthesized code is printed to the terminal for each run.
 
 # How to run the LLM answering process
 We currently only support ollama as the LLM backend. We plan to add support for more LLM backends in the future. You should have an ollama server running with the models you want to use before executing the LLM answering process. Also, make sure to update the envinronment variable `OLLAMA_HOST` to point to your ollama server if it's not running on the default `http://localhost:11434`.
@@ -236,15 +255,3 @@ python src/main.py src/sample/sample.json
 ```
 
 > **Note:** If an LLM API is not available, the pipeline will fall back to a predefined sample output instead of a real model response. This allows you to run and test the full pipeline without requiring API access.
-
----
-
-## 📦 Artifact Documentation
-
-This repository includes additional documentation required for artifact evaluation:
-
-- `REQUIREMENTS`: Describes the hardware and software dependencies required to run the artifact, including Docker environment and Python dependencies.
-- `STATUS`: explains the badge(s) applied for and justifies why the artifact satisfies the criteria.
-- `LICENSE`: specifies the distribution terms of this artifact.
-
-These documents focus on technical details of artifact usage that are not fully described in the paper, in accordance with the FSE 2026 artifact evaluation guidelines.
